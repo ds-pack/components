@@ -1,0 +1,21 @@
+name: Publish
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: borales/actions-yarn@v2.0.0
+        with:
+          # will run `yarn install` command
+          cmd: install
+      - uses: borales/actions-yarn@v2.0.0
+        with:
+          # will run `yarn pub` command
+          cmd: pub
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}

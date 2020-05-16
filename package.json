@@ -1,6 +1,6 @@
 {
   "name": "@matthamlin/components",
-  "version": "0.0.0",
+  "version": "0.0.0-alpha.1",
   "main": "dist/index.js",
   "source": "src/index.tsx",
   "repository": "git@github.com:hamlim/component-library.git",
