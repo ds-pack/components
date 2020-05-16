@@ -13,9 +13,10 @@ jobs:
         with:
           # will run `yarn install` command
           cmd: install
-      - uses: borales/actions-yarn@v2.0.0
+      - uses: actions/setup-node@v1
         with:
-          # will run `yarn pub` command
-          cmd: pub
+          node-version: 12
+          registry-url: https://registry.npmjs.org/
+      - run: npm publish --access public
         env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
