@@ -10,7 +10,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "babel src/ --out-dir dist/",
+    "build": "babel src/ --out-dir dist/ --extensions '.ts,.tsx'",
     "test": "jest",
     "test-watch": "jest --watch",
     "test-cov": "jest --collectCoverage",
