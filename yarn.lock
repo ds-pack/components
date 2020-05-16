@@ -1566,6 +1566,7 @@ __metadata:
     "@babel/plugin-transform-typescript": ^7.9.6
     "@babel/preset-env": ^7.9.6
     "@babel/preset-react": ^7.9.4
+    "@babel/runtime": ^7.9.6
     "@matthamlin/base-styled": ^1.2.0
     "@testing-library/jest-dom": ^5.7.0
     "@testing-library/react": ^10.0.4
@@ -1579,6 +1580,8 @@ __metadata:
     styled-system: ^5.1.5
     typescript: ^3.9.2
   peerDependencies:
+    react: "*"
+    react-dom: "*"
     styled-components: "*"
   languageName: unknown
   linkType: soft

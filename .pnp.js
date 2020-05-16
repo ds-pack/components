@@ -58,6 +58,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "virtual:5f3d8531c5d385c63930de272388623a7d19aaa4ee895caab95b232186c21f79a94aef21da88d21424c0fe3e29718790fc6041305f73c0106f92f9740c763fb9#npm:7.9.4"
       ],
       [
+        "@babel/runtime",
+        "npm:7.9.6"
+      ],
+      [
         "@matthamlin/base-styled",
         "virtual:5f3d8531c5d385c63930de272388623a7d19aaa4ee895caab95b232186c21f79a94aef21da88d21424c0fe3e29718790fc6041305f73c0106f92f9740c763fb9#npm:1.2.0"
       ],
@@ -120,6 +124,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/plugin-transform-typescript", "virtual:5f3d8531c5d385c63930de272388623a7d19aaa4ee895caab95b232186c21f79a94aef21da88d21424c0fe3e29718790fc6041305f73c0106f92f9740c763fb9#npm:7.9.6"],
             ["@babel/preset-env", "virtual:5f3d8531c5d385c63930de272388623a7d19aaa4ee895caab95b232186c21f79a94aef21da88d21424c0fe3e29718790fc6041305f73c0106f92f9740c763fb9#npm:7.9.6"],
             ["@babel/preset-react", "virtual:5f3d8531c5d385c63930de272388623a7d19aaa4ee895caab95b232186c21f79a94aef21da88d21424c0fe3e29718790fc6041305f73c0106f92f9740c763fb9#npm:7.9.4"],
+            ["@babel/runtime", "npm:7.9.6"],
             ["@matthamlin/base-styled", "virtual:5f3d8531c5d385c63930de272388623a7d19aaa4ee895caab95b232186c21f79a94aef21da88d21424c0fe3e29718790fc6041305f73c0106f92f9740c763fb9#npm:1.2.0"],
             ["@testing-library/jest-dom", "npm:5.7.0"],
             ["@testing-library/react", "virtual:5f3d8531c5d385c63930de272388623a7d19aaa4ee895caab95b232186c21f79a94aef21da88d21424c0fe3e29718790fc6041305f73c0106f92f9740c763fb9#npm:10.0.4"],
@@ -1958,6 +1963,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/plugin-transform-typescript", "virtual:5f3d8531c5d385c63930de272388623a7d19aaa4ee895caab95b232186c21f79a94aef21da88d21424c0fe3e29718790fc6041305f73c0106f92f9740c763fb9#npm:7.9.6"],
             ["@babel/preset-env", "virtual:5f3d8531c5d385c63930de272388623a7d19aaa4ee895caab95b232186c21f79a94aef21da88d21424c0fe3e29718790fc6041305f73c0106f92f9740c763fb9#npm:7.9.6"],
             ["@babel/preset-react", "virtual:5f3d8531c5d385c63930de272388623a7d19aaa4ee895caab95b232186c21f79a94aef21da88d21424c0fe3e29718790fc6041305f73c0106f92f9740c763fb9#npm:7.9.4"],
+            ["@babel/runtime", "npm:7.9.6"],
             ["@matthamlin/base-styled", "virtual:5f3d8531c5d385c63930de272388623a7d19aaa4ee895caab95b232186c21f79a94aef21da88d21424c0fe3e29718790fc6041305f73c0106f92f9740c763fb9#npm:1.2.0"],
             ["@testing-library/jest-dom", "npm:5.7.0"],
             ["@testing-library/react", "virtual:5f3d8531c5d385c63930de272388623a7d19aaa4ee895caab95b232186c21f79a94aef21da88d21424c0fe3e29718790fc6041305f73c0106f92f9740c763fb9#npm:10.0.4"],
