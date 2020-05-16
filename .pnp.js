@@ -98,6 +98,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "virtual:5f3d8531c5d385c63930de272388623a7d19aaa4ee895caab95b232186c21f79a94aef21da88d21424c0fe3e29718790fc6041305f73c0106f92f9740c763fb9#npm:0.0.0-experimental-33c3af284"
       ],
       [
+        "react-is",
+        "npm:16.13.1"
+      ],
+      [
         "styled-components",
         "virtual:5f3d8531c5d385c63930de272388623a7d19aaa4ee895caab95b232186c21f79a94aef21da88d21424c0fe3e29718790fc6041305f73c0106f92f9740c763fb9#npm:5.1.0"
       ],
@@ -134,6 +138,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest", "npm:26.0.1"],
             ["react", "npm:0.0.0-experimental-33c3af284"],
             ["react-dom", "virtual:5f3d8531c5d385c63930de272388623a7d19aaa4ee895caab95b232186c21f79a94aef21da88d21424c0fe3e29718790fc6041305f73c0106f92f9740c763fb9#npm:0.0.0-experimental-33c3af284"],
+            ["react-is", "npm:16.13.1"],
             ["styled-components", "virtual:5f3d8531c5d385c63930de272388623a7d19aaa4ee895caab95b232186c21f79a94aef21da88d21424c0fe3e29718790fc6041305f73c0106f92f9740c763fb9#npm:5.1.0"],
             ["styled-system", "npm:5.1.5"],
             ["typescript", "patch:typescript@npm%3A3.9.2#builtin<compat/typescript>::version=3.9.2&hash=8cac75"]
@@ -1973,6 +1978,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest", "npm:26.0.1"],
             ["react", "npm:0.0.0-experimental-33c3af284"],
             ["react-dom", "virtual:5f3d8531c5d385c63930de272388623a7d19aaa4ee895caab95b232186c21f79a94aef21da88d21424c0fe3e29718790fc6041305f73c0106f92f9740c763fb9#npm:0.0.0-experimental-33c3af284"],
+            ["react-is", "npm:16.13.1"],
             ["styled-components", "virtual:5f3d8531c5d385c63930de272388623a7d19aaa4ee895caab95b232186c21f79a94aef21da88d21424c0fe3e29718790fc6041305f73c0106f92f9740c763fb9#npm:5.1.0"],
             ["styled-system", "npm:5.1.5"],
             ["typescript", "patch:typescript@npm%3A3.9.2#builtin<compat/typescript>::version=3.9.2&hash=8cac75"]
@@ -7232,7 +7238,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["hoist-non-react-statics", "npm:3.3.2"],
             ["react", "npm:0.0.0-experimental-33c3af284"],
             ["react-dom", "virtual:5f3d8531c5d385c63930de272388623a7d19aaa4ee895caab95b232186c21f79a94aef21da88d21424c0fe3e29718790fc6041305f73c0106f92f9740c763fb9#npm:0.0.0-experimental-33c3af284"],
-            ["react-is", null],
+            ["react-is", "npm:16.13.1"],
             ["shallowequal", "npm:1.1.0"],
             ["supports-color", "npm:5.5.0"]
           ],

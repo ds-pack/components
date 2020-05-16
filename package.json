@@ -34,6 +34,7 @@
     "jest": "^26.0.1",
     "react": "experimental",
     "react-dom": "experimental",
+    "react-is": "^16.13.1",
     "styled-components": "^5.1.0",
     "typescript": "^3.9.2"
   },
