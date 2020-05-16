@@ -1,6 +1,10 @@
-# Project Template
+# `@matthamlin/components`
 
-Make sure to update this with the right documentation!
+A bare-bones component library built using:
+
+- Styled System
+- Styled Components
+- React
 
 ### Tools:
 

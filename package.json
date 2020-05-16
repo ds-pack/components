@@ -1,11 +1,14 @@
 {
-  "name": "template-project",
-  "version": "1.0.0",
+  "name": "@matthamlin/components",
+  "version": "0.0.0",
   "main": "dist/index.js",
   "source": "src/index.tsx",
-  "repository": "git@github.com:hamlim/template-project.git",
+  "repository": "git@github.com:hamlim/component-library.git",
   "author": "Matt Hamlin <matthewjameshamlin@gmail.com>",
   "license": "MIT",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "babel src/ --out-dir dist/",
     "test": "jest",
@@ -36,5 +39,14 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
+  },
+  "peerDependencies": {
+    "styled-components": "*",
+    "react": "experimental",
+    "react-dom": "experimental"
+  },
+  "dependencies": {
+    "@matthamlin/base-styled": "^1.2.0",
+    "styled-system": "^5.1.5"
   }
 }
