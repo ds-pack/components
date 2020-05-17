@@ -6,6 +6,7 @@
 - [ThemeProvider](./components/ThemeProvider.md)
 - [Text](./components/Text.md)
 - [Label](./components/Label.md)
+- [List](./components/List.md)
 
 ### Hooks
 

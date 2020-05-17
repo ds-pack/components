@@ -34,3 +34,11 @@ test('Text is defined', () => {
 test('Label is defined', () => {
   expect(components.Label).toBeDefined()
 })
+
+test('List is defined', () => {
+  expect(components.List).toBeDefined()
+})
+
+test('ListItem is defined', () => {
+  expect(components.ListItem).toBeDefined()
+})
