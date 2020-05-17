@@ -78,6 +78,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "npm:25.2.2"
       ],
       [
+        "@types/react",
+        "npm:16.9.35"
+      ],
+      [
+        "@types/react-dom",
+        "npm:16.9.8"
+      ],
+      [
         "babel-jest",
         "virtual:0975d94dee9ff79a18bada017469f037204c9b3564a1ecea9f0b0ed843f047fea139f0fb17afacefab3ae165c22666d09b4a19e31c5471b4e6eeae0f593875b5#npm:26.0.1"
       ],
@@ -133,6 +141,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@testing-library/jest-dom", "npm:5.7.0"],
             ["@testing-library/react", "virtual:b9f39531e50a29ba61ff4ba9ae49067c90167579b2a6555835e9e27be76ec60c2239685877b7b610d8ae78eebccbecc8ddd9b607237fae57d516681308477756#npm:10.0.4"],
             ["@types/jest", "npm:25.2.2"],
+            ["@types/react", "npm:16.9.35"],
+            ["@types/react-dom", "npm:16.9.8"],
             ["babel-jest", "virtual:0975d94dee9ff79a18bada017469f037204c9b3564a1ecea9f0b0ed843f047fea139f0fb17afacefab3ae165c22666d09b4a19e31c5471b4e6eeae0f593875b5#npm:26.0.1"],
             ["babel-plugin-styled-components", "virtual:b9f39531e50a29ba61ff4ba9ae49067c90167579b2a6555835e9e27be76ec60c2239685877b7b610d8ae78eebccbecc8ddd9b607237fae57d516681308477756#npm:1.10.7"],
             ["jest", "npm:26.0.1"],
@@ -1691,6 +1701,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@testing-library/jest-dom", "npm:5.7.0"],
             ["@testing-library/react", "virtual:b9f39531e50a29ba61ff4ba9ae49067c90167579b2a6555835e9e27be76ec60c2239685877b7b610d8ae78eebccbecc8ddd9b607237fae57d516681308477756#npm:10.0.4"],
             ["@types/jest", "npm:25.2.2"],
+            ["@types/react", "npm:16.9.35"],
+            ["@types/react-dom", "npm:16.9.8"],
             ["babel-jest", "virtual:0975d94dee9ff79a18bada017469f037204c9b3564a1ecea9f0b0ed843f047fea139f0fb17afacefab3ae165c22666d09b4a19e31c5471b4e6eeae0f593875b5#npm:26.0.1"],
             ["babel-plugin-styled-components", "virtual:b9f39531e50a29ba61ff4ba9ae49067c90167579b2a6555835e9e27be76ec60c2239685877b7b610d8ae78eebccbecc8ddd9b607237fae57d516681308477756#npm:1.10.7"],
             ["jest", "npm:26.0.1"],
