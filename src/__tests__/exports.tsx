@@ -26,3 +26,7 @@ test('Banner is defined', () => {
 test('Stack is defined', () => {
   expect(components.Stack).toBeDefined()
 })
+
+test('Text is defined', () => {
+  expect(components.Text).toBeDefined()
+})
