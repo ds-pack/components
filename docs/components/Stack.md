@@ -1,6 +1,6 @@
 # Stack
 
-[All components](../index.md)
+[All components/hooks](../index.md)
 
 The Stack component is a layout utility component that is useful for creating
 evenly spaced collections of children in a single direction.
