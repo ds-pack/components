@@ -1,4 +1,4 @@
-# `@matthamlin/components`
+# `@ds-pack/components`
 
 A bare-bones component library built using:
 
