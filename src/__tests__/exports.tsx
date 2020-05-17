@@ -19,3 +19,7 @@ test('ThemeProvider is defined', () => {
 test('Banner is defined', () => {
   expect(components.Banner).toBeDefined()
 })
+
+test('Stack is defined', () => {
+  expect(components.Stack).toBeDefined()
+})
