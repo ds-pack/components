@@ -5,6 +5,7 @@
 - [Stack](./components/Stack.md)
 - [ThemeProvider](./components/ThemeProvider.md)
 - [Text](./components/Text.md)
+- [Label](./components/Label.md)
 
 ### Hooks
 

@@ -30,3 +30,7 @@ test('Stack is defined', () => {
 test('Text is defined', () => {
   expect(components.Text).toBeDefined()
 })
+
+test('Label is defined', () => {
+  expect(components.Label).toBeDefined()
+})
