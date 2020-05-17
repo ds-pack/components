@@ -15,7 +15,8 @@
     "test-watch": "jest --watch",
     "test-cov": "jest --collectCoverage",
     "prepub": "yarn build",
-    "pub": "yarn prepub && yarn npm publish --access public"
+    "pub": "yarn prepub && yarn npm publish --access public",
+    "tsc": "yarn dlx --package typescript tsc"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
