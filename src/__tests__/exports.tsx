@@ -1,3 +1,6 @@
+declare const test: any
+declare const expect: any
+
 import * as components from '../index'
 
 test('Box is defined', () => {
@@ -18,4 +21,8 @@ test('ThemeProvider is defined', () => {
 
 test('Banner is defined', () => {
   expect(components.Banner).toBeDefined()
+})
+
+test('Stack is defined', () => {
+  expect(components.Stack).toBeDefined()
 })
