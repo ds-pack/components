@@ -9,7 +9,7 @@ type StackProps = {
   [key: string]: any
 }
 
-export default function Stack({
+export function Stack({
   gap,
   children,
   inline = false,
