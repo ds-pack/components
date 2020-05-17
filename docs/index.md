@@ -4,6 +4,7 @@
 - [Banner](./components/Banner.md)
 - [Stack](./components/Stack.md)
 - [ThemeProvider](./components/ThemeProvider.md)
+- [Text](./components/Text.md)
 
 ### Hooks
 

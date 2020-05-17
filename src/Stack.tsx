@@ -9,18 +9,16 @@ type StackProps = {
   [key: string]: any
 }
 
-export function Stack({
-  gap,
-  children,
-  inline = false,
-  props = {},
-  ...rest
-}: StackProps) {
+export let Stack = React.forwardRef(function Stack(
+  { gap, children, inline = false, props = {}, ...rest }: StackProps,
+  ref: any,
+) {
   return (
     <Box
-      {...rest}
       display={inline ? 'inline-flex' : 'flex'}
       flexDirection={inline ? 'row' : 'column'}
+      {...rest}
+      ref={ref}
     >
       {React.Children.map(children, (child: any, index: number) => (
         <Box
@@ -35,4 +33,4 @@ export function Stack({
       ))}
     </Box>
   )
-}
+})
