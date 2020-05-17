@@ -1,3 +1,6 @@
+declare const test: any
+declare const expect: any
+
 import * as components from '../index'
 
 test('Box is defined', () => {
