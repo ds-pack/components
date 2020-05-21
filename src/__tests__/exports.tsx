@@ -42,3 +42,7 @@ test('List is defined', () => {
 test('ListItem is defined', () => {
   expect(components.ListItem).toBeDefined()
 })
+
+test('InlineCode is defined', () => {
+  expect(components.InlineCode).toBeDefined()
+})

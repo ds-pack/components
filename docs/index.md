@@ -7,6 +7,7 @@
 - [Text](./components/Text.md)
 - [Label](./components/Label.md)
 - [List](./components/List.md)
+- [InlineCode](./components/InlineCode.md)
 
 ### Hooks
 
