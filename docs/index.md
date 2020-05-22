@@ -8,6 +8,7 @@
 - [Label](./components/Label.md)
 - [List](./components/List.md)
 - [InlineCode](./components/InlineCode.md)
+- [VisuallyHidden](./components/VisuallyHidden.md)
 
 ### Hooks
 
