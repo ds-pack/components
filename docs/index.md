@@ -9,6 +9,7 @@
 - [List](./components/List.md)
 - [InlineCode](./components/InlineCode.md)
 - [VisuallyHidden](./components/VisuallyHidden.md)
+- [Link](./components/Link.md)
 
 ### Hooks
 
