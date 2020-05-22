@@ -46,3 +46,7 @@ test('ListItem is defined', () => {
 test('InlineCode is defined', () => {
   expect(components.InlineCode).toBeDefined()
 })
+
+test('VisuallyHidden is defined', () => {
+  expect(components.VisuallyHidden).toBeDefined()
+})
