@@ -50,3 +50,7 @@ test('InlineCode is defined', () => {
 test('VisuallyHidden is defined', () => {
   expect(components.VisuallyHidden).toBeDefined()
 })
+
+test('Link is defined', () => {
+  expect(components.Link).toBeDefined()
+})
