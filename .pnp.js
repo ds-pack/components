@@ -66,6 +66,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "virtual:b9f39531e50a29ba61ff4ba9ae49067c90167579b2a6555835e9e27be76ec60c2239685877b7b610d8ae78eebccbecc8ddd9b607237fae57d516681308477756#npm:1.2.0"
       ],
       [
+        "@matthamlin/use-refs",
+        "npm:1.0.0"
+      ],
+      [
         "@testing-library/jest-dom",
         "npm:5.7.0"
       ],
@@ -150,6 +154,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/preset-react", "virtual:b9f39531e50a29ba61ff4ba9ae49067c90167579b2a6555835e9e27be76ec60c2239685877b7b610d8ae78eebccbecc8ddd9b607237fae57d516681308477756#npm:7.9.4"],
             ["@babel/runtime", "npm:7.9.6"],
             ["@matthamlin/base-styled", "virtual:b9f39531e50a29ba61ff4ba9ae49067c90167579b2a6555835e9e27be76ec60c2239685877b7b610d8ae78eebccbecc8ddd9b607237fae57d516681308477756#npm:1.2.0"],
+            ["@matthamlin/use-refs", "npm:1.0.0"],
             ["@testing-library/jest-dom", "npm:5.7.0"],
             ["@testing-library/react", "virtual:b9f39531e50a29ba61ff4ba9ae49067c90167579b2a6555835e9e27be76ec60c2239685877b7b610d8ae78eebccbecc8ddd9b607237fae57d516681308477756#npm:10.0.4"],
             ["@types/jest", "npm:25.2.2"],
@@ -1713,6 +1718,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/preset-react", "virtual:b9f39531e50a29ba61ff4ba9ae49067c90167579b2a6555835e9e27be76ec60c2239685877b7b610d8ae78eebccbecc8ddd9b607237fae57d516681308477756#npm:7.9.4"],
             ["@babel/runtime", "npm:7.9.6"],
             ["@matthamlin/base-styled", "virtual:b9f39531e50a29ba61ff4ba9ae49067c90167579b2a6555835e9e27be76ec60c2239685877b7b610d8ae78eebccbecc8ddd9b607237fae57d516681308477756#npm:1.2.0"],
+            ["@matthamlin/use-refs", "npm:1.0.0"],
             ["@testing-library/jest-dom", "npm:5.7.0"],
             ["@testing-library/react", "virtual:b9f39531e50a29ba61ff4ba9ae49067c90167579b2a6555835e9e27be76ec60c2239685877b7b610d8ae78eebccbecc8ddd9b607237fae57d516681308477756#npm:10.0.4"],
             ["@types/jest", "npm:25.2.2"],
@@ -2012,6 +2018,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "packagePeers": [
             "styled-components"
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@matthamlin/use-refs", [
+        ["npm:1.0.0", {
+          "packageLocation": "./.yarn/cache/@matthamlin-use-refs-npm-1.0.0-be373b887d-3.zip/node_modules/@matthamlin/use-refs/",
+          "packageDependencies": [
+            ["@matthamlin/use-refs", "npm:1.0.0"]
           ],
           "linkType": "HARD",
         }]

@@ -55,6 +55,7 @@
   },
   "dependencies": {
     "@matthamlin/base-styled": "^1.2.0",
+    "@matthamlin/use-refs": "^1.0.0",
     "styled-system": "^5.1.5"
   }
 }
