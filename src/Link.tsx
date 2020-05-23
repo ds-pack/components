@@ -8,11 +8,11 @@ export let Link = styled(Box)(
   display: inline-flex;
   &:hover,
   &:focus {
-    color: ${theme.colors.secondary};
+    color: ${theme.colors.primaryLight};
     text-decoration: none;
   }
   &:focus {
-    box-shadow: 0 0 4px 2px ${theme.colors.secondary};
+    box-shadow: ${theme.focusShadow};
     outline: none;
   }
 `,

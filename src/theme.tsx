@@ -183,15 +183,15 @@ let baseColors = {
 let colors = {
   ...baseColors,
   white: '#fdfefe',
-  primary: baseColors.teal[4],
-  primaryLight: baseColors.teal[2],
-  primaryDark: baseColors.teal[6],
-  secondary: baseColors.blue[4],
-  secondaryLight: baseColors.blue[2],
-  secondaryDark: baseColors.blue[6],
-  tertiary: baseColors.orange[4],
-  tertiaryLight: baseColors.orange[2],
-  tertiaryDark: baseColors.orange[6],
+  primary: baseColors.teal[8],
+  primaryLight: baseColors.teal[6],
+  primaryDark: baseColors.teal[9],
+  secondary: baseColors.blue[8],
+  secondaryLight: baseColors.blue[6],
+  secondaryDark: baseColors.blue[9],
+  tertiary: baseColors.orange[8],
+  tertiaryLight: baseColors.orange[6],
+  tertiaryDark: baseColors.orange[9],
 }
 
 export default {
@@ -294,5 +294,5 @@ export default {
       alignItems: 'center',
     },
   },
-  outline: `dashed 1px ${colors.secondary}`,
+  focusShadow: `0 0 4px 2px ${colors.primaryLight}`,
 }
