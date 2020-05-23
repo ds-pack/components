@@ -54,3 +54,11 @@ test('VisuallyHidden is defined', () => {
 test('Link is defined', () => {
   expect(components.Link).toBeDefined()
 })
+
+test('Tapable is defined', () => {
+  expect(components.Tapable).toBeDefined()
+})
+
+test('useTapable is defined', () => {
+  expect(components.useTapable).toBeDefined()
+})

@@ -10,7 +10,9 @@
 - [InlineCode](./components/InlineCode.md)
 - [VisuallyHidden](./components/VisuallyHidden.md)
 - [Link](./components/Link.md)
+- [Tapable](./components/Tapable.md)
 
 ### Hooks
 
 - [useTheme](./hooks/useTheme.md)
+- [useTapable](./hooks/useTapable.md)
