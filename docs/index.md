@@ -11,6 +11,7 @@
 - [VisuallyHidden](./components/VisuallyHidden.md)
 - [Link](./components/Link.md)
 - [Tapable](./components/Tapable.md)
+- [Button](./components/Button.md)
 
 ### Hooks
 

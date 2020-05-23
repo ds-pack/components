@@ -62,3 +62,7 @@ test('Tapable is defined', () => {
 test('useTapable is defined', () => {
   expect(components.useTapable).toBeDefined()
 })
+
+test('Button is defined', () => {
+  expect(components.Button).toBeDefined()
+})
