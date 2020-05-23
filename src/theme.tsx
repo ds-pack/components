@@ -259,8 +259,8 @@ export default {
   banners: {
     success: {
       color: colors.black,
-      backgroundColor: colors.primaryLight,
-      border: `solid 2px ${colors.primaryDark}`,
+      backgroundColor: colors.teal[2],
+      border: `solid 2px ${colors.teal[6]}`,
       borderRadius: '4px',
       padding: '10px',
       display: 'flex',
@@ -268,8 +268,8 @@ export default {
     },
     info: {
       color: colors.black,
-      backgroundColor: colors.secondaryLight,
-      border: `solid 2px ${colors.secondaryDark}`,
+      backgroundColor: colors.blue[2],
+      border: `solid 2px ${colors.blue[6]}`,
       borderRadius: '4px',
       padding: '10px',
       display: 'flex',
