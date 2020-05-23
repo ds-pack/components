@@ -1,5 +1,4 @@
 import { useEffect, useCallback, useState } from 'react'
-// @ts-ignore
 import { useSharedRef } from '@matthamlin/use-refs'
 
 interface Props {

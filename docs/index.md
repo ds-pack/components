@@ -12,6 +12,7 @@
 - [Link](./components/Link.md)
 - [Tapable](./components/Tapable.md)
 - [Button](./components/Button.md)
+- [Reset](./components/Reset.md)
 
 ### Hooks
 
