@@ -5,7 +5,6 @@ export let Link = styled(Box)(
   ({ theme }) => `
   color: ${theme.colors.primary};
   text-decoration: underline;
-  border-radius: ${theme.radii[0]}px;
   display: inline-flex;
   &:hover,
   &:focus {
