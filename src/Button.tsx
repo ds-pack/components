@@ -4,6 +4,8 @@ import { Box } from './Box'
 export let Button = styled(Box)(
   ({ theme, disabled }) => `
   display: inline-flex;
+  justify-content: center;
+  align-items: center;
   border-radius: ${theme.radii[0]};
   background-color: ${
     disabled ? theme.colors.disabledBg : theme.colors.primary
