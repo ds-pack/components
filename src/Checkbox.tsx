@@ -21,14 +21,14 @@ let StyledCheckbox = styled(Box)(
   border: solid 2px;
   border-color: ${
     disabled
-      ? theme.colors.gray[4]
+      ? theme.colors.disabledFill
       : checked || indeterminate
       ? theme.colors.teal[8]
       : theme.colors.black
   };
   background-color: ${
     disabled
-      ? theme.colors.gray[2]
+      ? theme.colors.disabledBg
       : checked || indeterminate
       ? theme.colors.teal[4]
       : theme.colors.white
@@ -47,14 +47,14 @@ let StyledCheckbox = styled(Box)(
     border-left: solid 2px ${
       disabled
         ? checked || indeterminate
-          ? theme.colors.gray[5]
+          ? theme.colors.disabledFill
           : 'transparent'
         : theme.colors.white
     };
     border-bottom: solid 2px ${
       disabled
         ? checked || indeterminate
-          ? theme.colors.gray[5]
+          ? theme.colors.disabledFill
           : 'transparent'
         : theme.colors.white
     };

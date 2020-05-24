@@ -8,8 +8,10 @@ interface Props {
   [key: string]: any
 }
 
+function noop() {}
+
 export function useTapable(
-  { disabled, autoFocus, onClick, ...props }: Props,
+  { disabled = false, autoFocus = false, onClick, ...props }: Props,
   ref: any,
 ) {
   let sharedRef = useSharedRef(ref)
@@ -35,7 +37,7 @@ export function useTapable(
 
   return {
     ...props,
-    onClick: handleClick,
+    onClick: disabled ? noop : handleClick,
     ref: sharedRef,
     role: 'button',
     tabIndex: disabled ? '-1' : '0',

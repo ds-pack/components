@@ -192,6 +192,9 @@ let colors = {
   tertiary: baseColors.orange[8],
   tertiaryLight: baseColors.orange[6],
   tertiaryDark: baseColors.orange[9],
+
+  disabledBg: baseColors.gray[2],
+  disabledFill: baseColors.gray[5],
 }
 
 export default {

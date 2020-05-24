@@ -1,13 +1,14 @@
-import * as React from 'react'
 import styled from 'styled-components'
 import { Box } from './Box'
 
 export let Button = styled(Box)(
-  ({ theme }) => `
+  ({ theme, disabled }) => `
   display: inline-flex;
   border-radius: ${theme.radii[0]};
-  background-color: ${theme.colors.primary};
-  color: ${theme.colors.white};
+  background-color: ${
+    disabled ? theme.colors.disabledBg : theme.colors.primary
+  };
+  color: ${disabled ? theme.colors.disabledFill : theme.colors.white};
   padding: .5em 1em;
   cursor: pointer;
   &:hover, &:focus {
