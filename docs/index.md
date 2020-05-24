@@ -15,6 +15,7 @@
 - [Reset](./components/Reset.md)
 - [ToggleInput](./components/ToggleInput.md)
 - [Checkbox](./components/Checkbox.md)
+- [Heading](./components/Heading.md)
 
 ### Hooks
 

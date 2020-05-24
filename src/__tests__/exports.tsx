@@ -78,3 +78,7 @@ test('ToggleInput is defined', () => {
 test('Checkbox is defined', () => {
   expect(components.Checkbox).toBeDefined()
 })
+
+test('Heading is defined', () => {
+  expect(components.Heading).toBeDefined()
+})

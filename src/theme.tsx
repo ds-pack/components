@@ -19,6 +19,14 @@ let fontSizes = [
   baseFontSize * (fontScale * 3),
 ]
 
+// @ts-ignore
+fontSizes.h1 = fontSizes[4]
+fontSizes.h2 = fontSizes[3]
+fontSizes.h3 = fontSizes[2]
+fontSizes.h4 = fontSizes[1]
+fontSizes.h5 = fontSizes[1]
+fontSizes.h6 = fontSizes[1]
+
 let baseColors = {
   base: '#07c',
   black: '#374047',
@@ -295,6 +303,29 @@ export default {
       padding: '10px',
       display: 'flex',
       alignItems: 'center',
+    },
+  },
+  headings: {
+    h1: {
+      fontSize: fontSizes[4],
+      fontWeight: 700,
+    },
+    lead: {
+      fontSize: fontSizes[4],
+      fontWeight: 700,
+      fontFamily: '"Times New Roman", serif',
+    },
+    h2: {
+      fontSize: fontSizes[3],
+      fontWeight: 700,
+    },
+    h3: {
+      fontSize: fontSizes[2],
+      fontWeight: 700,
+    },
+    subhead: {
+      fontSize: fontSizes[1],
+      fontWeight: 700,
     },
   },
   focusShadow: `0 0 4px 2px ${colors.primaryLight}`,
