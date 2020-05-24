@@ -70,3 +70,11 @@ test('Button is defined', () => {
 test('Reset is defined', () => {
   expect(components.Reset).toBeDefined()
 })
+
+test('ToggleInput is defined', () => {
+  expect(components.ToggleInput).toBeDefined()
+})
+
+test('Checkbox is defined', () => {
+  expect(components.Checkbox).toBeDefined()
+})
