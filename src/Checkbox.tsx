@@ -67,10 +67,10 @@ interface Props {
   checked: boolean
   onChange: (checked: boolean) => void
   disabled?: boolean
-  value?: any
   indeterminate?: boolean
   autoFocus?: boolean
   children: any
+  [key: string]: any
 }
 
 export let Checkbox = React.forwardRef(function Checkbox(
@@ -78,7 +78,6 @@ export let Checkbox = React.forwardRef(function Checkbox(
     checked,
     onChange,
     disabled,
-    value,
     indeterminate,
     autoFocus,
     children,
@@ -110,11 +109,8 @@ export let Checkbox = React.forwardRef(function Checkbox(
         onBlur={() => flush(() => setFocused(false))}
         autoFocus={autoFocus}
         checked={checked}
-        onChange={() => {
-          onChange(!checked)
-        }}
+        onChange={onChange}
         disabled={disabled}
-        value={value}
         ref={sharedRef}
       />
       {children}
