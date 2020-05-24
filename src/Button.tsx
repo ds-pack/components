@@ -10,12 +10,14 @@ export let Button = styled(Box)(
   };
   color: ${disabled ? theme.colors.disabledFill : theme.colors.white};
   padding: .5em 1em;
-  cursor: pointer;
+  cursor: ${disabled ? 'not-allowed' : 'pointer'};
   &:hover, &:focus {
-    background-color: ${theme.colors.primaryLight};
+    background-color: ${
+      disabled ? theme.colors.disabledBg : theme.colors.primaryLight
+    };
   }
   &:focus {
-    box-shadow: ${theme.focusShadow};
+    box-shadow: ${disabled ? null : theme.focusShadow};
     outline: none;
   }
 `,
