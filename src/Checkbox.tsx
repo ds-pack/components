@@ -4,6 +4,13 @@ import styled from 'styled-components'
 import { Box } from './Box'
 import { useSharedRef } from '@matthamlin/use-refs'
 import { Label } from './Label'
+import ReactDOM from 'react-dom'
+
+// @see https://github.com/facebook/react/issues/18591#issuecomment-613026224
+function flush(cb) {
+  // @ts-ignore
+  ReactDOM.flushSync(cb)
+}
 
 let StyledCheckbox = styled(Box)(
   ({ theme, checked, disabled, focused, indeterminate }) => `
@@ -58,7 +65,7 @@ let StyledCheckbox = styled(Box)(
 
 interface Props {
   checked: boolean
-  onChange: (checked: boolean, secondArg: { value: any }) => void
+  onChange: (checked: boolean) => void
   disabled?: boolean
   value?: any
   indeterminate?: boolean
@@ -99,12 +106,12 @@ export let Checkbox = React.forwardRef(function Checkbox(
       />
       <ToggleInput
         // @ts-ignore
-        onFocus={() => setFocused(true)}
-        onBlur={() => setFocused(false)}
+        onFocus={() => flush(() => setFocused(true))}
+        onBlur={() => flush(() => setFocused(false))}
         autoFocus={autoFocus}
         checked={checked}
         onChange={() => {
-          onChange(!checked, { value })
+          onChange(!checked)
         }}
         disabled={disabled}
         value={value}
