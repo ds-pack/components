@@ -21,10 +21,15 @@ let fontSizes = [
 
 // @ts-ignore
 fontSizes.h1 = fontSizes[4]
+// @ts-ignore
 fontSizes.h2 = fontSizes[3]
+// @ts-ignore
 fontSizes.h3 = fontSizes[2]
+// @ts-ignore
 fontSizes.h4 = fontSizes[1]
+// @ts-ignore
 fontSizes.h5 = fontSizes[1]
+// @ts-ignore
 fontSizes.h6 = fontSizes[1]
 
 let baseColors = {
@@ -307,24 +312,29 @@ export default {
   },
   headings: {
     h1: {
-      fontSize: fontSizes[4],
+      // @ts-ignore
+      fontSize: fontSizes.h1,
       fontWeight: 700,
     },
     lead: {
-      fontSize: fontSizes[4],
+      // @ts-ignore
+      fontSize: fontSizes.h1,
       fontWeight: 700,
       fontFamily: '"Times New Roman", serif',
     },
     h2: {
-      fontSize: fontSizes[3],
+      // @ts-ignore
+      fontSize: fontSizes.h2,
       fontWeight: 700,
     },
     h3: {
-      fontSize: fontSizes[2],
+      // @ts-ignore
+      fontSize: fontSizes.h3,
       fontWeight: 700,
     },
     subhead: {
-      fontSize: fontSizes[1],
+      // @ts-ignore
+      fontSize: fontSizes.h4,
       fontWeight: 700,
     },
   },
