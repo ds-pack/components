@@ -58,7 +58,7 @@ let StyledCheckbox = styled(Box)(
 
 interface Props {
   checked: boolean
-  onChange: (event: any) => void
+  onChange: (checked: boolean, secondArg: { value: any }) => void
   disabled?: boolean
   value?: any
   indeterminate?: boolean
