@@ -13,6 +13,8 @@
 - [Tapable](./components/Tapable.md)
 - [Button](./components/Button.md)
 - [Reset](./components/Reset.md)
+- [ToggleInput](./components/ToggleInput.md)
+- [Checkbox](./components/Checkbox.md)
 
 ### Hooks
 
