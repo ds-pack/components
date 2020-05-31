@@ -16,6 +16,7 @@
 - [ToggleInput](./components/ToggleInput.md)
 - [Checkbox](./components/Checkbox.md)
 - [Heading](./components/Heading.md)
+- [Blockquote](./components/Blockquote.md)
 
 ### Hooks
 
