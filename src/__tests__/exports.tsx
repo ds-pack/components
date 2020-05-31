@@ -82,3 +82,7 @@ test('Checkbox is defined', () => {
 test('Heading is defined', () => {
   expect(components.Heading).toBeDefined()
 })
+
+test('Blockquote is defined', () => {
+  expect(components.Blockquote).toBeDefined()
+})
