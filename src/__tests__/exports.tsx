@@ -94,3 +94,7 @@ test('TwitterMention is defined', () => {
 test('GitHubMention is defined', () => {
   expect(components.GitHubMention).toBeDefined()
 })
+
+test('Image is defined', () => {
+  expect(components.Image).toBeDefined()
+})

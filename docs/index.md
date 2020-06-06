@@ -19,6 +19,7 @@
 - [Blockquote](./components/Blockquote.md)
 - [TwitterMention](./components/TwitterMention.md)
 - [GitHubMention](./components/GitHubMention.md)
+- [Image](./components/Image.md)
 
 ### Hooks
 
