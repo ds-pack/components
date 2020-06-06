@@ -17,6 +17,8 @@
 - [Checkbox](./components/Checkbox.md)
 - [Heading](./components/Heading.md)
 - [Blockquote](./components/Blockquote.md)
+- [TwitterMention](./components/TwitterMention.md)
+- [GitHubMention](./components/GitHubMention.md)
 
 ### Hooks
 
