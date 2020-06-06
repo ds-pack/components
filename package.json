@@ -1,6 +1,6 @@
 {
   "name": "@ds-pack/components",
-  "version": "0.0.0-alpha.23",
+  "version": "0.0.0-alpha.24",
   "main": "dist/index.js",
   "source": "src/index.tsx",
   "repository": "git@github.com:hamlim/component-library.git",
