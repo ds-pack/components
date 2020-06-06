@@ -86,3 +86,11 @@ test('Heading is defined', () => {
 test('Blockquote is defined', () => {
   expect(components.Blockquote).toBeDefined()
 })
+
+test('TwitterMention is defined', () => {
+  expect(components.TwitterMention).toBeDefined()
+})
+
+test('GitHubMention is defined', () => {
+  expect(components.GitHubMention).toBeDefined()
+})
