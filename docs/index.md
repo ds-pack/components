@@ -20,6 +20,7 @@
 - [TwitterMention](./components/TwitterMention.md)
 - [GitHubMention](./components/GitHubMention.md)
 - [Image](./components/Image.md)
+- [Figure](./components/Figure.md)
 
 ### Hooks
 
