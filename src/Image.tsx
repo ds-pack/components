@@ -7,6 +7,12 @@ let StyledImage = styled(Box)`
   height: auto;
 `
 
-export let Image = React.forwardRef(function Image(props, ref) {
+interface Props {
+  src: string
+  alt: string
+  [key: string]: any
+}
+
+export let Image = React.forwardRef(function Image(props: Props, ref) {
   return <StyledImage forwardedAs="img" ref={ref} {...props} />
 })

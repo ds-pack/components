@@ -98,3 +98,7 @@ test('GitHubMention is defined', () => {
 test('Image is defined', () => {
   expect(components.Image).toBeDefined()
 })
+
+test('Figure is defined', () => {
+  expect(components.Figure).toBeDefined()
+})
