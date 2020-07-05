@@ -39,8 +39,8 @@ let StyledInput = styled(Box)(
 
 interface Props {
   disabled: boolean
-  value: any
-  onChange: (any) => void
+  value: string
+  onChange: (value: string) => void
   children: any
   autoFocus: boolean
   placeholder: any
@@ -83,7 +83,7 @@ export let Input = React.forwardRef(function Input(
         ref={ref}
         disabled={disabled}
         value={value}
-        onChange={onChange}
+        onChange={({ target: { value } }) => onChange(value)}
       />
     </Label>
   )
