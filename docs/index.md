@@ -21,6 +21,7 @@
 - [GitHubMention](./components/GitHubMention.md)
 - [Image](./components/Image.md)
 - [Figure](./components/Figure.md)
+- [Input](./components/Input.md)
 
 ### Hooks
 

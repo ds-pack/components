@@ -102,3 +102,7 @@ test('Image is defined', () => {
 test('Figure is defined', () => {
   expect(components.Figure).toBeDefined()
 })
+
+test('Input is defined', () => {
+  expect(components.Input).toBeDefined()
+})

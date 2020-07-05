@@ -1,0 +1,90 @@
+import * as React from 'react'
+import styled from 'styled-components'
+import { Box } from './Box'
+import { Label } from './Label'
+import ReactDOM from 'react-dom'
+
+// @see https://github.com/facebook/react/issues/18591#issuecomment-613026224
+function flush(cb) {
+  // @ts-ignore
+  ReactDOM.flushSync(cb)
+}
+
+let StyledInput = styled(Box)(
+  ({ theme, focused, hovered, disabled }) => `
+  border: solid 2px;
+  width: 100%;
+  display: inline-flex;
+  flex-grow: 1;
+  flex-shring: 0;
+  padding: .5em 1em;
+  border-radius: ${theme.radii[0]};
+  color: ${theme.colors.black};
+  box-shadow: ${focused ? theme.focusShadow : null};
+  outline: none;
+  font-size: ${theme.fontSizes[1]}px;
+
+  border-color: ${
+    disabled
+      ? theme.colors.disabledFill
+      : focused || hovered
+      ? theme.colors.primary
+      : theme.colors.black
+  };
+  background-color: ${
+    disabled ? theme.colors.disabledBg : theme.colors.gray[0]
+  };
+`,
+)
+
+interface Props {
+  disabled: boolean
+  value: any
+  onChange: (any) => void
+  children: any
+  autoFocus: boolean
+  placeholder: any
+  [key: string]: any
+}
+
+export let Input = React.forwardRef(function Input(
+  {
+    disabled,
+    value,
+    onChange,
+    children,
+    autoFocus,
+    placeholder,
+    ...props
+  }: Props,
+  ref,
+) {
+  let [focused, setFocused] = React.useState(autoFocus)
+
+  function handleFocus() {
+    setFocused(true)
+  }
+  function handleBlur() {
+    setFocused(false)
+  }
+
+  return (
+    <Label
+      onFocus={() => flush(handleFocus)}
+      onBlur={() => flush(handleBlur)}
+      {...props}
+    >
+      {children}
+      <StyledInput
+        placeholder={placeholder}
+        focused={focused}
+        type="text"
+        forwardedAs="input"
+        ref={ref}
+        disabled={disabled}
+        value={value}
+        onChange={onChange}
+      />
+    </Label>
+  )
+})
