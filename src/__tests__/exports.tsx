@@ -106,3 +106,7 @@ test('Figure is defined', () => {
 test('Input is defined', () => {
   expect(components.Input).toBeDefined()
 })
+
+test('Textarea is defined', () => {
+  expect(components.Textarea).toBeDefined()
+})
