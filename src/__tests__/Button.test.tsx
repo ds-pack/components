@@ -17,3 +17,41 @@ test('Button does not call onClick when disabled', () => {
 
   expect(handleClick).not.toHaveBeenCalled()
 })
+
+test('Button calls onClick when focused and the user hits enter', () => {
+  let handleClick = jest.fn(() => null)
+  let { getByText } = render(
+    <ThemeProvider>
+      <Button forwardedAs={Tapable} onClick={() => handleClick()}>
+        Test
+      </Button>
+    </ThemeProvider>,
+  )
+
+  let button = getByText('Test')
+
+  fireEvent.focus(button)
+
+  fireEvent.keyDown(button, { key: 'Enter' })
+
+  expect(handleClick).toHaveBeenCalled()
+})
+
+test('Button calls onClick when focused and the user hits spacebar', () => {
+  let handleClick = jest.fn(() => null)
+  let { getByText } = render(
+    <ThemeProvider>
+      <Button forwardedAs={Tapable} onClick={() => handleClick()}>
+        Test
+      </Button>
+    </ThemeProvider>,
+  )
+
+  let button = getByText('Test')
+
+  fireEvent.focus(button)
+
+  fireEvent.keyDown(button, { key: ' ' })
+
+  expect(handleClick).toHaveBeenCalled()
+})

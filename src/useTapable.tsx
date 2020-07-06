@@ -11,7 +11,13 @@ interface Props {
 function noop() {}
 
 export function useTapable(
-  { disabled = false, autoFocus = false, onClick, ...props }: Props,
+  {
+    disabled = false,
+    autoFocus = false,
+    onClick = noop,
+    onKeyDown = noop,
+    ...props
+  }: Props,
   ref: any,
 ) {
   let sharedRef = useSharedRef(ref)
@@ -35,8 +41,22 @@ export function useTapable(
     [onClick],
   )
 
+  let handleKeyDown = useCallback(
+    function handleKeyDown(event) {
+      onKeyDown(event)
+      if (event.key === 'Enter' || event.key === ' ') {
+        if (event.key === ' ') {
+          event.preventDefault()
+        }
+        onClick(event)
+      }
+    },
+    [onClick, onKeyDown],
+  )
+
   return {
     ...props,
+    onKeyDown: disabled ? noop : handleKeyDown,
     onClick: disabled ? noop : handleClick,
     ref: sharedRef,
     role: 'button',
