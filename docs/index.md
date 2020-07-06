@@ -22,6 +22,7 @@
 - [Image](./components/Image.md)
 - [Figure](./components/Figure.md)
 - [Input](./components/Input.md)
+- [Textarea](./components/Textarea.md)
 
 ### Hooks
 

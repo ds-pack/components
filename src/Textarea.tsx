@@ -10,7 +10,7 @@ function flush(cb) {
   ReactDOM.flushSync(cb)
 }
 
-let StyledInput = styled(Box)(
+let StyledTextarea = styled(Box)(
   ({ theme, focused, hovered, disabled }) => `
   border: solid 2px;
   width: 100%;
@@ -23,6 +23,7 @@ let StyledInput = styled(Box)(
   box-shadow: ${focused ? theme.focusShadow : null};
   outline: none;
   font-size: ${theme.fontSizes[1]}px;
+  font-family: ${theme.fonts.base};
 
   border-color: ${
     disabled
@@ -47,7 +48,7 @@ interface Props {
   [key: string]: any
 }
 
-export let Input = React.forwardRef(function Input(
+export let Textarea = React.forwardRef(function Textarea(
   {
     disabled,
     value,
@@ -75,12 +76,11 @@ export let Input = React.forwardRef(function Input(
       {...props}
     >
       {children}
-      <StyledInput
+      <StyledTextarea
         mt={1}
         placeholder={placeholder}
         focused={focused}
-        type="text"
-        forwardedAs="input"
+        forwardedAs="textarea"
         ref={ref}
         disabled={disabled}
         value={value}
