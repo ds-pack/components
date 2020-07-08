@@ -62,6 +62,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "npm:7.9.6"
       ],
       [
+        "@ds-pack/property-controls",
+        "npm:0.0.1"
+      ],
+      [
         "@matthamlin/base-styled",
         "virtual:b9f39531e50a29ba61ff4ba9ae49067c90167579b2a6555835e9e27be76ec60c2239685877b7b610d8ae78eebccbecc8ddd9b607237fae57d516681308477756#npm:1.2.0"
       ],
@@ -153,6 +157,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/preset-env", "virtual:b9f39531e50a29ba61ff4ba9ae49067c90167579b2a6555835e9e27be76ec60c2239685877b7b610d8ae78eebccbecc8ddd9b607237fae57d516681308477756#npm:7.9.6"],
             ["@babel/preset-react", "virtual:b9f39531e50a29ba61ff4ba9ae49067c90167579b2a6555835e9e27be76ec60c2239685877b7b610d8ae78eebccbecc8ddd9b607237fae57d516681308477756#npm:7.9.4"],
             ["@babel/runtime", "npm:7.9.6"],
+            ["@ds-pack/property-controls", "npm:0.0.1"],
             ["@matthamlin/base-styled", "virtual:b9f39531e50a29ba61ff4ba9ae49067c90167579b2a6555835e9e27be76ec60c2239685877b7b610d8ae78eebccbecc8ddd9b607237fae57d516681308477756#npm:1.2.0"],
             ["@matthamlin/use-refs", "npm:1.0.0"],
             ["@testing-library/jest-dom", "npm:5.7.0"],
@@ -1717,6 +1722,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/preset-env", "virtual:b9f39531e50a29ba61ff4ba9ae49067c90167579b2a6555835e9e27be76ec60c2239685877b7b610d8ae78eebccbecc8ddd9b607237fae57d516681308477756#npm:7.9.6"],
             ["@babel/preset-react", "virtual:b9f39531e50a29ba61ff4ba9ae49067c90167579b2a6555835e9e27be76ec60c2239685877b7b610d8ae78eebccbecc8ddd9b607237fae57d516681308477756#npm:7.9.4"],
             ["@babel/runtime", "npm:7.9.6"],
+            ["@ds-pack/property-controls", "npm:0.0.1"],
             ["@matthamlin/base-styled", "virtual:b9f39531e50a29ba61ff4ba9ae49067c90167579b2a6555835e9e27be76ec60c2239685877b7b610d8ae78eebccbecc8ddd9b607237fae57d516681308477756#npm:1.2.0"],
             ["@matthamlin/use-refs", "npm:1.0.0"],
             ["@testing-library/jest-dom", "npm:5.7.0"],
@@ -1738,6 +1744,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["typescript", "patch:typescript@npm%3A3.9.2#builtin<compat/typescript>::version=3.9.2&hash=8cac75"]
           ],
           "linkType": "SOFT",
+        }]
+      ]],
+      ["@ds-pack/property-controls", [
+        ["npm:0.0.1", {
+          "packageLocation": "./.yarn/cache/@ds-pack-property-controls-npm-0.0.1-1832f11afa-3.zip/node_modules/@ds-pack/property-controls/",
+          "packageDependencies": [
+            ["@ds-pack/property-controls", "npm:0.0.1"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["@emotion/is-prop-valid", [

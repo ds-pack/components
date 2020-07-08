@@ -1305,6 +1305,7 @@ __metadata:
     "@babel/preset-env": ^7.9.6
     "@babel/preset-react": ^7.9.4
     "@babel/runtime": ^7.9.6
+    "@ds-pack/property-controls": ^0.0.1
     "@matthamlin/base-styled": ^1.2.0
     "@matthamlin/use-refs": ^1.0.0
     "@testing-library/jest-dom": ^5.7.0
@@ -1325,11 +1326,19 @@ __metadata:
     styled-system: ^5.1.5
     typescript: ^3.9.2
   peerDependencies:
+    "@ds-pack/property-controls": "*"
     react: "*"
     react-dom: "*"
     styled-components: "*"
   languageName: unknown
   linkType: soft
+
+"@ds-pack/property-controls@npm:^0.0.1":
+  version: 0.0.1
+  resolution: "@ds-pack/property-controls@npm:0.0.1"
+  checksum: 3/c3bcd8857496ccf0c4ae1507a5f7b3350e2d7b60c3a899368cab3e4d2a1b7e07b4f341bf49dc0e6817c590e697e3d800dbad36a3054b4b0c0035c3533177f15f
+  languageName: node
+  linkType: hard
 
 "@emotion/is-prop-valid@npm:^0.8.8":
   version: 0.8.8

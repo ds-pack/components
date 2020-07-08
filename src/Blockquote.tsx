@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { Box } from './Box'
+import { types } from '@ds-pack/property-controls'
 
 export let Blockquote = React.forwardRef(function Blockquote(props, ref) {
   return (
@@ -15,3 +16,12 @@ export let Blockquote = React.forwardRef(function Blockquote(props, ref) {
     />
   )
 })
+
+Blockquote.propertyControls = {
+  children: {
+    // @todo
+    type: 'node',
+    label: `The content within the Blockquote`,
+    default: 'Blockquote content here - Mark Twain',
+  },
+}

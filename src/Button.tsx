@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 import { Box } from './Box'
+import { types } from '@ds-pack/property-controls'
+import { Tapable } from './Tapable'
 
 export let Button = styled(Box)(
   ({ theme, disabled }) => `
@@ -24,3 +26,24 @@ export let Button = styled(Box)(
   }
 `,
 )
+
+Button.propertyControls = {
+  children: {
+    // @todo
+    type: 'node',
+    label: `The content within the Button`,
+    default: 'Click here',
+  },
+  forwardedAs: {
+    // @todo,
+    type: 'component',
+    label: `The rendered element of the Button component`,
+    default: Tapable,
+  },
+  onClick: {
+    // @todo
+    type: 'function',
+    label: `The function called when the user activates the Button`,
+    default: () => console.log('Clicked'),
+  },
+}
