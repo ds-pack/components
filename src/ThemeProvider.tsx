@@ -14,7 +14,10 @@ interface Props {
 
 export function ThemeProvider({ theme = defaultTheme, children }: Props) {
   return (
-    <themeContext.Provider value={theme}>
+    <themeContext.Provider
+      // @ts-ignore
+      value={theme}
+    >
       <StyledProvider theme={theme}>{children}</StyledProvider>
     </themeContext.Provider>
   )
