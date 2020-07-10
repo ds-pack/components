@@ -50,7 +50,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "peerDependencies": {
-    "@ds-pack/property-controls": "*",
+    "@ds-pack/property-controls": "^0.0.1",
     "react": "*",
     "react-dom": "*",
     "styled-components": "*"
