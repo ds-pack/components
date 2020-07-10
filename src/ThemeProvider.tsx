@@ -1,11 +1,14 @@
 import * as React from 'react'
 import defaultTheme from './theme'
-import { ThemeProvider as StyledProvider } from 'styled-components'
+import {
+  ThemeProvider as StyledProvider,
+  DefaultTheme,
+} from 'styled-components'
 
 export let themeContext = React.createContext(defaultTheme)
 
 interface Props {
-  theme?: typeof defaultTheme
+  theme?: DefaultTheme
   children: any
 }
 

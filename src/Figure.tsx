@@ -22,10 +22,9 @@ export let Figure = React.forwardRef(function Figure(
   )
 })
 
-Figure.propertyControls = {
+let propertyControls = {
   caption: {
-    // @todo
-    type: 'node',
+    type: types.node,
     label: `The caption content for the Figure`,
   },
   src: {

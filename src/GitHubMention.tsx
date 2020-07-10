@@ -25,7 +25,7 @@ export let GitHubMention = React.forwardRef(function GitHubMention(
   )
 })
 
-GitHubMention.propertyControls = {
+let propertyControls = {
   children: {
     type: types.string,
     label: `The GitHub username being linked to`,

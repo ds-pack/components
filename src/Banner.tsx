@@ -10,7 +10,7 @@ let bannerVariant = variant({
 
 export let Banner = styled(Box)(bannerVariant)
 
-Banner.propertyControls = {
+let propertyControls = {
   variant: {
     type: types.enum,
     label: `The visual variant of the Banner to be shown`,
@@ -18,8 +18,7 @@ Banner.propertyControls = {
     values: ['info', 'warning', 'success', 'error'],
   },
   children: {
-    // @todo
-    type: 'node',
+    type: types.node,
     label: `The content within the Banner`,
     default: 'This is a banner',
   },

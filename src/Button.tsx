@@ -27,22 +27,19 @@ export let Button = styled(Box)(
 `,
 )
 
-Button.propertyControls = {
+let propertyControls = {
   children: {
-    // @todo
-    type: 'node',
+    type: types.node,
     label: `The content within the Button`,
     default: 'Click here',
   },
   forwardedAs: {
-    // @todo,
-    type: 'component',
+    type: types.component,
     label: `The rendered element of the Button component`,
     default: Tapable,
   },
   onClick: {
-    // @todo
-    type: 'function',
+    type: types.function,
     label: `The function called when the user activates the Button`,
     default: () => console.log('Clicked'),
   },

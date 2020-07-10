@@ -119,14 +119,13 @@ export let Checkbox = React.forwardRef(function Checkbox(
   )
 })
 
-Checkbox.propertyControls = {
+let propertyControls = {
   checked: {
     type: types.boolean,
     label: `The checked state of the Checkbox`,
   },
   onChange: {
-    // @todo
-    type: 'function',
+    type: types.function,
     label: `The function called when the user toggles the checkbox`,
     default: (checked) =>
       console.log(
@@ -139,8 +138,7 @@ Checkbox.propertyControls = {
     default: false,
   },
   children: {
-    // @todo
-    type: 'node',
+    type: types.node,
     label: `The label content for the Checkbox`,
     default: `Check this out`,
   },

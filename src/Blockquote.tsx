@@ -17,10 +17,9 @@ export let Blockquote = React.forwardRef(function Blockquote(props, ref) {
   )
 })
 
-Blockquote.propertyControls = {
+let propertyControls = {
   children: {
-    // @todo
-    type: 'node',
+    type: types.node,
     label: `The content within the Blockquote`,
     default: 'Blockquote content here - Mark Twain',
   },
