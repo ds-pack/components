@@ -16,7 +16,7 @@ let StyledInput = styled(Box)(
   width: 100%;
   display: inline-flex;
   flex-grow: 1;
-  flex-shring: 0;
+  flex-shrink: 0;
   padding: .5em 1em;
   border-radius: ${theme.radii[0]};
   color: ${theme.colors.black};

@@ -11,13 +11,13 @@ function flush(cb) {
 }
 
 let StyledTextarea = styled(Box)(
-  ({ theme, focused, hovered, disabled }) => `
+  ({ theme, focused, disabled }) => `
   border: solid 2px;
   width: 100%;
   display: inline-flex;
   flex-grow: 1;
-  flex-shring: 0;
-  padding: .5em 1em;
+  flex-shrink: 0;
+  padding: .5em;
   border-radius: ${theme.radii[0]};
   color: ${theme.colors.black};
   box-shadow: ${focused ? theme.focusShadow : null};
@@ -28,7 +28,7 @@ let StyledTextarea = styled(Box)(
   border-color: ${
     disabled
       ? theme.colors.disabledFill
-      : focused || hovered
+      : focused
       ? theme.colors.primary
       : theme.colors.black
   };
