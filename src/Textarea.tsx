@@ -45,6 +45,9 @@ interface Props {
   children: any
   autoFocus: boolean
   placeholder: any
+  inputProps: {
+    [key: string]: any
+  }
   [key: string]: any
 }
 
@@ -56,6 +59,7 @@ export let Textarea = React.forwardRef(function Textarea(
     children,
     autoFocus,
     placeholder,
+    inputProps,
     ...props
   }: Props,
   ref,
@@ -80,10 +84,11 @@ export let Textarea = React.forwardRef(function Textarea(
         mt={1}
         placeholder={placeholder}
         focused={focused}
-        forwardedAs="textarea"
-        ref={ref}
         disabled={disabled}
         value={value}
+        {...inputProps}
+        forwardedAs="textarea"
+        ref={ref}
         onChange={({ target: { value } }) => onChange(value)}
       />
     </Label>

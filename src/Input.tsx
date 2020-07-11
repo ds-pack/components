@@ -44,6 +44,9 @@ interface Props {
   children: any
   autoFocus: boolean
   placeholder: any
+  inputProps: {
+    [key: string]: any
+  }
   [key: string]: any
 }
 
@@ -55,6 +58,7 @@ export let Input = React.forwardRef(function Input(
     children,
     autoFocus,
     placeholder,
+    inputProps,
     ...props
   }: Props,
   ref,
@@ -80,10 +84,11 @@ export let Input = React.forwardRef(function Input(
         placeholder={placeholder}
         focused={focused}
         type="text"
-        forwardedAs="input"
-        ref={ref}
         disabled={disabled}
         value={value}
+        {...inputProps}
+        forwardedAs="input"
+        ref={ref}
         onChange={({ target: { value } }) => onChange(value)}
       />
     </Label>
