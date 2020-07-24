@@ -338,5 +338,19 @@ export default {
       fontWeight: 700,
     },
   },
+  chips: {
+    primary: {
+      backgroundColor: colors.teal[2],
+      color: colors.black,
+    },
+    secondary: {
+      backgroundColor: colors.orange[2],
+      color: colors.black,
+    },
+    tertiary: {
+      backgroundColor: colors.violet[2],
+      color: colors.black,
+    },
+  },
   focusShadow: `0 0 4px 2px ${colors.primaryLight}`,
 }
