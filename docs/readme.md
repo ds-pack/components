@@ -23,6 +23,7 @@
 - [Figure](./components/Figure.md)
 - [Input](./components/Input.md)
 - [Textarea](./components/Textarea.md)
+- [Chip](./components/Chip.md)
 
 ### Hooks
 

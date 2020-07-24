@@ -110,3 +110,7 @@ test('Input is defined', () => {
 test('Textarea is defined', () => {
   expect(components.Textarea).toBeDefined()
 })
+
+test('Chip is defined', () => {
+  expect(components.Chip).toBeDefined()
+})
