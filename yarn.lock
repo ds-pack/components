@@ -1321,6 +1321,7 @@ __metadata:
     "@testing-library/jest-dom": ^5.7.0
     "@testing-library/react": ^10.0.4
     "@types/jest": ^25.2.2
+    "@types/prettier": 2.1.0
     "@types/react": ^16.9.42
     "@types/react-dom": ^16.9.8
     "@types/styled-components": ^5.1.1
@@ -1329,6 +1330,7 @@ __metadata:
     babel-jest: ^26.0.1
     babel-plugin-styled-components: ^1.10.7
     jest: ^26.0.1
+    prettier: ^2.1.1
     react: experimental
     react-dom: experimental
     react-is: ^16.13.1
@@ -2029,6 +2031,13 @@ __metadata:
   version: 2.4.0
   resolution: "@types/normalize-package-data@npm:2.4.0"
   checksum: 6d077e73be7ac6227b678829c7bd765607136cdef537fd4ee7f368d9302a651aea924254d69826663322048436d90d6e7c679c9aa99c4824a687c568aab8ce4f
+  languageName: node
+  linkType: hard
+
+"@types/prettier@npm:2.1.0":
+  version: 2.1.0
+  resolution: "@types/prettier@npm:2.1.0"
+  checksum: 607790eae3a61d2b42afff7fbce119cc556f978f178075d8a5c3fe188b9a54ab90dec2d335dd01af828ef1a66719f4d4632c392591b77ca0e6a1d122e8af1b8e
   languageName: node
   linkType: hard
 
@@ -6117,6 +6126,15 @@ fsevents@^2.1.2:
   version: 1.1.2
   resolution: "prelude-ls@npm:1.1.2"
   checksum: 189c969c92151b0de7a6e5d2ae0c4e50bbec5675cdd9fee3b7509d9d74b6416787ee36a8c12a07e8afb01454a8185b695b3395912484fa118e071fea45223b9b
+  languageName: node
+  linkType: hard
+
+"prettier@npm:^2.1.1":
+  version: 2.1.1
+  resolution: "prettier@npm:2.1.1"
+  bin:
+    prettier: bin-prettier.js
+  checksum: 420a807cda2d482388daa42379a7aaa1be629cb71f5792362a971a5ed1c6ff377d2e311818d24e9390a4a8a6eac3fda9ebe6975f2168efec893790c0497d8a93
   languageName: node
   linkType: hard
 

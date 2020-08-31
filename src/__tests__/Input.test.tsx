@@ -11,5 +11,6 @@ test('forwards all props from inputProps to the input', () => {
   )
 
   let input = getByLabelText('Label')
+  // @ts-ignore
   expect(input.type).toBe('tel')
 })

@@ -1,3 +1,4 @@
+import React, { forwardRef } from 'react'
 import styled from 'styled-components'
 import {
   space,
@@ -15,7 +16,29 @@ import {
 
 import Base from '@matthamlin/base-styled'
 
-export let Box = styled(Base)(
+function createTestIds(testIds = null) {
+  if (testIds) {
+    return {
+      'data-testid': typeof testIds === 'string' ? testIds : testIds.default,
+    }
+  }
+  return {}
+}
+
+interface Props {
+  is: any
+  testIds?: string | { default: string }
+  [key: string]: any
+}
+
+let WrappedBase = forwardRef(function WrappedBase(
+  { is: Element, testIds, ...props }: Props,
+  ref,
+) {
+  return <Base ref={ref} {...createTestIds(testIds)} {...props} as={Element} />
+})
+
+export let Box = styled(WrappedBase)(
   compose(
     space,
     layout,
