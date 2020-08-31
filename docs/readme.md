@@ -29,3 +29,9 @@
 
 - [useTheme](./hooks/useTheme.md)
 - [useTapable](./hooks/useTapable.md)
+
+### System Props:
+
+- `is` - essentially `forwardedAs` but easier to type 😄
+- `testIds` - An optional prop that allows for passing in `data-testid` to the
+  rendered components

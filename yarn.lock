@@ -1303,6 +1303,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@ds-pack/base-styled@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@ds-pack/base-styled@npm:1.0.0"
+  peerDependencies:
+    "@styled-system/props": "*"
+    react: "*"
+    styled-components: "*"
+  checksum: df9be2b3ad582db9e5c4b03e5479806e1a57a63919dd47e09159c9553368bd90dc0575b4e0dcbbf603dc17d0f8c289a146835a6a980053a29661e5f17865b2d7
+  languageName: node
+  linkType: hard
+
 "@ds-pack/components@workspace:.":
   version: 0.0.0-use.local
   resolution: "@ds-pack/components@workspace:."
@@ -1315,12 +1326,14 @@ __metadata:
     "@babel/preset-env": ^7.9.6
     "@babel/preset-react": ^7.9.4
     "@babel/runtime": ^7.9.6
+    "@ds-pack/base-styled": ^1.0.0
     "@ds-pack/property-controls": ^0.0.3
-    "@matthamlin/base-styled": ^1.2.0
     "@matthamlin/use-refs": ^1.0.0
+    "@styled-system/props": ^5.1.5
     "@testing-library/jest-dom": ^5.7.0
     "@testing-library/react": ^10.0.4
     "@types/jest": ^25.2.2
+    "@types/prettier": 2.1.0
     "@types/react": ^16.9.42
     "@types/react-dom": ^16.9.8
     "@types/styled-components": ^5.1.1
@@ -1329,6 +1342,7 @@ __metadata:
     babel-jest: ^26.0.1
     babel-plugin-styled-components: ^1.10.7
     jest: ^26.0.1
+    prettier: ^2.1.1
     react: experimental
     react-dom: experimental
     react-is: ^16.13.1
@@ -1601,17 +1615,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@matthamlin/base-styled@npm:^1.2.0":
-  version: 1.2.0
-  resolution: "@matthamlin/base-styled@npm:1.2.0"
-  dependencies:
-    "@styled-system/props": 5.1.4
-  peerDependencies:
-    styled-components: ^5
-  checksum: ecae79cdce090a09ea04a3251afdc90d99a9a194d09e81feca9e8c3c05bf472fdeac758d2116aa0529915e3e3f196b5793742ab8d3242424298d498d173db9da
-  languageName: node
-  linkType: hard
-
 "@matthamlin/use-refs@npm:^1.0.0":
   version: 1.0.0
   resolution: "@matthamlin/use-refs@npm:1.0.0"
@@ -1750,12 +1753,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@styled-system/props@npm:5.1.4":
-  version: 5.1.4
-  resolution: "@styled-system/props@npm:5.1.4"
+"@styled-system/props@npm:^5.1.5":
+  version: 5.1.5
+  resolution: "@styled-system/props@npm:5.1.5"
   dependencies:
-    styled-system: ^5.1.4
-  checksum: 56294492ebba11860f7859a72d055adcbf02935e4495ec3eedea221a00db45f4698c5322b95e659bafd5dbb2d2b0234a8628e72ed2d533b4538fad4d3e473f17
+    styled-system: ^5.1.5
+  checksum: a58fcc62bc89620044cafaffe91cce8ace7c11fb6a23c43081f1044d1d02161ee9b27bf3435868236ad988bb48ad057c6ce843c2472de2b469d24f3b858503c6
   languageName: node
   linkType: hard
 
@@ -2029,6 +2032,13 @@ __metadata:
   version: 2.4.0
   resolution: "@types/normalize-package-data@npm:2.4.0"
   checksum: 6d077e73be7ac6227b678829c7bd765607136cdef537fd4ee7f368d9302a651aea924254d69826663322048436d90d6e7c679c9aa99c4824a687c568aab8ce4f
+  languageName: node
+  linkType: hard
+
+"@types/prettier@npm:2.1.0":
+  version: 2.1.0
+  resolution: "@types/prettier@npm:2.1.0"
+  checksum: 607790eae3a61d2b42afff7fbce119cc556f978f178075d8a5c3fe188b9a54ab90dec2d335dd01af828ef1a66719f4d4632c392591b77ca0e6a1d122e8af1b8e
   languageName: node
   linkType: hard
 
@@ -6120,6 +6130,15 @@ fsevents@^2.1.2:
   languageName: node
   linkType: hard
 
+"prettier@npm:^2.1.1":
+  version: 2.1.1
+  resolution: "prettier@npm:2.1.1"
+  bin:
+    prettier: bin-prettier.js
+  checksum: 420a807cda2d482388daa42379a7aaa1be629cb71f5792362a971a5ed1c6ff377d2e311818d24e9390a4a8a6eac3fda9ebe6975f2168efec893790c0497d8a93
+  languageName: node
+  linkType: hard
+
 "pretty-bytes@npm:^5.1.0":
   version: 5.3.0
   resolution: "pretty-bytes@npm:5.3.0"
@@ -7111,7 +7130,7 @@ fsevents@^2.1.2:
   languageName: node
   linkType: hard
 
-"styled-system@npm:^5.1.4, styled-system@npm:^5.1.5":
+"styled-system@npm:^5.1.5":
   version: 5.1.5
   resolution: "styled-system@npm:5.1.5"
   dependencies:
