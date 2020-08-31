@@ -14,7 +14,7 @@ import {
   compose,
 } from 'styled-system'
 
-import Base from '@matthamlin/base-styled'
+import Base from '@ds-pack/base-styled'
 
 function createTestIds(testIds = null) {
   if (testIds) {
