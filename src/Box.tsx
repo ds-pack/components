@@ -26,15 +26,25 @@ function createTestIds(testIds = null) {
 }
 
 interface Props {
-  is: any
+  is?: any
+  forwardedAs?: any
+  as?: any
   testIds?: string | { default: string }
   [key: string]: any
 }
 
 let WrappedBase = forwardRef(function WrappedBase(
-  { is: Element, testIds, ...props }: Props,
+  { is, forwardedAs, as, testIds, ...props }: Props,
   ref,
 ) {
+  let Element
+  if (typeof is !== 'undefined') {
+    Element = is
+  } else if (typeof forwardedAs !== 'undefined') {
+    Element = forwardedAs
+  } else if (typeof as !== 'undefined') {
+    Element = as
+  }
   return <Base ref={ref} {...createTestIds(testIds)} {...props} as={Element} />
 })
 
