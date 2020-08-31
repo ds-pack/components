@@ -58,8 +58,9 @@
     "styled-components": "*"
   },
   "dependencies": {
-    "@matthamlin/base-styled": "^1.2.0",
+    "@ds-pack/base-styled": "^1.0.0",
     "@matthamlin/use-refs": "^1.0.0",
+    "@styled-system/props": "^5.1.5",
     "styled-system": "^5.1.5"
   }
 }
