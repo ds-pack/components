@@ -12,8 +12,8 @@ export let Button = styled(Box)(
   background-color: ${
     disabled ? theme.colors.disabledBg : theme.colors.primary
   };
-  border-color: ${disabled ? theme.colors.disabledBg : theme.colors.primary};
   color: ${disabled ? theme.colors.disabledFill : theme.colors.white};
+  border-color: ${disabled ? theme.colors.disabledBg : theme.colors.primary};
   padding: .5em 1em;
   cursor: ${disabled ? 'not-allowed' : 'pointer'};
   // match border for Input elements
