@@ -15,7 +15,7 @@ export let Stack = React.forwardRef(function Stack(
 ) {
   return (
     <Box
-      display={inline ? 'inline-flex' : 'flex'}
+      display="flex"
       flexDirection={inline ? 'row' : 'column'}
       {...rest}
       ref={ref}
