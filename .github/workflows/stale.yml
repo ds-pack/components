@@ -2,7 +2,7 @@ name: Mark stale issues and pull requests
 
 on:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: '0 0 * * *'
 
 jobs:
   stale:
@@ -12,7 +12,12 @@ jobs:
       - uses: actions/stale@v1
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          stale-issue-message: "This issue is stale. Add another comment if this issue is still actionable."
-          stale-pr-message: "This PR is stale. Add another comment if this PR is still actionable."
-          stale-issue-label: "🕸 Stale"
-          stale-pr-label: "🕸 Stale"
+          stale-issue-message:
+            'This issue is stale. Add another comment if this issue is still
+            actionable.'
+          stale-pr-message:
+            'This PR is stale. Add another comment if this PR is still
+            actionable.'
+          stale-issue-label: '🕸 Stale'
+          stale-pr-label: '🕸 Stale'
+          exempt-issue-labels: '🗺 Planned'
