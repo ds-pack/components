@@ -1,6 +1,6 @@
 {
   "name": "@ds-pack/components",
-  "version": "0.0.0-alpha.38",
+  "version": "0.0.0-alpha.39",
   "main": "dist/index.js",
   "source": "src/index.tsx",
   "repository": "git@github.com:hamlim/component-library.git",
@@ -15,8 +15,8 @@
     "test-watch": "jest --watch",
     "test-cov": "jest --collectCoverage",
     "prepub": "yarn build",
-    "pub": "yarn prepub && yarn npm publish --access public",
-    "tsc": "yarn dlx --package typescript tsc"
+    "pub": "yarn publish --access public",
+    "tsc": "typescript"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
