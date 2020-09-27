@@ -26,7 +26,7 @@ test('supports `is` prop with styles', () => {
   let box = container.querySelector('marquee')
   expect(box).toMatchInlineSnapshot(`
     <marquee
-      class="src__Primitive-tl99yu-0 ghagzE Box-sc-1x62x1l-0 bkfzws"
+      class="src__Primitive-tl99yu-0 Box-sc-1x62x1l-0 hMeCTP"
     >
       Box
     </marquee>
