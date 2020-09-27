@@ -33,20 +33,33 @@ function getInverse({
 let InnerChip = styled(Box)(variant({ scale: 'chips', prop: 'variant' }))
 
 interface Props {
-  bg?: string
+  bg?: any
+  backgroundColor?: any
+  bgColor?: any
   children: any
 }
 
-export let Chip = React.forwardRef(function Chip({ bg, ...props }: Props, ref) {
+export let Chip = React.forwardRef(function Chip(
+  { bg, backgroundColor, bgColor, ...props }: Props,
+  ref,
+) {
   let theme = useTheme()
-  let background = get(theme, `colors.${bg}`)
+  let providedBg
+  if (typeof bg !== 'undefined') {
+    providedBg = bg
+  } else if (typeof backgroundColor !== 'undefined') {
+    providedBg = backgroundColor
+  } else if (typeof bgColor !== 'undefined') {
+    providedBg = bgColor
+  }
+  let background = get(theme, `colors.${providedBg}`)
   return (
     <InnerChip
       py={1}
       px={2}
       borderRadius={1}
-      forwardedAs="span"
-      bg={bg}
+      is="span"
+      bg={providedBg}
       {...props}
       color={
         background
