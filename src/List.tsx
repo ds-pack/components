@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 import { variant } from 'styled-system'
 import styled from 'styled-components'
 import { Box } from './Box'
@@ -15,5 +15,5 @@ List.defaultProps = {
 }
 
 export let ListItem = React.forwardRef(function ListItem(props: any, ref: any) {
-  return <Box ref={ref} forwardedAs="li" {...props} />
+  return <Box ref={ref} is="li" {...props} />
 })

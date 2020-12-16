@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 import { VisuallyHidden } from './VisuallyHidden'
 
 interface Props {
@@ -13,7 +13,7 @@ export let ToggleInput = React.forwardRef(function ToggleInput(
 ) {
   return (
     <VisuallyHidden
-      forwardedAs="input"
+      is="input"
       type="checkbox"
       onChange={() => onChange(!checked)}
       {...props}

@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 import { Link } from './Link'
 
 interface Props {
@@ -13,7 +13,7 @@ export let TwitterMention = React.forwardRef(function TwitterMention(
   return (
     <Link
       ref={ref}
-      forwardedAs="a"
+      is="a"
       rel="nooperner noreferrer"
       target="_blank"
       href={`https://twitter.com/${children}`}

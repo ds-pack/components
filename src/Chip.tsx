@@ -1,5 +1,5 @@
+import React from 'react'
 import { variant, get } from 'styled-system'
-import * as React from 'react'
 import { Box } from './Box'
 import styled from 'styled-components'
 import { useTheme } from './useTheme'

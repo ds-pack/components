@@ -1,7 +1,6 @@
-import * as React from 'react'
+import React from 'react'
 import { Box } from './Box'
 import { Image } from './Image'
-import { types } from '@ds-pack/property-controls'
 
 interface Props {
   caption: any
@@ -15,24 +14,9 @@ export let Figure = React.forwardRef(function Figure(
   ref,
 ) {
   return (
-    <Box {...props} forwardedAs="figure" ref={ref}>
+    <Box {...props} is="figure" ref={ref}>
       <Image src={src} alt={alt} />
-      <Box forwardedAs="figcaption">{caption}</Box>
+      <Box is="figcaption">{caption}</Box>
     </Box>
   )
 })
-
-let propertyControls = {
-  caption: {
-    type: types.node,
-    label: `The caption content for the Figure`,
-  },
-  src: {
-    type: types.string,
-    label: `The image source attribute`,
-  },
-  alt: {
-    type: types.string,
-    label: `The image alt attribute`,
-  },
-}

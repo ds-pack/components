@@ -10,6 +10,6 @@ test('forwards all props from inputProps to the input', () => {
     </ThemeProvider>,
   )
 
-  let input = getByLabelText('Label')
+  let input = getByLabelText('Label') as HTMLTextAreaElement
   expect(input.rows).toBe(10)
 })

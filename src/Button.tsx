@@ -1,9 +1,18 @@
+import React, { forwardRef, MouseEvent } from 'react'
 import styled from 'styled-components'
 import { Box } from './Box'
-import { types } from '@ds-pack/property-controls'
 import { Tapable } from './Tapable'
 
-export let Button = styled(Box)(
+interface ButtonProps {
+  disabled?: boolean
+  onClick?: (e: MouseEvent<HTMLButtonElement>) => void
+  children?: React.ReactNode
+}
+let ButtonImpl = forwardRef(function ButtonImpl(props: ButtonProps, ref) {
+  return <Box is={Tapable} {...props} ref={ref} />
+})
+
+export let Button = styled(ButtonImpl)(
   ({ theme, disabled }) => `
   display: inline-flex;
   justify-content: center;
@@ -33,21 +42,3 @@ export let Button = styled(Box)(
   }
 `,
 )
-
-let propertyControls = {
-  children: {
-    type: types.node,
-    label: `The content within the Button`,
-    default: 'Click here',
-  },
-  is: {
-    type: types.component,
-    label: `The rendered element of the Button component`,
-    default: Tapable,
-  },
-  onClick: {
-    type: types.function,
-    label: `The function called when the user activates the Button`,
-    default: () => console.log('Clicked'),
-  },
-}

@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { Box } from './Box'
 import { Label } from './Label'
@@ -87,7 +87,7 @@ export let Input = React.forwardRef(function Input(
         disabled={disabled}
         value={value}
         {...inputProps}
-        forwardedAs="input"
+        is="input"
         ref={ref}
         onChange={({ target: { value } }) => onChange(value)}
       />

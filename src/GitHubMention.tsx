@@ -1,6 +1,5 @@
-import * as React from 'react'
+import React from 'react'
 import { Link } from './Link'
-import { types } from '@ds-pack/property-controls'
 
 interface Props {
   children: string
@@ -14,7 +13,7 @@ export let GitHubMention = React.forwardRef(function GitHubMention(
   return (
     <Link
       ref={ref}
-      forwardedAs="a"
+      is="a"
       rel="nooperner noreferrer"
       target="_blank"
       href={`https://github.com/${children}`}
@@ -24,11 +23,3 @@ export let GitHubMention = React.forwardRef(function GitHubMention(
     </Link>
   )
 })
-
-let propertyControls = {
-  children: {
-    type: types.string,
-    label: `The GitHub username being linked to`,
-    default: 'hamlim',
-  },
-}

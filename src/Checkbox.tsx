@@ -1,11 +1,10 @@
-import * as React from 'react'
+import React from 'react'
 import { ToggleInput } from './ToggleInput'
 import styled from 'styled-components'
 import { Box } from './Box'
 import { useSharedRef } from '@matthamlin/use-refs'
 import { Label } from './Label'
 import ReactDOM from 'react-dom'
-import { types } from '@ds-pack/property-controls'
 
 // @see https://github.com/facebook/react/issues/18591#issuecomment-613026224
 function flush(cb) {
@@ -118,33 +117,3 @@ export let Checkbox = React.forwardRef(function Checkbox(
     </Label>
   )
 })
-
-let propertyControls = {
-  checked: {
-    type: types.boolean,
-    label: `The checked state of the Checkbox`,
-  },
-  onChange: {
-    type: types.function,
-    label: `The function called when the user toggles the checkbox`,
-    default: (checked) =>
-      console.log(
-        `The Checkbox is now: ${checked ? 'checked' : 'not checked'}.`,
-      ),
-  },
-  disabled: {
-    type: types.boolean,
-    label: `The disabled state for the Checkbox`,
-    default: false,
-  },
-  children: {
-    type: types.node,
-    label: `The label content for the Checkbox`,
-    default: `Check this out`,
-  },
-  indeterminate: {
-    type: types.boolean,
-    label: `The indeterminate state of the Checkbox`,
-    default: false,
-  },
-}

@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 import { Box } from './Box'
 import styled from 'styled-components'
 
@@ -14,5 +14,5 @@ interface Props {
 }
 
 export let Image = React.forwardRef(function Image(props: Props, ref) {
-  return <StyledImage forwardedAs="img" ref={ref} {...props} />
+  return <StyledImage is="img" ref={ref} {...props} />
 })

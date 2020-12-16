@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 import { Box } from './Box'
 
 export let InlineCode = React.forwardRef(function InlineCode(
@@ -7,7 +7,7 @@ export let InlineCode = React.forwardRef(function InlineCode(
 ) {
   return (
     <Box
-      forwardedAs="code"
+      is="code"
       bg="gray.1"
       fontFamily="monospace"
       display="inline-flex"

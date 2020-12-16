@@ -1,14 +1,13 @@
-import * as React from 'react'
+import React from 'react'
 import { render, fireEvent } from '@testing-library/react'
 import { Button } from '../Button'
 import { ThemeProvider } from '../ThemeProvider'
-import { Tapable } from '../Tapable'
 
 test('Button does not call onClick when disabled', () => {
   let handleClick = jest.fn(() => null)
   let { getByText } = render(
     <ThemeProvider>
-      <Button forwardedAs={Tapable} disabled onClick={() => handleClick()}>
+      <Button disabled onClick={() => handleClick()}>
         Test
       </Button>
     </ThemeProvider>,
@@ -22,9 +21,7 @@ test('Button calls onClick when focused and the user hits enter', () => {
   let handleClick = jest.fn(() => null)
   let { getByText } = render(
     <ThemeProvider>
-      <Button forwardedAs={Tapable} onClick={() => handleClick()}>
-        Test
-      </Button>
+      <Button onClick={() => handleClick()}>Test</Button>
     </ThemeProvider>,
   )
 
@@ -41,9 +38,7 @@ test('Button calls onClick when focused and the user hits spacebar', () => {
   let handleClick = jest.fn(() => null)
   let { getByText } = render(
     <ThemeProvider>
-      <Button forwardedAs={Tapable} onClick={() => handleClick()}>
-        Test
-      </Button>
+      <Button onClick={() => handleClick()}>Test</Button>
     </ThemeProvider>,
   )
 
