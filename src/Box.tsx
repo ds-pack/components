@@ -1,20 +1,36 @@
 import React, { forwardRef } from 'react'
 import styled from 'styled-components'
+import Base from '@ds-pack/base-styled'
+
 import {
-  space,
-  layout,
-  flexbox,
-  typography,
-  color,
-  grid,
-  background,
+  createSystem,
   border,
+  color,
+  flexbox,
+  grid,
+  layout,
   position,
   shadow,
-  compose,
-} from 'styled-system'
+  space,
+  typography,
+} from 'system-props'
 
-import Base from '@ds-pack/base-styled'
+// Shown are the default values
+let system = createSystem({
+  strict: false,
+  pseudoSelectors: {
+    _hover: '&:hover',
+    _focus: '&:focus',
+    _hoverAndFocus: '&:hover, &:focus',
+    _disabled:
+      '[disabled], [disabled]:hover, [disabled]:focus, [aria-disabled], [aria-disabled]:hover, [aria-disabled]:focus',
+    _readOnly: '[readOnly]',
+    _first: '&:first-child',
+    _last: '&:last-child',
+    _odd: '&:nth-of-type(odd)',
+    _even: '&:nth-of-type(even)',
+  },
+})
 
 function createTestIds(testIds = null) {
   if (testIds) {
@@ -49,16 +65,15 @@ let WrappedBase = forwardRef(function WrappedBase(
 })
 
 export let Box = styled(WrappedBase)(
-  compose(
-    space,
-    layout,
-    flexbox,
-    typography,
-    color,
-    grid,
-    background,
-    border,
-    position,
-    shadow,
-  ),
+  system({
+    ...border,
+    ...color,
+    ...flexbox,
+    ...grid,
+    ...layout,
+    ...position,
+    ...shadow,
+    ...space,
+    ...typography,
+  }),
 )
