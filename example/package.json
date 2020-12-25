@@ -5,7 +5,7 @@
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
-    "@ds-pack/components": "0.0.0-alpha.37",
+    "@ds-pack/components": "*",
     "react": "experimental",
     "react-dom": "experimental",
     "react-scripts": "3.0.1",
