@@ -1,5 +1,5 @@
 import { useEffect, useCallback, useState } from 'react'
-import { useSharedRef } from '@matthamlin/use-refs'
+import { useSharedRef } from '@ds-pack/use-refs'
 
 interface Props {
   disabled?: boolean

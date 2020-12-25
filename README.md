@@ -2,9 +2,9 @@
 
 A bare-bones component library built using:
 
-- Styled System
-- Styled Components
-- React
+- [System Props](https://system-props.com/)
+- [Styled Components](https://styled-components.com/)
+- [React](https://reactjs.org/)
 
 ### Tools:
 

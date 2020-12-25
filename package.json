@@ -1,6 +1,6 @@
 {
   "name": "@ds-pack/components",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "dist/index.js",
   "source": "src/index.tsx",
   "repository": "git@github.com:hamlim/component-library.git",
@@ -27,7 +27,7 @@
     "@babel/preset-env": "^7.9.6",
     "@babel/preset-react": "^7.9.4",
     "@babel/runtime": "^7.9.6",
-    "@ds-pack/property-controls": "^0.0.3",
+    "@styled-system/props": "^5.1.5",
     "@testing-library/jest-dom": "^5.7.0",
     "@testing-library/react": "^10.0.4",
     "@types/jest": "^25.2.2",
@@ -35,7 +35,6 @@
     "@types/react": "^16.9.42",
     "@types/react-dom": "^16.9.8",
     "@types/styled-components": "^5.1.1",
-    "@types/styled-system": "^5.1.9",
     "babel-jest": "^26.0.1",
     "babel-plugin-styled-components": "^1.10.7",
     "jest": "^26.0.1",
@@ -44,22 +43,20 @@
     "react-dom": "experimental",
     "react-is": "^16.13.1",
     "styled-components": "^5.1.0",
-    "typescript": "^3.9.6"
+    "typescript": "^4.1.3"
   },
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
   "peerDependencies": {
-    "@ds-pack/property-controls": "^0.0.1",
     "react": "*",
     "react-dom": "*",
     "styled-components": "*"
   },
   "dependencies": {
     "@ds-pack/base-styled": "^1.0.0",
-    "@matthamlin/use-refs": "^1.0.0",
-    "@styled-system/props": "^5.1.5",
-    "styled-system": "^5.1.5"
+    "@ds-pack/use-refs": "^1.0.0",
+    "system-props": "^0.12.0"
   }
 }
