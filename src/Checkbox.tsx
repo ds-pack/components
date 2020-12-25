@@ -2,7 +2,7 @@ import React from 'react'
 import { ToggleInput } from './ToggleInput'
 import styled from 'styled-components'
 import { Box } from './Box'
-import { useSharedRef } from '@matthamlin/use-refs'
+import { useSharedRef } from '@ds-pack/use-refs'
 import { Label } from './Label'
 import ReactDOM from 'react-dom'
 

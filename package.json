@@ -42,7 +42,7 @@
     "react-dom": "experimental",
     "react-is": "^16.13.1",
     "styled-components": "^5.1.0",
-    "typescript": "^3.9.6"
+    "typescript": "^4.1.3"
   },
   "publishConfig": {
     "access": "public",
@@ -55,7 +55,7 @@
   },
   "dependencies": {
     "@ds-pack/base-styled": "^1.0.0",
-    "@matthamlin/use-refs": "^1.0.0",
+    "@ds-pack/use-refs": "^1.0.0",
     "system-props": "^0.12.0"
   }
 }
