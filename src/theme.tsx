@@ -11,33 +11,29 @@ let fontScale = 1.2
 
 let baseFontSize = 18
 
-let fontSizes = {
-  0: 0.8 * baseFontSize,
-  1: baseFontSize,
-  2: baseFontSize * fontScale,
-  3: baseFontSize * (fontScale * 2),
-  4: baseFontSize * (fontScale * 3),
-  get h1() {
-    return this[4]
-  },
-  get h2() {
-    return this[3]
-  },
-  get h3() {
-    return this[2]
-  },
-  get h4() {
-    return this[1]
-  },
-  get h5() {
-    return this[1]
-  },
-  get h6() {
-    return this[1]
-  },
-}
+let fontSizes = [
+  0.8 * baseFontSize,
+  baseFontSize,
+  baseFontSize * fontScale,
+  baseFontSize * (fontScale * 2),
+  baseFontSize * (fontScale * 3),
+]
+
+// @ts-ignore
+fontSizes.h1 = fontSizes[4]
+// @ts-ignore
+fontSizes.h2 = fontSizes[3]
+// @ts-ignore
+fontSizes.h3 = fontSizes[2]
+// @ts-ignore
+fontSizes.h4 = fontSizes[1]
+// @ts-ignore
+fontSizes.h5 = fontSizes[1]
+// @ts-ignore
+fontSizes.h6 = fontSizes[1]
 
 let baseColors = {
+  base: '#07c',
   black: '#374047',
   gray: [
     '#f8f9f9',
@@ -200,40 +196,18 @@ let baseColors = {
 let colors = {
   ...baseColors,
   white: '#fdfefe',
-  get primary() {
-    return this.blue[5]
-  },
-  get primaryLight() {
-    return this.blue[2]
-  },
-  get primaryDark() {
-    return this.blue[7]
-  },
-  get secondary() {
-    return this.teal[5]
-  },
-  get secondaryLight() {
-    return this.teal[2]
-  },
-  get secondaryDark() {
-    return this.teal[7]
-  },
-  get tertiary() {
-    return this.violet[5]
-  },
-  get tertiaryLight() {
-    return this.violet[2]
-  },
-  get tertiaryDark() {
-    return this.violet[7]
-  },
+  primary: baseColors.teal[8],
+  primaryLight: baseColors.teal[6],
+  primaryDark: baseColors.teal[9],
+  secondary: baseColors.blue[8],
+  secondaryLight: baseColors.blue[6],
+  secondaryDark: baseColors.blue[9],
+  tertiary: baseColors.orange[8],
+  tertiaryLight: baseColors.orange[6],
+  tertiaryDark: baseColors.orange[9],
 
-  get disabledBg() {
-    return this.gray[2]
-  },
-  get disabledFill() {
-    return this.gray[5]
-  },
+  disabledBg: baseColors.gray[2],
+  disabledFill: baseColors.gray[5],
 }
 
 export default {
@@ -254,13 +228,11 @@ export default {
   radii: ['4px', '1rem', '50%'],
   zIndices: [1, 5, 10, 20, 50],
   breakpoints,
-  get mediaQueries() {
-    return {
-      small: `@media screen and (min-width: ${this.breakpoints[0]})`,
-      medium: `@media screen and (min-width: ${this.breakpoints[1]})`,
-      large: `@media screen and (min-width: ${this.breakpoints[2]})`,
-      xLarge: `@media screen and (min-width: ${this.breakpoints[3]})`,
-    }
+  mediaQueries: {
+    small: `@media screen and (min-width: ${breakpoints[0]})`,
+    medium: `@media screen and (min-width: ${breakpoints[1]})`,
+    large: `@media screen and (min-width: ${breakpoints[2]})`,
+    xLarge: `@media screen and (min-width: ${breakpoints[3]})`,
   },
   colors,
   lists: {
@@ -300,85 +272,85 @@ export default {
       paddingTop: 0,
     },
   },
-  get banners() {
-    return {
-      success: {
-        color: this.colors.black,
-        backgroundColor: this.colors.teal[2],
-        border: `solid 2px ${this.colors.teal[6]}`,
-        borderRadius: this.radii[0],
-        padding: this.space[3],
-        display: 'flex',
-        alignItems: 'center',
-      },
-      info: {
-        color: this.colors.black,
-        backgroundColor: this.colors.blue[2],
-        border: `solid 2px ${this.colors.blue[6]}`,
-        borderRadius: this.radii[0],
-        padding: this.space[3],
-        display: 'flex',
-        alignItems: 'center',
-      },
-      error: {
-        color: this.colors.black,
-        backgroundColor: this.colors.red[2],
-        border: `solid 2px ${this.colors.red[6]}`,
-        borderRadius: this.radii[0],
-        padding: this.space[3],
-        display: 'flex',
-        alignItems: 'center',
-      },
-      warning: {
-        color: this.colors.black,
-        backgroundColor: this.colors.yellow[2],
-        border: `solid 2px ${this.colors.yellow[6]}`,
-        borderRadius: this.radii[0],
-        padding: this.space[3],
-        display: 'flex',
-        alignItems: 'center',
-      },
-    }
+  banners: {
+    success: {
+      color: colors.black,
+      backgroundColor: colors.teal[2],
+      border: `solid 2px ${colors.teal[6]}`,
+      borderRadius: '4px',
+      padding: '10px',
+      display: 'flex',
+      alignItems: 'center',
+    },
+    info: {
+      color: colors.black,
+      backgroundColor: colors.blue[2],
+      border: `solid 2px ${colors.blue[6]}`,
+      borderRadius: '4px',
+      padding: '10px',
+      display: 'flex',
+      alignItems: 'center',
+    },
+    error: {
+      color: colors.black,
+      backgroundColor: colors.red[2],
+      border: `solid 2px ${colors.red[6]}`,
+      borderRadius: '4px',
+      padding: '10px',
+      display: 'flex',
+      alignItems: 'center',
+    },
+    warning: {
+      color: colors.black,
+      backgroundColor: colors.orange[2],
+      border: `solid 2px ${colors.orange[6]}`,
+      borderRadius: '4px',
+      padding: '10px',
+      display: 'flex',
+      alignItems: 'center',
+    },
   },
-  get headings() {
-    return {
-      h1: {
-        // @ts-ignore
-        fontSize: this.fontSizes.h1,
-        fontWeight: this.fontWeights.bold,
-      },
-      lead: {
-        // @ts-ignore
-        fontSize: this.fontSizes.h1,
-        fontWeight: this.fontWeights.bold,
-        fontFamily: this.fonts.serif,
-      },
-      h2: {
-        // @ts-ignore
-        fontSize: this.fontSizes.h2,
-        fontWeight: this.fontWeights.bold,
-      },
-      h3: {
-        // @ts-ignore
-        fontSize: this.fontSizes.h3,
-        fontWeight: this.fontWeights.bold,
-      },
-      subhead: {
-        // @ts-ignore
-        fontSize: this.fontSizes.h4,
-        fontWeight: this.fontWeights.bold,
-      },
-    }
+  headings: {
+    h1: {
+      // @ts-ignore
+      fontSize: fontSizes.h1,
+      fontWeight: 700,
+    },
+    lead: {
+      // @ts-ignore
+      fontSize: fontSizes.h1,
+      fontWeight: 700,
+      fontFamily: '"Times New Roman", serif',
+    },
+    h2: {
+      // @ts-ignore
+      fontSize: fontSizes.h2,
+      fontWeight: 700,
+    },
+    h3: {
+      // @ts-ignore
+      fontSize: fontSizes.h3,
+      fontWeight: 700,
+    },
+    subhead: {
+      // @ts-ignore
+      fontSize: fontSizes.h4,
+      fontWeight: 700,
+    },
   },
-  get chips() {
-    return {
-      primary: {
-        backgroundColor: this.colors.teal[2],
-        color: this.colors.black,
-      },
-    }
+  chips: {
+    primary: {
+      backgroundColor: colors.teal[2],
+      color: colors.black,
+    },
+    secondary: {
+      backgroundColor: colors.orange[2],
+      color: colors.black,
+    },
+    tertiary: {
+      backgroundColor: colors.violet[2],
+      color: colors.black,
+    },
   },
-  get focusShadow() {
-    return `0 0 4px 2px ${this.colors.primaryDark}`
-  },
+  focusShadow: `0 0 4px 2px ${colors.primaryLight}`,
 }
