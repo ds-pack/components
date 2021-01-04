@@ -14,7 +14,7 @@ let ButtonImpl = forwardRef(function ButtonImpl(props: ButtonProps, ref) {
 })
 
 export let Button = styled(ButtonImpl)(
-  ({ theme, disabled, variant }) => css`
+  ({ theme, disabled = false, variant = 'default' }) => css`
     display: inline-flex;
     justify-content: center;
     align-items: center;
