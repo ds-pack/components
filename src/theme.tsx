@@ -343,28 +343,23 @@ export default {
   get headings() {
     return {
       h1: {
-        // @ts-ignore
         fontSize: this.fontSizes.h1,
         fontWeight: this.fontWeights.bold,
       },
       lead: {
-        // @ts-ignore
         fontSize: this.fontSizes.h1,
         fontWeight: this.fontWeights.bold,
         fontFamily: this.fonts.serif,
       },
       h2: {
-        // @ts-ignore
         fontSize: this.fontSizes.h2,
         fontWeight: this.fontWeights.bold,
       },
       h3: {
-        // @ts-ignore
         fontSize: this.fontSizes.h3,
         fontWeight: this.fontWeights.bold,
       },
       subhead: {
-        // @ts-ignore
         fontSize: this.fontSizes.h4,
         fontWeight: this.fontWeights.bold,
       },
