@@ -1,9 +1,9 @@
 {
   "name": "@ds-pack/components",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "main": "dist/index.js",
   "source": "src/index.tsx",
-  "repository": "git@github.com:hamlim/component-library.git",
+  "repository": "git@github.com:ds-pack/components.git",
   "author": "Matt Hamlin <matthewjameshamlin@gmail.com>",
   "license": "MIT",
   "files": [
