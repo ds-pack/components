@@ -1,6 +1,6 @@
 {
   "name": "@ds-pack/components",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "dist/index.js",
   "source": "src/index.tsx",
   "repository": "git@github.com:hamlim/component-library.git",
@@ -52,11 +52,11 @@
   "peerDependencies": {
     "react": "*",
     "react-dom": "*",
+    "system-props": "^0",
+    "@ds-pack/base-styled": "^1.0.0",
     "styled-components": "*"
   },
   "dependencies": {
-    "@ds-pack/base-styled": "^1.0.0",
-    "@ds-pack/use-refs": "^1.0.0",
-    "system-props": "^0.12.0"
+    "@ds-pack/use-refs": "^1.0.0"
   }
 }

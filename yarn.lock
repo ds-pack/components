@@ -1007,11 +1007,6 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
-"@ds-pack/base-styled@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@ds-pack/base-styled/-/base-styled-1.0.0.tgz#42ae856087a2fecb5f45991e973b087594fc1a05"
-  integrity sha512-qP5nGi2UpnJbZ+UiobEr2MeWumaaj4DAA8MIaAVagsew8+gQcpuoVzMn9jQukPa69ADuevdKxvgU6HTwRO7xHg==
-
 "@ds-pack/use-refs@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@ds-pack/use-refs/-/use-refs-1.0.0.tgz#0a9b29e7e15eb1bcb6f757634bb342071162a7ed"
@@ -4835,11 +4830,6 @@ symbol-tree@^3.2.4:
   version "3.2.4"
   resolved "https://registry.yarnpkg.com/symbol-tree/-/symbol-tree-3.2.4.tgz#430637d248ba77e078883951fb9aa0eed7c63fa2"
   integrity sha512-9QNk5KwDF+Bvz+PyObkmSYjI5ksVUYtjW7AU22r2NKcfLJcXp96hkDWU3+XndOsUb+AQ9QhfzfCT2O+CNWT5Tw==
-
-system-props@^0.12.0:
-  version "0.12.0"
-  resolved "https://registry.yarnpkg.com/system-props/-/system-props-0.12.0.tgz#9f967c617e9866d0e5d329fe62a2e7e9e709444e"
-  integrity sha512-GrXaq7Ou2vBU60xuxXff3RwXsQY2cXHGLu9XYZ3z1W1ZBtSmNCkljth4etUPs4C+zB5iukcT9lzM0twzFzlkVg==
 
 terminal-link@^2.0.0:
   version "2.1.1"
