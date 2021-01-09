@@ -1,6 +1,6 @@
 import React from 'react'
 import { ToggleInput } from './ToggleInput'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { Box } from './Box'
 import { useSharedRef } from '@ds-pack/use-refs'
 import { Label } from './Label'
@@ -13,54 +13,48 @@ function flush(cb) {
 }
 
 let StyledCheckbox = styled(Box)(
-  ({ theme, checked, disabled, focused, indeterminate }) => `
-  height: 20px;
-  width: 20px;
-  position: relative;
-  flex-shrink: 0;
-  border: solid 2px;
-  border-color: ${
-    disabled
+  ({ theme, checked, disabled, focused, indeterminate }) => css`
+    height: 20px;
+    width: 20px;
+    position: relative;
+    flex-shrink: 0;
+    border: solid 2px;
+    border-color: ${disabled
       ? theme.colors.disabledFill
       : checked || indeterminate
       ? theme.colors.teal[8]
-      : theme.colors.black
-  };
-  background-color: ${
-    disabled
+      : theme.colors.black};
+    background-color: ${disabled
       ? theme.colors.disabledBg
       : checked || indeterminate
       ? theme.colors.teal[4]
-      : theme.colors.white
-  };
-  box-shadow: ${focused ? theme.focusShadow : null};
-  border-radius: ${theme.radii[0]};
-  &::before {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 1;
-    content: " ";
-    display: block;
-    height: ${!indeterminate ? '5px' : '0px'};
-    width: 10px;
-    border-left: solid 2px ${
-      disabled
-        ? checked || indeterminate
-          ? theme.colors.disabledFill
-          : 'transparent'
-        : theme.colors.white
-    };
-    border-bottom: solid 2px ${
-      disabled
-        ? checked || indeterminate
-          ? theme.colors.disabledFill
-          : 'transparent'
-        : theme.colors.white
-    };
-    transform: translate(-50%, -75%) ${indeterminate ? '' : 'rotate(-45deg)'};
-  }
-`,
+      : theme.colors.white};
+    box-shadow: ${focused ? theme.focusShadow : null};
+    border-radius: ${theme.radii[0]};
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 1;
+      content: ' ';
+      display: block;
+      height: ${!indeterminate ? '5px' : '0px'};
+      width: 10px;
+      border-left: solid 2px
+        ${disabled
+          ? checked || indeterminate
+            ? theme.colors.disabledFill
+            : 'transparent'
+          : theme.colors.white};
+      border-bottom: solid 2px
+        ${disabled
+          ? checked || indeterminate
+            ? theme.colors.disabledFill
+            : 'transparent'
+          : theme.colors.white};
+      transform: translate(-50%, -75%) ${indeterminate ? '' : 'rotate(-45deg)'};
+    }
+  `,
 )
 
 interface Props {

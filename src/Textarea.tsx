@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { Box } from './Box'
 import { Label } from './Label'
 import ReactDOM from 'react-dom'
@@ -11,31 +11,29 @@ function flush(cb) {
 }
 
 let StyledTextarea = styled(Box)(
-  ({ theme, focused, disabled }) => `
-  border: solid 2px;
-  width: 100%;
-  display: inline-flex;
-  flex-grow: 1;
-  flex-shrink: 0;
-  padding: .5em;
-  border-radius: ${theme.radii[0]};
-  color: ${theme.colors.black};
-  box-shadow: ${focused ? theme.focusShadow : null};
-  outline: none;
-  font-size: ${theme.fontSizes[1]}px;
-  font-family: ${theme.fonts.base};
+  ({ theme, focused, disabled }) => css`
+    border: solid 2px;
+    width: 100%;
+    display: inline-flex;
+    flex-grow: 1;
+    flex-shrink: 0;
+    padding: 0.5em;
+    border-radius: ${theme.radii[0]};
+    color: ${theme.colors.black};
+    box-shadow: ${focused ? theme.focusShadow : null};
+    outline: none;
+    font-size: ${theme.fontSizes[1]}px;
+    font-family: ${theme.fonts.base};
 
-  border-color: ${
-    disabled
+    border-color: ${disabled
       ? theme.colors.disabledFill
       : focused
       ? theme.colors.primary
-      : theme.colors.black
-  };
-  background-color: ${
-    disabled ? theme.colors.disabledBg : theme.colors.gray[0]
-  };
-`,
+      : theme.colors.black};
+    background-color: ${disabled
+      ? theme.colors.disabledBg
+      : theme.colors.gray[0]};
+  `,
 )
 
 interface Props {
