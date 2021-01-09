@@ -1,6 +1,6 @@
 {
   "name": "@ds-pack/components",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "dist/index.js",
   "source": "src/index.tsx",
   "repository": "git@github.com:hamlim/component-library.git",
@@ -27,6 +27,8 @@
     "@babel/preset-env": "^7.9.6",
     "@babel/preset-react": "^7.9.4",
     "@babel/runtime": "^7.9.6",
+    "@ds-pack/base-styled": "^1.0.0",
+    "@ds-pack/use-refs": "^1.0.0",
     "@styled-system/props": "^5.1.5",
     "@testing-library/jest-dom": "^5.7.0",
     "@testing-library/react": "^10.0.4",
@@ -50,13 +52,11 @@
     "registry": "https://registry.npmjs.org/"
   },
   "peerDependencies": {
+    "@ds-pack/base-styled": "^1.0.0",
+    "@ds-pack/use-refs": "^1.0.0",
     "react": "*",
     "react-dom": "*",
-    "system-props": "^0",
-    "@ds-pack/base-styled": "^1.0.0",
-    "styled-components": "*"
-  },
-  "dependencies": {
-    "@ds-pack/use-refs": "^1.0.0"
+    "styled-components": "*",
+    "system-props": "^0"
   }
 }
