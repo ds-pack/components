@@ -373,7 +373,7 @@ export default {
   get chips() {
     return {
       primary: {
-        backgroundColor: this.colors.teal[2],
+        backgroundColor: this.colors.primary,
         color: this.colors.black,
       },
     }
