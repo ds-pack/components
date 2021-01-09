@@ -1,6 +1,6 @@
 {
   "name": "@ds-pack/components",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "main": "dist/index.js",
   "source": "src/index.tsx",
   "repository": "git@github.com:hamlim/component-library.git",
@@ -45,6 +45,7 @@
     "react-dom": "experimental",
     "react-is": "^16.13.1",
     "styled-components": "^5.1.0",
+    "system-props": "^0.13.0",
     "typescript": "^4.1.3"
   },
   "publishConfig": {
