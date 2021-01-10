@@ -58,3 +58,12 @@ test('supports `testIds` object prop', () => {
   let box = getByTestId('foo')
   expect(box).toBe(container.querySelector('marquee'))
 })
+
+test('supports outlines', () => {
+  // test that it doesn't throw :)
+  render(
+    <ThemeProvider>
+      <Box outline="$focusShadow">Box</Box>
+    </ThemeProvider>,
+  )
+})

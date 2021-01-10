@@ -29,6 +29,7 @@ let system = createSystem({
     _last: '&:last-child',
     _odd: '&:nth-of-type(odd)',
     _even: '&:nth-of-type(even)',
+    _target: ':target',
   },
 })
 
@@ -75,5 +76,9 @@ export let Box = styled(WrappedBase)(
     ...shadow,
     ...space,
     ...typography,
+    outline: {
+      property: 'outline',
+      scale: 'outlines',
+    },
   }),
 )

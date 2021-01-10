@@ -376,4 +376,9 @@ export default {
   get focusShadow() {
     return `0 0 4px 2px ${this.colors.primaryDark}`
   },
+  get outlines() {
+    return {
+      focusShadow: this.focusShadow,
+    }
+  },
 }
