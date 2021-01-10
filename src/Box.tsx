@@ -76,9 +76,5 @@ export let Box = styled(WrappedBase)(
     ...shadow,
     ...space,
     ...typography,
-    outline: {
-      property: 'outline',
-      scale: 'outlines',
-    },
   }),
 )
