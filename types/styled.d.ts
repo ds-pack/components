@@ -30,7 +30,6 @@ declare module 'styled-components' {
     space: Array<number>
     fontSizes: any
     colors: {
-      base: string
       black: string
       white: string
       primary: string

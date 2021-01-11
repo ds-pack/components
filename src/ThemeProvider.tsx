@@ -4,21 +4,26 @@ import {
   ThemeProvider as StyledProvider,
   DefaultTheme,
 } from 'styled-components'
+import { flagContext, Flags } from './flagContext'
 
-export let themeContext = React.createContext(defaultTheme)
+export let themeContext = React.createContext<DefaultTheme>(defaultTheme)
 
 interface Props {
   theme?: DefaultTheme
+  flags?: Flags
   children: any
 }
 
-export function ThemeProvider({ theme = defaultTheme, children }: Props) {
+export function ThemeProvider({
+  theme = defaultTheme,
+  flags,
+  children,
+}: Props) {
   return (
-    <themeContext.Provider
-      // @ts-ignore
-      value={theme}
-    >
-      <StyledProvider theme={theme}>{children}</StyledProvider>
+    <themeContext.Provider value={theme}>
+      <flagContext.Provider value={flags}>
+        <StyledProvider theme={theme}>{children}</StyledProvider>
+      </flagContext.Provider>
     </themeContext.Provider>
   )
 }
