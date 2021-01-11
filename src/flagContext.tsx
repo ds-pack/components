@@ -1,6 +1,6 @@
 import { createContext } from 'react'
 
-let defaultFlags = {
+export let defaultFlags = {
   useCSSVars: false,
 }
 

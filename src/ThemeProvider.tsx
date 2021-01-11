@@ -4,7 +4,7 @@ import {
   ThemeProvider as StyledProvider,
   DefaultTheme,
 } from 'styled-components'
-import { flagContext, Flags } from './flagContext'
+import { flagContext, Flags, defaultFlags } from './flagContext'
 
 export let themeContext = React.createContext<DefaultTheme>(defaultTheme)
 
@@ -16,7 +16,7 @@ interface Props {
 
 export function ThemeProvider({
   theme = defaultTheme,
-  flags,
+  flags = defaultFlags,
   children,
 }: Props) {
   return (
