@@ -42,16 +42,16 @@ function createTestIds(testIds = null) {
   return {}
 }
 
-interface BoxProps {
-  is?: React.ReactElement
-  forwardedAs?: React.ReactElement
-  as?: React.ReactElement
+export interface Props {
+  is?: any
+  forwardedAs?: any
+  as?: any
   testIds?: string | { default: string }
   [key: string]: any
 }
 
 let WrappedBase = forwardRef(function WrappedBase(
-  { is, forwardedAs, as, testIds, ...props }: BoxProps,
+  { is, forwardedAs, as, testIds, ...props }: Props,
   ref,
 ) {
   let Element

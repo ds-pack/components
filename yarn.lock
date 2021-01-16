@@ -1012,6 +1012,11 @@
   resolved "https://registry.yarnpkg.com/@ds-pack/base-styled/-/base-styled-1.0.0.tgz#42ae856087a2fecb5f45991e973b087594fc1a05"
   integrity sha512-qP5nGi2UpnJbZ+UiobEr2MeWumaaj4DAA8MIaAVagsew8+gQcpuoVzMn9jQukPa69ADuevdKxvgU6HTwRO7xHg==
 
+"@ds-pack/theme-to-css-vars@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@ds-pack/theme-to-css-vars/-/theme-to-css-vars-1.0.0.tgz#06dd88f0847db7819b05db3cc5f86f0aca103fbf"
+  integrity sha512-9aNfcInBftzFnQq8q4s1hpCHXLfq3gF9uB4wEsB3sz+dlkzQFhTs/4UYxK59CmrfxhQOkIDHe/zPzpJZpWVdfQ==
+
 "@ds-pack/use-refs@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@ds-pack/use-refs/-/use-refs-1.0.0.tgz#0a9b29e7e15eb1bcb6f757634bb342071162a7ed"

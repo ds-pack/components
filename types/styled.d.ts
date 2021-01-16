@@ -30,7 +30,6 @@ declare module 'styled-components' {
     space: Array<number>
     fontSizes: any
     colors: {
-      base: string
       black: string
       white: string
       primary: string
@@ -98,5 +97,14 @@ declare module 'styled-components' {
       subhead: Variant
     }
     focusShadow: string
+    chips: {
+      primary: {
+        backgroundColor: string
+        color: string
+      }
+    }
+    shadows: {
+      focusShadow: string
+    }
   }
 }

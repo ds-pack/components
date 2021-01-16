@@ -59,5 +59,8 @@
     "react-dom": "*",
     "styled-components": "*",
     "system-props": "^0"
+  },
+  "dependencies": {
+    "@ds-pack/theme-to-css-vars": "^1.0.0"
   }
 }
