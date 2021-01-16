@@ -68,7 +68,7 @@ export let Chip = React.forwardRef(function Chip(
               black: theme.colors.black,
               white: theme.colors.white,
             })
-          : undefined
+          : theme.colors.white
       }
       ref={ref}
     />
