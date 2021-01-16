@@ -6,6 +6,10 @@
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
+    "@ds-pack/base-styled": "*",
+    "@ds-pack/use-refs": "*",
+    "system-props": "*",
+    "@styled-system/props": "*",
     "@ds-pack/components": "*",
     "react": "experimental",
     "react-dom": "experimental",
