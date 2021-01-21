@@ -55,11 +55,11 @@ export let Chip = React.forwardRef(function Chip(
   let background = get(theme, `colors.${providedBg}`)
   return (
     <InnerChip
-      py={1}
-      px={2}
-      borderRadius={1}
+      py="$1"
+      px="$2"
+      borderRadius="$1"
       is="span"
-      bg={providedBg}
+      background={providedBg}
       {...props}
       color={
         background
@@ -68,7 +68,7 @@ export let Chip = React.forwardRef(function Chip(
               black: theme.colors.black,
               white: theme.colors.white,
             })
-          : theme.colors.white
+          : theme.colors.black
       }
       ref={ref}
     />

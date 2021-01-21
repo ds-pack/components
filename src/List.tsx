@@ -3,6 +3,7 @@ import { variant } from 'styled-system'
 import styled from 'styled-components'
 import { Box } from './Box'
 
+// @TODO replace
 let listVariant = variant({
   scale: 'lists',
   prop: 'variant',
@@ -14,6 +15,14 @@ List.defaultProps = {
   variant: 'base',
 }
 
-export let ListItem = React.forwardRef(function ListItem(props: any, ref: any) {
+export interface ListItemProps {
+  children?: React.ReactNode
+  [key: string]: any
+}
+
+export let ListItem = React.forwardRef(function ListItem(
+  props: ListItemProps,
+  ref,
+) {
   return <Box ref={ref} is="li" {...props} />
 })

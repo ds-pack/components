@@ -22,7 +22,7 @@ let StyledTextarea = styled(Box)(
     color: ${theme.colors.black};
     box-shadow: ${focused ? theme.focusShadow : null};
     outline: none;
-    font-size: ${theme.fontSizes[1]}px;
+    font-size: ${theme.fontSizes[1]};
     font-family: ${theme.fonts.base};
 
     border-color: ${disabled
@@ -79,7 +79,7 @@ export let Textarea = React.forwardRef(function Textarea(
     >
       {children}
       <StyledTextarea
-        mt={1}
+        mt="$1"
         placeholder={placeholder}
         focused={focused}
         disabled={disabled}

@@ -91,7 +91,7 @@ export let Checkbox = React.forwardRef(function Checkbox(
   return (
     <Label flexDirection="row" {...props}>
       <StyledCheckbox
-        mr={2}
+        mr="$2"
         indeterminate={indeterminate}
         focused={focused}
         checked={checked}

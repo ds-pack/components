@@ -80,7 +80,7 @@ export let Input = React.forwardRef(function Input(
     >
       {children}
       <StyledInput
-        mt={1}
+        mt="$1"
         placeholder={placeholder}
         focused={focused}
         type="text"
