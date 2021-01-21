@@ -9,6 +9,8 @@
     "@ds-pack/base-styled": "*",
     "@ds-pack/use-refs": "*",
     "system-props": "*",
+    "simple-props": "*",
+    "csstype": "*",
     "@styled-system/props": "*",
     "@ds-pack/components": "*",
     "react": "experimental",
