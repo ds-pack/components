@@ -4545,10 +4545,10 @@ signal-exit@^3.0.0, signal-exit@^3.0.2:
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.3.tgz#a1410c2edd8f077b08b4e253c8eacfcaf057461c"
   integrity sha512-VUJ49FC8U1OxwZLxIbTTrDvLnf/6TDgxZcK8wxR8zs13xpx7xbG60ndBlhNrFi2EMuFRoeDoJO7wthSLq42EjA==
 
-simple-props@^0.4.2:
-  version "0.4.2"
-  resolved "https://registry.yarnpkg.com/simple-props/-/simple-props-0.4.2.tgz#938a4a6b0d829dadc1e05e8edbfe34c5c67bcdec"
-  integrity sha512-udRffFa3uTGQ6jRSNjgRCLvtcbKF/3UMN2z1a2JcOeNfEmmHi4CsvtIuLNjN7e17nXrpObAaucrfV+ykQzB2UA==
+simple-props@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/simple-props/-/simple-props-0.5.0.tgz#9da5eabe026534d279f6b1e0ec82245f620cf5e0"
+  integrity sha512-FAIvMNdxzIrdmXQVgOxz8qBdt9z3dnINg7mMrRgXjFPbjPI1SsyFgCxdyOXl+7hirsej690q82SrrweoAn4VfA==
 
 sisteransi@^1.0.4:
   version "1.0.5"

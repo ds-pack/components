@@ -73,14 +73,14 @@ let propConfig = {
     scale: 'space',
     property: 'padding',
   },
-  // px: {
-  //   scale: 'space',
-  //   properties: ['paddingLeft', 'paddingRight'],
-  // },
-  // py: {
-  //   scale: 'space',
-  //   property: ['paddingTop', 'paddingBottom'],
-  // },
+  px: {
+    scale: 'space',
+    properties: ['paddingLeft', 'paddingRight'],
+  },
+  py: {
+    scale: 'space',
+    property: ['paddingTop', 'paddingBottom'],
+  },
   pt: {
     scale: 'space',
     property: 'paddingTop',
@@ -189,10 +189,10 @@ let propConfig = {
     scale: 'sizes',
     property: 'minHeight',
   },
-  // size: {
-  //   scale: 'sizes',
-  //   property: ['height', 'width'],
-  // },
+  size: {
+    scale: 'sizes',
+    property: ['height', 'width'],
+  },
   overflow: {
     scale: '',
     property: 'overflow',
