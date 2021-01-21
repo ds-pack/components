@@ -11,7 +11,7 @@ export let Reset = createGlobalStyle(
     }
     html {
       box-sizing: border-box;
-      font-size: ${theme.fontSizes[1]}px;
+      font-size: ${theme.fontSizes[1]};
       font-family: ${theme.fonts.base};
       color: ${theme.colors.black};
       background-color: ${theme.colors.white};
