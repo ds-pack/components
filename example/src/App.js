@@ -133,13 +133,13 @@ function Demo() {
   let [val, setVal] = useState('')
   return (
     <>
-      <Stack gap={4} p={5} bg="gray.1" className="App">
+      <Stack gap="$4" p="$5" bg="$gray-1" className="App">
         <Stack
           props={{ flexGrow: 1 }}
           inline
-          gap={4}
+          gap="$4"
           alignItems="flex-end"
-          mb={2}
+          mb="$2"
         >
           <Input display="flex" flexGrow={1} value="fpp">
             Test
@@ -280,9 +280,9 @@ function Swatch({ value, name }) {
       height={50}
       justifyContent="center"
       alignItems="center"
-      borderRadius={0}
+      borderRadius="$0"
       style={{ backgroundColor: value, color: getInverse({ target: value }) }}
-      fontFamily="base"
+      fontFamily="$base"
     >
       {name}
     </Box>
@@ -316,13 +316,13 @@ function Theme() {
     <>
       <Box
         display="grid"
-        gridGap={4}
+        gridGap="$4"
         gridTemplateColumns={['repeat(1, 1fr)', 'repeat(5, 1fr)']}
       >
         <Colors />
       </Box>
       <Text>Named Colors:</Text>
-      <Stack gap={2}>
+      <Stack gap="$2">
         {Object.entries(theme.colors).map(([key, value]) => {
           if (typeof value === 'string') {
             return <Swatch value={value} key={key} name={key} />

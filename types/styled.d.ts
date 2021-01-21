@@ -27,7 +27,7 @@ type Variant = any
 
 declare module 'styled-components' {
   export interface DefaultTheme {
-    space: Array<number>
+    space: Array<string>
     fontSizes: any
     colors: {
       black: string
