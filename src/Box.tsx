@@ -115,23 +115,23 @@ let propConfig = {
   },
   color: true,
   backgroundColor: {
-    scale: 'color',
+    scale: 'colors',
     property: 'backgroundColor',
   },
   bg: {
-    scale: 'color',
+    scale: 'colors',
     property: 'backgroundColor',
   },
   fill: {
-    scale: 'color',
+    scale: 'colors',
     property: 'fill',
   },
   stroke: {
-    scale: 'color',
+    scale: 'colors',
     property: 'stroke',
   },
   opacity: {
-    scale: 'color',
+    scale: 'colors',
     property: 'opacity',
   },
   fontFamily: {
