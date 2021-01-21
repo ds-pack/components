@@ -522,7 +522,7 @@ let WrappedBase = forwardRef(function WrappedBase(
     if (prop in propConfig) {
       continue
     }
-    next[prop] = props
+    next[prop] = props[prop]
   }
   return <Element ref={ref} {...createTestIds(testIds)} {...next} />
 })
