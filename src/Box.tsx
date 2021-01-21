@@ -16,6 +16,7 @@ import createSimpleProps from 'simple-props'
 // } from 'system-props'
 
 let propConfig = {
+  display: true,
   margin: {
     scale: 'space',
     property: 'margin',
