@@ -44,7 +44,7 @@
     "react": "experimental",
     "react-dom": "experimental",
     "react-is": "^16.13.1",
-    "simple-props": "^0.4.0",
+    "simple-props": "^0.4.1",
     "styled-components": "^5.1.0",
     "system-props": "^0.13.0",
     "typescript": "^4.1.3"
@@ -59,7 +59,8 @@
     "react": "*",
     "react-dom": "*",
     "styled-components": "*",
-    "system-props": "^0"
+    "system-props": "^0",
+    "simple-props": "*"
   },
   "dependencies": {
     "@ds-pack/theme-to-css-vars": "^1.0.0"
