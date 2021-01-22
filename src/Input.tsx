@@ -11,27 +11,29 @@ function flush(cb) {
 }
 
 let StyledInput = styled(Box)(
-  ({ theme, focused, hovered, disabled }) => css`
+  ({ focused, hovered, disabled }) => css`
     border: solid 2px;
     width: 100%;
     display: inline-flex;
     flex-grow: 1;
     flex-shrink: 0;
     padding: 0.5em 1em;
-    border-radius: ${theme.radii[0]};
-    color: ${theme.colors.black};
-    box-shadow: ${focused ? theme.focusShadow : null};
+    border-radius: var(--radii-0);
+    color: var(--colors-black)
+    box-shadow: ${focused ? `var(--shadows-focusShadow)` : null};
     outline: none;
-    font-size: ${theme.fontSizes[1]};
+    font-size: var(--fontSizes-1);
 
-    border-color: ${disabled
-      ? theme.colors.disabledFill
-      : focused || hovered
-      ? theme.colors.primary
-      : theme.colors.black};
-    background-color: ${disabled
-      ? theme.colors.disabledBg
-      : theme.colors.gray[0]};
+    border-color: ${
+      disabled
+        ? `var(--colors-disabledFill)`
+        : focused || hovered
+        ? `var(--colors-primary)`
+        : `var(--colors-black)`
+    };
+    background-color: ${
+      disabled ? `var(--colors-disabledBg)` : `var(--colors-gray-0)`
+    };
   `,
 )
 
