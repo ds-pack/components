@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { Box } from './Box'
 import { Label } from './Label'
 import ReactDOM from 'react-dom'
@@ -11,30 +11,28 @@ function flush(cb) {
 }
 
 let StyledInput = styled(Box)(
-  ({ theme, focused, hovered, disabled }) => `
-  border: solid 2px;
-  width: 100%;
-  display: inline-flex;
-  flex-grow: 1;
-  flex-shrink: 0;
-  padding: .5em 1em;
-  border-radius: ${theme.radii[0]};
-  color: ${theme.colors.black};
-  box-shadow: ${focused ? theme.focusShadow : null};
-  outline: none;
-  font-size: ${theme.fontSizes[1]}px;
+  ({ theme, focused, hovered, disabled }) => css`
+    border: solid 2px;
+    width: 100%;
+    display: inline-flex;
+    flex-grow: 1;
+    flex-shrink: 0;
+    padding: 0.5em 1em;
+    border-radius: ${theme.radii[0]};
+    color: ${theme.colors.black};
+    box-shadow: ${focused ? theme.focusShadow : null};
+    outline: none;
+    font-size: ${theme.fontSizes[1]};
 
-  border-color: ${
-    disabled
+    border-color: ${disabled
       ? theme.colors.disabledFill
       : focused || hovered
       ? theme.colors.primary
-      : theme.colors.black
-  };
-  background-color: ${
-    disabled ? theme.colors.disabledBg : theme.colors.gray[0]
-  };
-`,
+      : theme.colors.black};
+    background-color: ${disabled
+      ? theme.colors.disabledBg
+      : theme.colors.gray[0]};
+  `,
 )
 
 interface Props {
