@@ -141,11 +141,31 @@ function Demo() {
           alignItems="flex-end"
           mb="$2"
         >
-          <Input display="flex" flexGrow={1} value="fpp">
+          <Input
+            autoFocus
+            display="flex"
+            flexGrow={1}
+            value={val}
+            onChange={setVal}
+          >
             Test
           </Input>
           <Button>Test</Button>
         </Stack>
+
+        <Button variant="default">Default</Button>
+        <Button variant="ghost">Ghost</Button>
+        <Button variant="text">text</Button>
+
+        <Button variant="default" disabled>
+          Default
+        </Button>
+        <Button variant="ghost" disabled>
+          Ghost
+        </Button>
+        <Button variant="text" disabled>
+          text
+        </Button>
 
         <Chip variant="primary">Primary</Chip>
         <Chip variant="secondary">Primary</Chip>
