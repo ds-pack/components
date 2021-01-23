@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import { ToggleInput } from './ToggleInput'
 import styled, { css } from 'styled-components'
 import { Box } from './Box'
@@ -12,25 +12,50 @@ function flush(cb) {
   ReactDOM.flushSync(cb)
 }
 
-let StyledCheckbox = styled(Box)(
-  ({ theme, checked, disabled, focused, indeterminate }) => css`
+export interface Props {
+  checked: boolean
+  onChange: (checked: boolean) => void
+  disabled?: boolean
+  indeterminate?: boolean
+  autoFocus?: boolean
+  children: any
+  [key: string]: any
+}
+
+let WithoutProps = forwardRef(function WithoutProps(
+  { indeterminate, ...props }: Props,
+  ref,
+) {
+  return <Box {...props} ref={ref} />
+})
+
+let StyledCheckbox = styled(WithoutProps)(
+  ({ checked, disabled, focused, indeterminate }) => css`
     height: 20px;
     width: 20px;
     position: relative;
     flex-shrink: 0;
     border: solid 2px;
-    border-color: ${disabled
-      ? theme.colors.disabledFill
-      : checked || indeterminate
-      ? theme.colors.teal[8]
-      : theme.colors.black};
-    background-color: ${disabled
-      ? theme.colors.disabledBg
-      : checked || indeterminate
-      ? theme.colors.teal[4]
-      : theme.colors.white};
-    box-shadow: ${focused ? theme.focusShadow : null};
-    border-radius: ${theme.radii[0]};
+    border-color: ${(() => {
+      if (disabled) {
+        return `var(--colors-disabledFill)`
+      }
+      if (checked || indeterminate) {
+        return `var(--colors-primaryDark)`
+      }
+      return `var(--colors-black)`
+    })()};
+    background-color: ${(() => {
+      if (disabled) {
+        return `var(--colors-disabledBg)`
+      }
+      if (checked || indeterminate) {
+        return `var(--colors-primary)`
+      }
+      return `var(--colors-white)`
+    })()};
+    box-shadow: ${focused ? `var(--shadows-focusShadow)` : null};
+    border-radius: var(--radii-0);
     &::before {
       position: absolute;
       top: 50%;
@@ -41,31 +66,29 @@ let StyledCheckbox = styled(Box)(
       height: ${!indeterminate ? '5px' : '0px'};
       width: 10px;
       border-left: solid 2px
-        ${disabled
-          ? checked || indeterminate
-            ? theme.colors.disabledFill
-            : 'transparent'
-          : theme.colors.white};
+        ${(() => {
+          if (disabled) {
+            if (checked || indeterminate) {
+              return `var(--colors-disabledFill)`
+            }
+            return 'transparent'
+          }
+          return `var(--colors-white)`
+        })()};
       border-bottom: solid 2px
-        ${disabled
-          ? checked || indeterminate
-            ? theme.colors.disabledFill
-            : 'transparent'
-          : theme.colors.white};
+        ${(() => {
+          if (disabled) {
+            if (checked || indeterminate) {
+              return `var(--colors-disabledFill)`
+            }
+            return 'transparent'
+          }
+          return `var(--colors-white)`
+        })()};
       transform: translate(-50%, -75%) ${indeterminate ? '' : 'rotate(-45deg)'};
     }
   `,
 )
-
-interface Props {
-  checked: boolean
-  onChange: (checked: boolean) => void
-  disabled?: boolean
-  indeterminate?: boolean
-  autoFocus?: boolean
-  children: any
-  [key: string]: any
-}
 
 export let Checkbox = React.forwardRef(function Checkbox(
   {
@@ -91,7 +114,7 @@ export let Checkbox = React.forwardRef(function Checkbox(
   return (
     <Label flexDirection="row" {...props}>
       <StyledCheckbox
-        mr={2}
+        mr="$2"
         indeterminate={indeterminate}
         focused={focused}
         checked={checked}

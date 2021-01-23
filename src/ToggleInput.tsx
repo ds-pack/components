@@ -1,10 +1,10 @@
 import React from 'react'
 import { VisuallyHidden } from './VisuallyHidden'
+import { Props as BoxProps } from './Box'
 
-interface Props {
+interface Props extends BoxProps {
   checked: boolean
   onChange: (checked: boolean) => void
-  [key: string]: any
 }
 
 export let ToggleInput = React.forwardRef(function ToggleInput(

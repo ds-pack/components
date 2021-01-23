@@ -1,12 +1,11 @@
 import React from 'react'
-import { Box } from './Box'
+import { Box, Props as BoxProps } from './Box'
 import { Image } from './Image'
 
-interface Props {
+interface Props extends BoxProps {
   caption: any
   src: string
   alt: string
-  [key: string]: any
 }
 
 export let Figure = React.forwardRef(function Figure(

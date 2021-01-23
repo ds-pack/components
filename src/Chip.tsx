@@ -1,76 +1,48 @@
-import React from 'react'
-import { variant, get } from 'styled-system'
-import { Box } from './Box'
-import styled from 'styled-components'
-import { useTheme } from './useTheme'
+import React, { forwardRef } from 'react'
+import { Box, Props as BoxProps } from './Box'
+import styled, { css } from 'styled-components'
 
-function getInverse({
-  target: hex,
-  black = '#000000',
-  white = '#ffffff',
-}: {
-  target: string
-  black?: string
-  white?: string
-}): string {
-  if (hex.indexOf('#') === 0) {
-    hex = hex.slice(1)
-  }
-  // convert 3-digit hex to 6-digits.
-  if (hex.length === 3) {
-    hex = hex[0] + hex[0] + hex[1] + hex[1] + hex[2] + hex[2]
-  }
-  if (hex.length !== 6) {
-    throw new Error('Invalid HEX color.')
-  }
-  var r = parseInt(hex.slice(0, 2), 16),
-    g = parseInt(hex.slice(2, 4), 16),
-    b = parseInt(hex.slice(4, 6), 16)
-  // http://stackoverflow.com/a/3943023/112731
-  return r * 0.299 + g * 0.587 + b * 0.114 > 186 ? black : white
+export interface Props extends BoxProps {
+  variant?: 'primary' | 'default'
 }
 
-let InnerChip = styled(Box)(variant({ scale: 'chips', prop: 'variant' }))
-
-interface Props {
-  bg?: any
-  backgroundColor?: any
-  bgColor?: any
-  children: any
-}
-
-export let Chip = React.forwardRef(function Chip(
-  { bg, backgroundColor, bgColor, ...props }: Props,
+let WithoutProps = forwardRef(function WithoutProps(
+  { variant, ...props }: Props,
   ref,
 ) {
-  let theme = useTheme()
-  let providedBg
-  if (typeof bg !== 'undefined') {
-    providedBg = bg
-  } else if (typeof backgroundColor !== 'undefined') {
-    providedBg = backgroundColor
-  } else if (typeof bgColor !== 'undefined') {
-    providedBg = bgColor
+  return <Box {...props} ref={ref} />
+})
+
+let InnerChip = styled(WithoutProps)(({ variant }) => {
+  switch (variant) {
+    case 'primary': {
+      return css`
+        display: inline-flex;
+        background-color: var(--colors-primary);
+        color: var(--colors-white);
+        padding-left: var(--space-2);
+        padding-right: var(--space-2);
+        padding-top: var(--space-1);
+        padding-bottom: var(--space-1);
+        border-radius: var(--radii-1);
+      `
+    }
+    case 'default':
+    default: {
+      return css`
+        display: inline-flex;
+        background-color: var(--colors-gray-3);
+        color: var(--colors-black);
+        padding-left: var(--space-2);
+        padding-right: var(--space-2);
+        padding-top: var(--space-1);
+        padding-bottom: var(--space-1);
+        border-radius: var(--radii-1);
+      `
+    }
   }
-  let background = get(theme, `colors.${providedBg}`)
-  return (
-    <InnerChip
-      py={1}
-      px={2}
-      borderRadius={1}
-      is="span"
-      bg={providedBg}
-      {...props}
-      color={
-        background
-          ? getInverse({
-              target: background,
-              black: theme.colors.black,
-              white: theme.colors.white,
-            })
-          : undefined
-      }
-      ref={ref}
-    />
-  )
+})
+
+export let Chip = forwardRef(function Chip(props: Props, ref) {
+  return <InnerChip {...props} ref={ref} />
 })

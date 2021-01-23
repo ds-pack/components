@@ -12,11 +12,11 @@ let fontScale = 1.2
 let baseFontSize = 18
 
 let fontSizes = {
-  0: 0.8 * baseFontSize,
-  1: baseFontSize,
-  2: baseFontSize * fontScale,
-  3: baseFontSize * (fontScale * 2),
-  4: baseFontSize * (fontScale * 3),
+  0: `${0.8 * baseFontSize}px`,
+  1: `${baseFontSize}px`,
+  2: `${baseFontSize * fontScale}px`,
+  3: `${baseFontSize * (fontScale * 2)}px`,
+  4: `${baseFontSize * (fontScale * 3)}px`,
   get h1() {
     return this[4]
   },
@@ -237,7 +237,7 @@ let colors = {
 }
 
 export default {
-  space: [0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40],
+  space: [0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40].map((val) => `${val}px`),
   fontSizes,
   fonts: {
     base: 'system-ui, sans-serif',

@@ -27,10 +27,9 @@ type Variant = any
 
 declare module 'styled-components' {
   export interface DefaultTheme {
-    space: Array<number>
+    space: Array<string>
     fontSizes: any
     colors: {
-      base: string
       black: string
       white: string
       primary: string
@@ -98,5 +97,14 @@ declare module 'styled-components' {
       subhead: Variant
     }
     focusShadow: string
+    chips: {
+      primary: {
+        backgroundColor: string
+        color: string
+      }
+    }
+    shadows: {
+      focusShadow: string
+    }
   }
 }

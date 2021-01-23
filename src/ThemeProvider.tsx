@@ -9,15 +9,12 @@ export let themeContext = React.createContext(defaultTheme)
 
 interface Props {
   theme?: DefaultTheme
-  children: any
+  children: React.ReactNode
 }
 
 export function ThemeProvider({ theme = defaultTheme, children }: Props) {
   return (
-    <themeContext.Provider
-      // @ts-ignore
-      value={theme}
-    >
+    <themeContext.Provider value={theme}>
       <StyledProvider theme={theme}>{children}</StyledProvider>
     </themeContext.Provider>
   )

@@ -1,18 +1,20 @@
-import styled, { css } from 'styled-components'
-import { Box } from './Box'
+import styled from 'styled-components'
+import { Box, Props as BoxProps } from './Box'
 
-export let Link = styled(Box)(
-  ({ theme }) => css`
-    color: ${theme.colors.primary};
-    text-decoration: underline;
-    &:hover,
-    &:focus {
-      color: ${theme.colors.primaryDark};
-      text-decoration: none;
-    }
-    &:focus {
-      box-shadow: ${theme.focusShadow};
-      outline: none;
-    }
-  `,
-)
+export interface Props extends BoxProps {}
+
+export let Link = styled(Box)<Props>`
+  color: var(--colors-primary);
+  text-decoration: underline;
+  display: inline-flex;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    color: var(--colors-primaryDark);
+    text-decoration: none;
+  }
+  &:focus {
+    box-shadow: var(--shadows-focusShadow);
+    outline: none;
+  }
+`

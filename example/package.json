@@ -1,11 +1,13 @@
 {
-  "name": "ds-pack-components-new-sandbox",
+  "name": "ds-pack-components-example",
   "private": true,
   "version": "1.0.0",
   "description": "",
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
+    "@ds-pack/use-refs": "*",
+    "simple-props": "*",
     "@ds-pack/components": "*",
     "react": "experimental",
     "react-dom": "experimental",

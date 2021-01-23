@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import styled, { css } from 'styled-components'
-import { Box } from './Box'
+import { Box, Props as BoxProps } from './Box'
 import { Label } from './Label'
 import ReactDOM from 'react-dom'
 
@@ -10,44 +10,53 @@ function flush(cb) {
   ReactDOM.flushSync(cb)
 }
 
-let StyledTextarea = styled(Box)(
-  ({ theme, focused, disabled }) => css`
+interface Props extends BoxProps {
+  disabled: boolean
+  value: string
+  onChange: (value: string) => void
+  children: React.ReactNode
+  autoFocus: boolean
+  placeholder: string
+  inputProps: {
+    [key: string]: any
+  }
+}
+
+let WithoutProps = forwardRef(function WithoutProps(
+  { focused, ...props }: Props,
+  ref,
+) {
+  return <Box {...props} ref={ref} />
+})
+
+let StyledTextarea = styled(WithoutProps)(
+  ({ focused, disabled }) => css`
     border: solid 2px;
     width: 100%;
     display: inline-flex;
     flex-grow: 1;
     flex-shrink: 0;
     padding: 0.5em;
-    border-radius: ${theme.radii[0]};
-    color: ${theme.colors.black};
-    box-shadow: ${focused ? theme.focusShadow : null};
+    border-radius: var(--radii-0);
+    color: var(--colors-black);
+    box-shadow: ${focused ? `var(--shadows-focusShadow)` : null};
     outline: none;
-    font-size: ${theme.fontSizes[1]}px;
-    font-family: ${theme.fonts.base};
+    font-size: var(--fontSizes-1);
+    font-family: var(--fonts-base);
 
-    border-color: ${disabled
-      ? theme.colors.disabledFill
-      : focused
-      ? theme.colors.primary
-      : theme.colors.black};
+    border-color: ${(() => {
+      if (disabled) {
+        return `var(--colors-disabledFill)`
+      } else if (focused) {
+        return `var(--colors-primary)`
+      }
+      return `var(--colors-black)`
+    })()};
     background-color: ${disabled
-      ? theme.colors.disabledBg
-      : theme.colors.gray[0]};
+      ? `var(--colors-disabledBg)`
+      : `var(--colors-gray-0)`};
   `,
 )
-
-interface Props {
-  disabled: boolean
-  value: string
-  onChange: (value: string) => void
-  children: any
-  autoFocus: boolean
-  placeholder: any
-  inputProps: {
-    [key: string]: any
-  }
-  [key: string]: any
-}
 
 export let Textarea = React.forwardRef(function Textarea(
   {
@@ -79,7 +88,7 @@ export let Textarea = React.forwardRef(function Textarea(
     >
       {children}
       <StyledTextarea
-        mt={1}
+        mt="$1"
         placeholder={placeholder}
         focused={focused}
         disabled={disabled}

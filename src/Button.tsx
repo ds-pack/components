@@ -22,32 +22,32 @@ export let Button = styled(ButtonImpl)(
       if (variant === 'text') {
         return null
       }
-      return theme.radii[0]
+      return `var(--radii-0)`
     })()};
     background-color: ${(() => {
       if (variant === 'default') {
         if (disabled) {
-          return theme.colors.disabledBg
+          return `var(--colors-disabledBg)`
         }
-        return theme.colors.primary
+        return `var(--colors-primary)`
       } else if (variant === 'ghost') {
         if (disabled) {
-          return theme.colors.disabledBg
+          return `var(--colors-disabledBg)`
         }
-        return theme.colors.white
+        return `var(--colors-white)`
       }
       // variant === 'text'
       return 'transparent'
     })()};
     color: ${(() => {
       if (disabled) {
-        return theme.colors.disabledFill
+        return `var(--colors-disabledFill)`
       }
       if (variant === 'default') {
-        return theme.colors.white
+        return `var(--colors-white)`
       }
       // variant === 'ghost' or 'text'
-      return theme.colors.primary
+      return `var(--colors-primary)`
     })()};
     padding: ${(() => {
       if (variant !== 'text') {
@@ -66,9 +66,9 @@ export let Button = styled(ButtonImpl)(
     border: ${(() => {
       if (variant === 'default' || variant === 'ghost') {
         if (disabled) {
-          return css`solid 2px ${theme.colors.disabledBg}`
+          return css`solid 2px var(--colors-disabledBg)`
         }
-        return css`solid 2px ${theme.colors.primary}`
+        return css`solid 2px var(--colors-primary)`
       }
       // variant === 'text'
       return null
@@ -80,29 +80,29 @@ export let Button = styled(ButtonImpl)(
       background-color: ${(() => {
         if (variant === 'default') {
           if (disabled) {
-            return theme.colors.disabledBg
+            return `var(--colors-disabledBg)`
           }
-          return theme.colors.primaryDark
+          return `var(--colors-primaryDark)`
         } else if (variant === 'ghost') {
           if (disabled) {
-            return theme.colors.gray[2]
+            return `var(--colors-gray-2)`
           }
-          return theme.colors.primaryLight
+          return `var(--colors-primaryLight)`
         }
         return 'transparent'
       })()};
       border-color: ${(() => {
         if (variant === 'default' || variant === 'ghost') {
           if (disabled) {
-            return theme.colors.disabledBg
+            return `var(--colors-disabledBg)`
           }
-          return theme.colors.primary
+          return `var(--colors-primary)`
         }
       })()};
       color: ${(() => {
         if (variant === 'text' || variant === 'ghost') {
           if (!disabled) {
-            return theme.colors.primaryDark
+            return `var(--colors-primaryDark)`
           }
         }
         return null
@@ -115,7 +115,7 @@ export let Button = styled(ButtonImpl)(
       })()};
     }
     &:focus {
-      box-shadow: ${disabled ? null : theme.focusShadow};
+      box-shadow: ${disabled ? null : `var(--shadows-focusShadow)`};
       outline: none;
     }
   `,

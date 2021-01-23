@@ -1,12 +1,11 @@
 import React from 'react'
-import { Box } from './Box'
+import { Box, Props as BoxProps } from './Box'
 
-interface Props {
-  props?: { [key: string]: any }
+export interface Props extends BoxProps {
+  props?: BoxProps
   inline: boolean
   gap: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10
-  children: any
-  [key: string]: any
+  children: React.ReactNode
 }
 
 export let Stack = React.forwardRef(function Stack(

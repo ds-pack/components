@@ -1,6 +1,6 @@
-import React from 'react'
-import styled from 'styled-components'
-import { Box } from './Box'
+import React, { forwardRef, useState } from 'react'
+import styled, { css } from 'styled-components'
+import { Box, Props as BoxProps } from './Box'
 import { Label } from './Label'
 import ReactDOM from 'react-dom'
 
@@ -10,47 +10,52 @@ function flush(cb) {
   ReactDOM.flushSync(cb)
 }
 
-let StyledInput = styled(Box)(
-  ({ theme, focused, hovered, disabled }) => `
-  border: solid 2px;
-  width: 100%;
-  display: inline-flex;
-  flex-grow: 1;
-  flex-shrink: 0;
-  padding: .5em 1em;
-  border-radius: ${theme.radii[0]};
-  color: ${theme.colors.black};
-  box-shadow: ${focused ? theme.focusShadow : null};
-  outline: none;
-  font-size: ${theme.fontSizes[1]}px;
-
-  border-color: ${
-    disabled
-      ? theme.colors.disabledFill
-      : focused || hovered
-      ? theme.colors.primary
-      : theme.colors.black
-  };
-  background-color: ${
-    disabled ? theme.colors.disabledBg : theme.colors.gray[0]
-  };
-`,
-)
-
-interface Props {
+export interface Props extends BoxProps {
   disabled: boolean
   value: string
   onChange: (value: string) => void
-  children: any
+  children: React.ReactNode
   autoFocus: boolean
-  placeholder: any
-  inputProps: {
-    [key: string]: any
-  }
-  [key: string]: any
+  placeholder: string
+  inputProps: BoxProps
 }
 
-export let Input = React.forwardRef(function Input(
+let WithoutProps = forwardRef(function WithoutProps(
+  { focused, hovered, ...props }: Props,
+  ref,
+) {
+  return <Box {...props} ref={ref} />
+})
+
+let StyledInput = styled(WithoutProps)(
+  ({ focused, hovered, disabled }: Props) => css`
+    border: solid 2px;
+    width: 100%;
+    display: inline-flex;
+    flex-grow: 1;
+    flex-shrink: 0;
+    padding: 0.5em 1em;
+    border-radius: var(--radii-0);
+    color: var(--colors-black);
+    box-shadow: ${focused ? `var(--shadows-focusShadow)` : null};
+    outline: none;
+    font-size: var(--fontSizes-1);
+
+    border-color: ${(() => {
+      if (disabled) {
+        return `var(--colors-disabledFill)`
+      } else if (focused || hovered) {
+        return `var(--colors-primary)`
+      }
+      return `var(--colors-black)`
+    })()};
+    background-color: ${disabled
+      ? `var(--colors-disabledBg)`
+      : `var(--colors-gray-0)`};
+  `,
+)
+
+export let Input = forwardRef(function Input(
   {
     disabled,
     value,
@@ -63,7 +68,7 @@ export let Input = React.forwardRef(function Input(
   }: Props,
   ref,
 ) {
-  let [focused, setFocused] = React.useState(autoFocus)
+  let [focused, setFocused] = useState(autoFocus)
 
   function handleFocus() {
     setFocused(true)
@@ -80,7 +85,7 @@ export let Input = React.forwardRef(function Input(
     >
       {children}
       <StyledInput
-        mt={1}
+        mt="$1"
         placeholder={placeholder}
         focused={focused}
         type="text"
