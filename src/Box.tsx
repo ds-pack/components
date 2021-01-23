@@ -14,11 +14,11 @@ let propConfig = {
   },
   mx: {
     scale: 'space',
-    property: ['marginLeft', 'marginRight'],
+    properties: ['marginLeft', 'marginRight'],
   },
   my: {
     scale: 'space',
-    property: ['marginTop', 'marginBottom'],
+    properties: ['marginTop', 'marginBottom'],
   },
   mt: {
     scale: 'space',
@@ -66,7 +66,7 @@ let propConfig = {
   },
   py: {
     scale: 'space',
-    property: ['paddingTop', 'paddingBottom'],
+    properties: ['paddingTop', 'paddingBottom'],
   },
   pt: {
     scale: 'space',
