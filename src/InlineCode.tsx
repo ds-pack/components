@@ -1,10 +1,7 @@
 import React from 'react'
-import { Box } from './Box'
+import { Box, Props as BoxProps } from './Box'
 
-export interface Props {
-  children: React.ReactNode
-  [key: string]: any
-}
+export interface Props extends BoxProps {}
 
 export let InlineCode = React.forwardRef(function InlineCode(
   props: Props,

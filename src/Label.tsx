@@ -1,7 +1,9 @@
 import React from 'react'
-import { Box } from './Box'
+import { Box, Props as BoxProps } from './Box'
 
-export let Label = React.forwardRef(function Label(props: any, ref: any) {
+export interface Props extends BoxProps {}
+
+export let Label = React.forwardRef(function Label(props: Props, ref) {
   return (
     <Box
       is="label"

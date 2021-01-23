@@ -1,8 +1,10 @@
 import React from 'react'
-import { Box } from './Box'
+import { Box, Props as BoxProps } from './Box'
 import { useTapable } from './useTapable'
 
-export let Tapable = React.forwardRef(function Tapable(props, ref) {
+export interface Props extends BoxProps {}
+
+export let Tapable = React.forwardRef(function Tapable(props: Props, ref) {
   let ariaProps = useTapable(props, ref)
   return <Box {...props} {...ariaProps} />
 })

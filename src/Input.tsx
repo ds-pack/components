@@ -1,6 +1,6 @@
 import React, { forwardRef, useState } from 'react'
 import styled, { css } from 'styled-components'
-import { Box } from './Box'
+import { Box, Props as BoxProps } from './Box'
 import { Label } from './Label'
 import ReactDOM from 'react-dom'
 
@@ -10,17 +10,14 @@ function flush(cb) {
   ReactDOM.flushSync(cb)
 }
 
-export interface Props {
+export interface Props extends BoxProps {
   disabled: boolean
   value: string
   onChange: (value: string) => void
-  children: any
+  children: React.ReactNode
   autoFocus: boolean
-  placeholder: any
-  inputProps: {
-    [key: string]: any
-  }
-  [key: string]: any
+  placeholder: string
+  inputProps: BoxProps
 }
 
 let WithoutProps = forwardRef(function WithoutProps(
@@ -44,11 +41,14 @@ let StyledInput = styled(WithoutProps)(
     outline: none;
     font-size: var(--fontSizes-1);
 
-    border-color: ${disabled
-      ? `var(--colors-disabledFill)`
-      : focused || hovered
-      ? `var(--colors-primary)`
-      : `var(--colors-black)`};
+    border-color: ${(() => {
+      if (disabled) {
+        return `var(--colors-disabledFill)`
+      } else if (focused || hovered) {
+        return `var(--colors-primary)`
+      }
+      return `var(--colors-black)`
+    })()};
     background-color: ${disabled
       ? `var(--colors-disabledBg)`
       : `var(--colors-gray-0)`};

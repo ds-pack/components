@@ -1,17 +1,16 @@
-import * as React from 'react'
-import ReactDOM, { createPortal } from 'react-dom'
+import React, { useState } from 'react'
+import ReactDOM from 'react-dom'
 import * as components from '@ds-pack/components'
-let { useCallback, useEffect, useState, forwardRef } = React
 // import styled from "styled-components";
 // import { useSharedRef } from "@matthamlin/use-refs";
 // import { variant, get, compose } from "styled-system";
 // import { createPopper, reposition } from "nanopop";
 
 // @see https://github.com/facebook/react/issues/18591#issuecomment-613026224
-function flush(cb) {
-  // @ts-ignore
-  ReactDOM.flushSync(cb)
-}
+// function flush(cb) {
+//   // @ts-ignore
+//   ReactDOM.flushSync(cb)
+// }
 
 let {
   ThemeProvider,
@@ -35,7 +34,6 @@ let {
   Figure,
   Input,
   Textarea,
-  useTheme,
   Chip,
 } = components
 
@@ -142,7 +140,7 @@ function Demo() {
           mb="$2"
         >
           <Input
-            autoFocus
+            // autoFocus
             display="flex"
             flexGrow={1}
             value={val}
@@ -168,12 +166,43 @@ function Demo() {
         </Button>
 
         <Chip variant="primary">Primary</Chip>
-        <Chip variant="secondary">Primary</Chip>
-        <Chip variant="tertiary">Primary</Chip>
-        <Chip bg="gray.3">Gray</Chip>
-        <Textarea value={val} onChange={setVal} mb={2}>
+        <Chip variant="default">Default</Chip>
+        <Chip>no variant</Chip>
+
+        <hr />
+
+        <Heading variant="lead" is="h1">
+          Lead
+        </Heading>
+        <Heading variant="h1" is="h1">
+          H1
+        </Heading>
+        <Heading variant="h2" is="h2">
+          H2
+        </Heading>
+        <Heading variant="h3" is="h3">
+          H3
+        </Heading>
+        <Heading variant="subhead" is="h4">
+          H4
+        </Heading>
+
+        <hr />
+
+        <Input />
+
+        <Input placeholder="foo" />
+
+        <Input disabled />
+
+        <Input disabled placeholder="foo" />
+
+        <hr />
+
+        <Textarea value={val} onChange={setVal}>
           Big Textbox here
         </Textarea>
+
         <Textarea
           placeholder="Some long placeholder here"
           disabled
@@ -182,30 +211,26 @@ function Demo() {
         >
           Big Textbox here
         </Textarea>
+
+        <hr />
+
         <Figure
           src="https://images.unsplash.com/photo-1592005915374-c93d61ad1913?ixlib=rb-1.2.1&auto=format&fit=crop&w=1629&q=80"
           alt="Yo"
           caption="Big ass image dude!"
         />
-        <Input value="Yo">Label content here</Input>
-        <Input disabled placeholder="Hello World">
-          Label content here
-        </Input>
-        <Blockquote>Test stuff</Blockquote>
-        <Heading variant="lead" forwardedAs="h1">
-          Test
-        </Heading>
-        <Heading variant="h1">Testing</Heading>
-        <Heading variant="h2">Testing</Heading>
-        <Heading variant="h3">Testing</Heading>
-        <Heading variant="subhead">Testing</Heading>
+
+        <hr />
+        <Blockquote>Insert a good quote here</Blockquote>
+        <hr />
         <Text>
           Some text with an inline{' '}
-          <Link forwardedAs="a" href="#foo">
+          <Link is="a" href="#foo">
             Link
           </Link>{' '}
           alongside other text
         </Text>
+        <hr />
         <Checkbox checked={c} onChange={() => set((c) => !c)}>
           Checkbox input
         </Checkbox>
@@ -223,6 +248,8 @@ function Demo() {
           Checkbox input with a ton of text that will wrap onto multiple lines.
           This description is really important make sure to read all of it!@
         </Checkbox>
+
+        <hr />
 
         <Button
           disabled
@@ -242,6 +269,7 @@ function Demo() {
         >
           test
         </Button>
+        <hr />
         <Stack gap={2} props={{ mt: 10 }}>
           <Banner variant="info">
             <Text>Info banner</Text>
@@ -256,21 +284,30 @@ function Demo() {
             <Text>Success banner</Text>
           </Banner>
         </Stack>
+        <hr />
         <Label as={Stack} gap={2}>
           <Text>Some text here</Text>
           <input type="text" defaultValue="foo" />
         </Label>
-        <List forwardedAs="ol" variant="ordered">
+        <hr />
+        <List is="ol" variant="ordered">
           <ListItem>Foo</ListItem>
           <ListItem>Bar</ListItem>
         </List>
-      </Stack>
-      <Box>
+        <List is="ul" variant="unordered">
+          <ListItem>Foo</ListItem>
+          <ListItem>Bar</ListItem>
+        </List>
+        <List is="ul" variant="base">
+          <ListItem>Foo</ListItem>
+          <ListItem>Bar</ListItem>
+        </List>
+        <hr />
         <InlineCode>InlineCode</InlineCode>
-      </Box>
-      <VisuallyHidden>
-        <p>Test</p>
-      </VisuallyHidden>
+        <VisuallyHidden>
+          <p>Test</p>
+        </VisuallyHidden>
+      </Stack>
     </>
   )
 }
