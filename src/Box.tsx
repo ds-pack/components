@@ -2,19 +2,6 @@ import React, { forwardRef } from 'react'
 import styled from 'styled-components'
 import createSimpleProps from 'simple-props'
 
-// import {
-//   createSystem,
-//   border,
-//   color,
-//   flexbox,
-//   grid,
-//   layout,
-//   position,
-//   shadow,
-//   space,
-//   typography,
-// } from 'system-props'
-
 let propConfig = {
   display: true,
   margin: {
@@ -25,14 +12,14 @@ let propConfig = {
     scale: 'space',
     property: 'margin',
   },
-  // mx: {
-  //   scale: 'space',
-  //   property: ['marginLeft', 'marginRight'],
-  // },
-  // my: {
-  //   scale: 'space',
-  //   property: ['marginTop', 'marginBottom'],
-  // },
+  mx: {
+    scale: 'space',
+    property: ['marginLeft', 'marginRight'],
+  },
+  my: {
+    scale: 'space',
+    property: ['marginTop', 'marginBottom'],
+  },
   mt: {
     scale: 'space',
     property: 'marginTop',
@@ -151,17 +138,14 @@ let propConfig = {
     property: 'letterSpacing',
   },
   textAlign: {
-    // ??????
     scale: '',
     property: 'textAlign',
   },
   fontStyle: {
-    // ??????
     scale: '',
     property: 'fontStyle',
   },
   fontWeight: {
-    // ??????
     scale: '',
     property: 'fontWeight',
   },
