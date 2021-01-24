@@ -146,7 +146,7 @@ let propConfig = {
     property: 'fontStyle',
   },
   fontWeight: {
-    scale: '',
+    scale: 'fontWeights',
     property: 'fontWeight',
   },
   width: {
