@@ -10,7 +10,7 @@ export let InlineCode = React.forwardRef(function InlineCode(
   return (
     <Box
       is="code"
-      background="$gray-1"
+      bg="$gray-1"
       fontFamily="$monospace"
       display="inline-flex"
       justifyContent="center"
