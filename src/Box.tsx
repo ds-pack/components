@@ -100,7 +100,10 @@ let propConfig = {
     scale: 'space',
     property: 'paddingLeft',
   },
-  color: true,
+  color: {
+    scale: 'colors',
+    property: 'color',
+  },
   backgroundColor: {
     scale: 'colors',
     property: 'backgroundColor',
