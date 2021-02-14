@@ -7,6 +7,7 @@
   "scripts": {
     "build": "yarn workspace @ds-pack/components run build",
     "test": "yarn workspace @ds-pack/components run test",
-    "pub": "yarn workspace @ds-pack/components run pub"
+    "pub": "yarn workspace @ds-pack/components run pub",
+    "start": "yarn workspace ds-pack-components-example start"
   }
 }
