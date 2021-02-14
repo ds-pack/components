@@ -2,7 +2,8 @@
   - docs/*
   - docs/**/*
   - README.md
+  - packages/components/README.md
 🧪 Tests:
-  - src/__tests__/*
-  - src/__tests__/**/*
-  - src/test
+  - packages/components/src/__tests__/*
+  - packages/components/src/__tests__/**/*
+  - packages/components/src/test

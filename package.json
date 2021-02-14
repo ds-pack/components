@@ -1,64 +1,13 @@
 {
-  "name": "@ds-pack/components",
-  "version": "0.0.13",
-  "main": "dist/index.js",
-  "source": "src/index.tsx",
-  "repository": "git@github.com:ds-pack/components.git",
-  "author": "Matt Hamlin <matthewjameshamlin@gmail.com>",
-  "license": "MIT",
-  "files": [
-    "dist"
+  "private": true,
+  "workspaces": [
+    "packages/*"
   ],
+  "name": "ds-pack-components",
   "scripts": {
-    "watch": "babel src/ --out-dir dist/ --extensions '.ts,.tsx' --watch",
-    "build": "babel src/ --out-dir dist/ --extensions '.ts,.tsx'",
-    "test": "jest",
-    "test-watch": "jest --watch",
-    "test-cov": "jest --collectCoverage",
-    "prepub": "yarn build",
-    "pub": "yarn publish --access public",
-    "tsc": "tsc --noEmit"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.8.4",
-    "@babel/core": "^7.9.6",
-    "@babel/plugin-proposal-export-default-from": "^7.8.3",
-    "@babel/plugin-transform-runtime": "^7.9.6",
-    "@babel/plugin-transform-typescript": "^7.9.6",
-    "@babel/preset-env": "^7.9.6",
-    "@babel/preset-react": "^7.9.4",
-    "@babel/runtime": "^7.9.6",
-    "@ds-pack/use-refs": "^1.0.0",
-    "@testing-library/jest-dom": "^5.7.0",
-    "@testing-library/react": "^10.0.4",
-    "@types/jest": "^25.2.2",
-    "@types/prettier": "2.1.0",
-    "@types/react": "^16.9.42",
-    "@types/react-dom": "^16.9.8",
-    "@types/styled-components": "^5.1.1",
-    "babel-jest": "^26.0.1",
-    "babel-plugin-styled-components": "^1.10.7",
-    "jest": "^26.0.1",
-    "prettier": "^2.1.1",
-    "react": "experimental",
-    "react-dom": "experimental",
-    "react-is": "^16.13.1",
-    "simple-props": "^0.5.0",
-    "styled-components": "^5.1.0",
-    "typescript": "^4.1.3"
-  },
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/"
-  },
-  "peerDependencies": {
-    "@ds-pack/use-refs": "^1.0.0",
-    "react": "*",
-    "react-dom": "*",
-    "styled-components": "*",
-    "simple-props": "*"
-  },
-  "dependencies": {
-    "@ds-pack/theme-to-css-vars": "^1.0.0"
+    "build": "yarn workspace @ds-pack/components run build",
+    "test": "yarn workspace @ds-pack/components run test",
+    "pub": "yarn workspace @ds-pack/components run pub",
+    "start": "yarn workspace ds-pack-components-example start"
   }
 }
