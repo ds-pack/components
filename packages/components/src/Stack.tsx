@@ -1,7 +1,7 @@
 import React from 'react'
-import { Box, Props as BoxProps } from './Box'
+import { Box, BoxProps } from './Box'
 
-export interface Props extends BoxProps {
+export interface StackProps extends BoxProps {
   props?: BoxProps
   inline: boolean
   gap: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10
@@ -9,7 +9,7 @@ export interface Props extends BoxProps {
 }
 
 export let Stack = React.forwardRef(function Stack(
-  { gap, children, inline = false, props = {}, ...rest }: Props,
+  { gap, children, inline = false, props = {}, ...rest }: StackProps,
   ref: any,
 ) {
   return (

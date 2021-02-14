@@ -114,3 +114,11 @@ test('Textarea is defined', () => {
 test('Chip is defined', () => {
   expect(components.Chip).toBeDefined()
 })
+
+test('RadioButton is defined', () => {
+  expect(components.RadioButton).toBeDefined()
+})
+
+test('RadioInput is defined', () => {
+  expect(components.RadioInput).toBeDefined()
+})

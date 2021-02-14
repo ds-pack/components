@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react'
 import styled, { css } from 'styled-components'
-import { Box, Props as BoxProps } from './Box'
+import { Box, BoxProps } from './Box'
 import { Label } from './Label'
 import ReactDOM from 'react-dom'
 
@@ -10,20 +10,18 @@ function flush(cb) {
   ReactDOM.flushSync(cb)
 }
 
-interface Props extends BoxProps {
+interface TextareaProps extends BoxProps {
   disabled: boolean
   value: string
   onChange: (value: string) => void
   children: React.ReactNode
   autoFocus: boolean
   placeholder: string
-  inputProps: {
-    [key: string]: any
-  }
+  inputProps: BoxProps
 }
 
 let WithoutProps = forwardRef(function WithoutProps(
-  { focused, ...props }: Props,
+  { focused, ...props }: TextareaProps,
   ref,
 ) {
   return <Box {...props} ref={ref} />
@@ -68,7 +66,7 @@ export let Textarea = React.forwardRef(function Textarea(
     placeholder,
     inputProps,
     ...props
-  }: Props,
+  }: TextareaProps,
   ref,
 ) {
   let [focused, setFocused] = React.useState(autoFocus)

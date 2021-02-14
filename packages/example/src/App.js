@@ -35,6 +35,7 @@ let {
   Input,
   Textarea,
   Chip,
+  RadioButton,
 } = components
 
 // function Portal({ children, isOpen = false }) {
@@ -129,9 +130,41 @@ let {
 function Demo() {
   let [c, set] = useState(false)
   let [val, setVal] = useState('')
+  let [selected, setSelected] = useState(null)
+  function selectFood(value) {
+    setSelected(value)
+  }
   return (
     <>
-      <Stack gap="$4" p="$5" bg="$gray-1" className="App">
+      <Stack gap="$4" p="$5" bg="$gray-0" className="App">
+        <Box is="fieldset">
+          <Box is="legend">Select your favorite food:</Box>
+
+          <RadioButton
+            onChange={selectFood}
+            checked={selected === 'pizza'}
+            name="food"
+            value="pizza"
+          >
+            Pizza
+          </RadioButton>
+          <RadioButton
+            onChange={selectFood}
+            checked={selected === 'pasta'}
+            name="food"
+            value="pasta"
+          >
+            Pasta
+          </RadioButton>
+          <RadioButton
+            onChange={selectFood}
+            checked={selected === 'burritos'}
+            name="food"
+            value="burritos"
+          >
+            Burritos
+          </RadioButton>
+        </Box>
         <Stack
           props={{ flexGrow: 1 }}
           inline

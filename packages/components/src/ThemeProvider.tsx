@@ -5,14 +5,17 @@ import {
   DefaultTheme,
 } from 'styled-components'
 
-export let themeContext = React.createContext(defaultTheme)
+export let themeContext = React.createContext<DefaultTheme>(defaultTheme)
 
-interface Props {
+export interface ThemeProviderProps {
   theme?: DefaultTheme
   children: React.ReactNode
 }
 
-export function ThemeProvider({ theme = defaultTheme, children }: Props) {
+export function ThemeProvider({
+  theme = defaultTheme,
+  children,
+}: ThemeProviderProps) {
   return (
     <themeContext.Provider value={theme}>
       <StyledProvider theme={theme}>{children}</StyledProvider>

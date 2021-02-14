@@ -1,7 +1,12 @@
 import React from 'react'
-import { Box } from './Box'
+import { Box, BoxProps } from './Box'
 
-export let Blockquote = React.forwardRef(function Blockquote(props, ref) {
+export interface BlockquoteProps extends BoxProps {}
+
+export let Blockquote = React.forwardRef(function Blockquote(
+  props: BlockquoteProps,
+  ref,
+) {
   return (
     <Box
       ref={ref}

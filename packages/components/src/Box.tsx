@@ -495,14 +495,14 @@ function createTestIds(testIds = null) {
   return {}
 }
 
-export interface Props {
+export interface BoxProps {
   is?: any
   testIds?: string | { default: string }
   [key: string]: any
 }
 
 let WrappedBase = forwardRef(function WrappedBase(
-  { is: Element = 'div', testIds, ...props }: Props,
+  { is: Element = 'div', testIds, ...props }: BoxProps,
   ref,
 ) {
   let next = {}

@@ -1,13 +1,13 @@
 import React, { forwardRef } from 'react'
-import { Box, Props as BoxProps } from './Box'
+import { Box, BoxProps } from './Box'
 import styled, { css } from 'styled-components'
 
-export interface Props extends BoxProps {
+export interface ChipProps extends BoxProps {
   variant?: 'primary' | 'default'
 }
 
 let WithoutProps = forwardRef(function WithoutProps(
-  { variant, ...props }: Props,
+  { variant, ...props }: ChipProps,
   ref,
 ) {
   return <Box {...props} ref={ref} />
@@ -43,6 +43,6 @@ let InnerChip = styled(WithoutProps)(({ variant }) => {
   }
 })
 
-export let Chip = forwardRef(function Chip(props: Props, ref) {
+export let Chip = forwardRef(function Chip(props: ChipProps, ref) {
   return <InnerChip {...props} ref={ref} />
 })

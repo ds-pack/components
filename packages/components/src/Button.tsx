@@ -1,9 +1,9 @@
 import React, { forwardRef, MouseEvent } from 'react'
 import styled, { css } from 'styled-components'
-import { Box } from './Box'
+import { Box, BoxProps } from './Box'
 import { Tapable } from './Tapable'
 
-interface ButtonProps {
+export interface ButtonProps extends BoxProps {
   disabled?: boolean
   variant?: 'default' | 'ghost' | 'text'
   onClick?: (e: MouseEvent<HTMLButtonElement>) => void
@@ -14,7 +14,7 @@ let ButtonImpl = forwardRef(function ButtonImpl(props: ButtonProps, ref) {
 })
 
 export let Button = styled(ButtonImpl)(
-  ({ theme, disabled = false, variant = 'default' }) => css`
+  ({ disabled = false, variant = 'default' }) => css`
     display: inline-flex;
     justify-content: center;
     align-items: center;

@@ -1,6 +1,6 @@
 import React, { forwardRef, useState } from 'react'
 import styled, { css } from 'styled-components'
-import { Box, Props as BoxProps } from './Box'
+import { Box, BoxProps } from './Box'
 import { Label } from './Label'
 import ReactDOM from 'react-dom'
 
@@ -10,7 +10,7 @@ function flush(cb) {
   ReactDOM.flushSync(cb)
 }
 
-export interface Props extends BoxProps {
+export interface InputProps extends BoxProps {
   disabled: boolean
   value: string
   onChange: (value: string) => void
@@ -21,14 +21,14 @@ export interface Props extends BoxProps {
 }
 
 let WithoutProps = forwardRef(function WithoutProps(
-  { focused, hovered, ...props }: Props,
+  { focused, hovered, ...props }: InputProps,
   ref,
 ) {
   return <Box {...props} ref={ref} />
 })
 
 let StyledInput = styled(WithoutProps)(
-  ({ focused, hovered, disabled }: Props) => css`
+  ({ focused, hovered, disabled }: InputProps) => css`
     border: solid 2px;
     width: 100%;
     display: inline-flex;
@@ -65,7 +65,7 @@ export let Input = forwardRef(function Input(
     placeholder,
     inputProps,
     ...props
-  }: Props,
+  }: InputProps,
   ref,
 ) {
   let [focused, setFocused] = useState(autoFocus)

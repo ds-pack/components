@@ -1,13 +1,13 @@
 import React, { forwardRef } from 'react'
 import styled, { css } from 'styled-components'
-import { Box, Props as BoxProps } from './Box'
+import { Box, BoxProps } from './Box'
 
-export interface Props extends BoxProps {
+export interface HeadingProps extends BoxProps {
   variant: 'h1' | 'lead' | 'h2' | 'h3' | 'subhead'
 }
 
 let WithoutProps = forwardRef(function WithoutProps(
-  { variant, ...props }: Props,
+  { variant, ...props }: HeadingProps,
   ref,
 ) {
   return <Box {...props} ref={ref} />

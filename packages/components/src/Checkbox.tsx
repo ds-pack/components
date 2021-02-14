@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react'
 import { ToggleInput } from './ToggleInput'
 import styled, { css } from 'styled-components'
-import { Box } from './Box'
+import { Box, BoxProps } from './Box'
 import { useSharedRef } from '@ds-pack/use-refs'
 import { Label } from './Label'
 import ReactDOM from 'react-dom'
@@ -12,18 +12,17 @@ function flush(cb) {
   ReactDOM.flushSync(cb)
 }
 
-export interface Props {
+export interface CheckboxProps extends BoxProps {
   checked: boolean
   onChange: (checked: boolean) => void
   disabled?: boolean
   indeterminate?: boolean
   autoFocus?: boolean
-  children: any
-  [key: string]: any
+  children: React.ReactNode
 }
 
 let WithoutProps = forwardRef(function WithoutProps(
-  { indeterminate, ...props }: Props,
+  { indeterminate, focused, ...props }: CheckboxProps,
   ref,
 ) {
   return <Box {...props} ref={ref} />
@@ -99,7 +98,7 @@ export let Checkbox = React.forwardRef(function Checkbox(
     autoFocus,
     children,
     ...props
-  }: Props,
+  }: CheckboxProps,
   ref,
 ) {
   let sharedRef = useSharedRef(ref)

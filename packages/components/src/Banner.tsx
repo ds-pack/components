@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react'
 import styled, { css } from 'styled-components'
-import { Box, Props as BoxProps } from './Box'
+import { Box, BoxProps } from './Box'
 
 export interface Props extends BoxProps {
   variant: 'info' | 'warning' | 'error' | 'success'

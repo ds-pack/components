@@ -1,11 +1,12 @@
 import { useEffect, useCallback, useState } from 'react'
 import { useSharedRef } from '@ds-pack/use-refs'
 
-interface Props {
+export interface UseTapableProps {
   disabled?: boolean
   autoFocus?: boolean
-  onClick?: (e: any) => void
-  [key: string]: any
+  onClick?: (e: MouseEvent) => void
+  onKeyDown?: (e: KeyboardEvent) => void
+  [key: string]: unknown
 }
 
 function noop() {}
@@ -17,7 +18,7 @@ export function useTapable(
     onClick = noop,
     onKeyDown = noop,
     ...props
-  }: Props,
+  }: UseTapableProps,
   ref: any,
 ) {
   let sharedRef = useSharedRef(ref)

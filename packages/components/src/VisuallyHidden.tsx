@@ -1,5 +1,7 @@
 import styled from 'styled-components'
-import { Box } from './Box'
+import { Box, BoxProps } from './Box'
+
+export interface VisuallyHiddenProps extends BoxProps {}
 
 export let VisuallyHidden = styled(Box)`
   border: 0;

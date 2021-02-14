@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react'
 import styled from 'styled-components'
-import { Box, Props as BoxProps } from './Box'
+import { Box, BoxProps } from './Box'
 
 export interface ListProps extends BoxProps {
   variant: 'base' | 'ordered' | 'unordered'
