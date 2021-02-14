@@ -13,8 +13,7 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
-      - run: cd packages/components
       - run: yarn
-      - run: yarn pub
+      - run: yarn worspace @ds-pack/components run pub
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
