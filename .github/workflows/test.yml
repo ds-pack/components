@@ -11,7 +11,6 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
-      - run: cd packages/components
       - run: yarn
-      - run: yarn worspace @ds-pack/components run build
-      - run: yarn worspace @ds-pack/components run test
+      - run: yarn build
+      - run: yarn test

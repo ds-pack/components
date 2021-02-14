@@ -3,5 +3,10 @@
   "workspaces": [
     "packages/*"
   ],
-  "name": "ds-pack-components"
+  "name": "ds-pack-components",
+  "scripts": {
+    "build": "yarn workspace @ds-pack/components run build",
+    "test": "yarn workspace @ds-pack/components run test",
+    "pub": "yarn workspace @ds-pack/components run pub"
+  }
 }
