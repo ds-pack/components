@@ -451,21 +451,23 @@ let propConfig = {
   },
 }
 
+let pseudoProps = {
+  _hover: '&:hover',
+  _focus: '&:focus',
+  _hoverAndFocus: '&:hover, &:focus',
+  _disabled:
+    '[disabled], [disabled]:hover, [disabled]:focus, [aria-disabled], [aria-disabled]:hover, [aria-disabled]:focus',
+  _readOnly: '[readOnly]',
+  _first: '&:first-child',
+  _last: '&:last-child',
+  _odd: '&:nth-of-type(odd)',
+  _even: '&:nth-of-type(even)',
+  _target: ':target',
+}
+
 let simpleProps = createSimpleProps({
   props: propConfig,
-  pseudoProps: {
-    _hover: '&:hover',
-    _focus: '&:focus',
-    _hoverAndFocus: '&:hover, &:focus',
-    _disabled:
-      '[disabled], [disabled]:hover, [disabled]:focus, [aria-disabled], [aria-disabled]:hover, [aria-disabled]:focus',
-    _readOnly: '[readOnly]',
-    _first: '&:first-child',
-    _last: '&:last-child',
-    _odd: '&:nth-of-type(odd)',
-    _even: '&:nth-of-type(even)',
-    _target: ':target',
-  },
+  pseudoProps,
 })
 
 // Shown are the default values
@@ -507,7 +509,7 @@ let WrappedBase = forwardRef(function WrappedBase(
 ) {
   let next = {}
   for (let prop in props) {
-    if (prop in propConfig) {
+    if (prop in propConfig || prop in pseudoProps) {
       continue
     }
     next[prop] = props[prop]
