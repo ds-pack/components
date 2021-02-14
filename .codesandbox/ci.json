@@ -1,4 +1,4 @@
 {
   "packages": ["packages/components"],
-  "sandboxes": ["new", "packages/example"]
+  "sandboxes": ["new", "/packages/example"]
 }
