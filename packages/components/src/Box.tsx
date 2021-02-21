@@ -449,6 +449,7 @@ let propConfig = {
     scale: 'shadows',
     property: 'boxShadow',
   },
+  transform: true,
 }
 
 let pseudoProps = {
