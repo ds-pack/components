@@ -1,16 +1,15 @@
-import React, { useState } from 'react'
-import ReactDOM from 'react-dom'
+import React, { useState, useEffect, forwardRef } from 'react'
+import ReactDOM, { createPortal, flushSync } from 'react-dom'
 import * as components from '@ds-pack/components'
-// import styled from "styled-components";
-// import { useSharedRef } from "@matthamlin/use-refs";
-// import { variant, get, compose } from "styled-system";
-// import { createPopper, reposition } from "nanopop";
+import styled from 'styled-components'
+import { useSharedRef } from '@ds-pack/use-refs'
+import { createPopper, reposition } from 'nanopop'
 
 // @see https://github.com/facebook/react/issues/18591#issuecomment-613026224
-// function flush(cb) {
-//   // @ts-ignore
-//   ReactDOM.flushSync(cb)
-// }
+function flush(cb) {
+  // @ts-ignore
+  flushSync(cb)
+}
 
 let {
   ThemeProvider,
@@ -36,21 +35,11 @@ let {
   Textarea,
   Chip,
   RadioButton,
+  Portal,
+  useDropdown,
+  DropdownButton,
+  DropdownMenu,
 } = components
-
-// function Portal({ children, isOpen = false }) {
-//   let [element, setElement] = useState(null)
-
-//   useEffect(() => {
-//     let element = document.body.appendChild(document.createElement('div'))
-//     setElement(element)
-//   }, [isOpen])
-
-//   if (isOpen && element) {
-//     return createPortal(children, element)
-//   }
-//   return null
-// }
 
 // let DropdownMenu = forwardRef(function DropdownMenu({ isOpen, ...props }, ref) {
 //   return (
@@ -63,11 +52,25 @@ let {
 // })
 
 // let DropdownButton = forwardRef(function DropdownButton(
-//   { children, ...props },
+//   { children, isOpen, ...props },
 //   ref,
 // ) {
 //   return (
-//     <Box is={Tapable} ref={ref} {...props}>
+//     <Box
+//       is={Tapable}
+//       ref={ref}
+//       borderRadius="$0"
+//       border="solid 2px"
+//       borderColor={isOpen ? '$primary' : '$black'}
+//       backgroundColor="$white"
+//       p="$2"
+//       boxShadow={isOpen ? 'var(--shadows-focusShadow)' : null}
+//       _focus={{
+//         boxShadow: 'var(--shadows-focusShadow)',
+//         borderColor: '$primary',
+//       }}
+//       {...props}
+//     >
 //       {children}
 //     </Box>
 //   )
@@ -103,29 +106,31 @@ let {
 //   }
 // }
 
-// function Dropdown() {
-//   let { isOpen, onClick, buttonRef, menuRef, menuStyles } = useDropdown()
+function Dropdown() {
+  let { isOpen, onClick, buttonRef, menuRef, menuStyles } = useDropdown()
 
-//   return (
-//     <>
-//       <DropdownButton ref={buttonRef} onClick={onClick}>
-//         Status
-//       </DropdownButton>
-//       <DropdownMenu
-//         isOpen={isOpen}
-//         ref={menuRef}
-//         height={300}
-//         width={300}
-//         left={0}
-//         backgroundColor="white"
-//         {...menuStyles}
-//       >
-//         <Text>Dropdown</Text>
-//       </DropdownMenu>
-//     </>
-//   )
-// }
-// {/* <Dropdown /> */}
+  return (
+    <>
+      <DropdownButton isOpen={isOpen} ref={buttonRef} onClick={onClick}>
+        Status
+      </DropdownButton>
+      <DropdownMenu
+        isOpen={isOpen}
+        ref={menuRef}
+        height={300}
+        width={300}
+        left={0}
+        backgroundColor="$white"
+        borderRadius="$0"
+        boxShadow="0px 0px 10px 4px var(--colors-gray-1)"
+        p="$2"
+        {...menuStyles}
+      >
+        <Text>Dropdown</Text>
+      </DropdownMenu>
+    </>
+  )
+}
 
 function Demo() {
   let [c, set] = useState(false)
@@ -137,6 +142,7 @@ function Demo() {
   return (
     <>
       <Stack gap="$4" p="$5" bg="$gray-0" className="App">
+        <Dropdown />
         <Box is="fieldset">
           <Box is="legend">Select your favorite food:</Box>
 

@@ -6,12 +6,13 @@
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
-    "@ds-pack/use-refs": "*",
-    "simple-props": "*",
     "@ds-pack/components": "*",
+    "@ds-pack/use-refs": "*",
+    "nanopop": "^2.1.0",
     "react": "experimental",
     "react-dom": "experimental",
     "react-scripts": "3.0.1",
+    "simple-props": "*",
     "styled-components": "^5"
   },
   "devDependencies": {
