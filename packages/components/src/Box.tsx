@@ -455,6 +455,7 @@ let propConfig = {
 let pseudoProps = {
   _hover: '&:hover',
   _focus: '&:focus',
+  _active: '&:active',
   _hoverAndFocus: '&:hover, &:focus',
   _disabled:
     '[disabled], [disabled]:hover, [disabled]:focus, [aria-disabled], [aria-disabled]:hover, [aria-disabled]:focus',
