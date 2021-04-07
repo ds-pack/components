@@ -17,7 +17,12 @@
     "test-cov": "jest --collectCoverage",
     "prepub": "yarn build",
     "pub": "yarn publish --access public",
-    "tsc": "tsc --noEmit"
+    "tsc": "tsc --noEmit",
+    "percy:cypress": "percy exec -- cypress run",
+    "start:server": "serve -l 8000 .",
+    "visual-test": "start-server-and-test start:server 8000 percy:cypress",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
@@ -29,6 +34,12 @@
     "@babel/preset-react": "^7.9.4",
     "@babel/runtime": "^7.9.6",
     "@ds-pack/use-refs": "^1.0.0",
+    "@percy/cli": "^1.0.0-beta.46",
+    "@percy/cypress": "^3.0.0",
+    "@storybook/addon-actions": "^6.2.3",
+    "@storybook/addon-essentials": "^6.2.3",
+    "@storybook/addon-links": "^6.2.3",
+    "@storybook/react": "^6.2.3",
     "@testing-library/jest-dom": "^5.7.0",
     "@testing-library/react": "^10.0.4",
     "@types/jest": "^25.2.2",
@@ -37,16 +48,20 @@
     "@types/react-dom": "^16.9.8",
     "@types/styled-components": "^5.1.1",
     "babel-jest": "^26.0.1",
+    "babel-loader": "^8.2.2",
     "babel-plugin-styled-components": "^1.10.7",
+    "cypress": "^7.0.0",
     "jest": "^26.0.1",
+    "nanopop": "2.1.0",
     "prettier": "^2.1.1",
     "react": "experimental",
     "react-dom": "experimental",
     "react-is": "^16.13.1",
+    "serve": "^11.3.2",
     "simple-props": "^0.5.0",
+    "start-server-and-test": "^1.12.1",
     "styled-components": "^5.1.0",
-    "typescript": "^4.1.3",
-    "nanopop": "2.1.0"
+    "typescript": "^4.1.3"
   },
   "publishConfig": {
     "access": "public",
@@ -54,11 +69,11 @@
   },
   "peerDependencies": {
     "@ds-pack/use-refs": "^1.0.0",
+    "nanopop": "^2.1.0",
     "react": "*",
     "react-dom": "*",
-    "styled-components": "*",
     "simple-props": "*",
-    "nanopop": "^2.1.0"
+    "styled-components": "*"
   },
   "dependencies": {
     "@ds-pack/theme-to-css-vars": "^1.0.0"

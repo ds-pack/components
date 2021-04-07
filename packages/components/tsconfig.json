@@ -15,5 +15,6 @@
     "jsx": "preserve"
   },
   "exclude": ["node_modules", ".yarn"],
-  "include": ["**/*.ts", "**/*.tsx"]
+  "include": ["**/*.ts", "**/*.tsx"],
+  "types": ["cypress", "@percy/cypress"]
 }
