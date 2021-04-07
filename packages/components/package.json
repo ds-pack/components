@@ -22,7 +22,8 @@
     "start:server": "serve -l 8000 .",
     "visual-test": "start-server-and-test start:server 8000 percy:cypress",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "snapshot": "build-storybook && percy-storybook --widths=320,1280"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
@@ -36,6 +37,7 @@
     "@ds-pack/use-refs": "^1.0.0",
     "@percy/cli": "^1.0.0-beta.46",
     "@percy/cypress": "^3.0.0",
+    "@percy/storybook": "^3.3.1",
     "@storybook/addon-actions": "^6.2.3",
     "@storybook/addon-essentials": "^6.2.3",
     "@storybook/addon-links": "^6.2.3",
