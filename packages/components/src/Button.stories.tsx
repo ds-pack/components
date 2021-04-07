@@ -1,9 +1,6 @@
 import React, { ComponentProps } from 'react';
 import { Story } from '@storybook/react';
 import { Button } from './Button'
-import {ThemeProvider} from './ThemeProvider'
-import {Reset} from './Reset'
-import {Theme} from './Theme'
 
 //👇 This default export determines where your story goes in the story list
 export default {
@@ -19,11 +16,4 @@ export default {
 //   /*👇 The args you need here will depend on your component */
 // };
 
-export const Basic = () => {
-  <ThemeProvider>
-      <Reset />
-      <Button>Test</Button>
-      <Theme />
-    </ThemeProvider>
-  )
-}
+export const Basic = () => <Button>Test</Button>
