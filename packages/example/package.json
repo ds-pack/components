@@ -8,10 +8,10 @@
   "dependencies": {
     "@ds-pack/components": "*",
     "@ds-pack/use-refs": "*",
-    "nanopop": "^2.1.0",
+    "nanopop": "^2",
     "react": "experimental",
     "react-dom": "experimental",
-    "react-scripts": "3.0.1",
+    "react-scripts": "^3",
     "simple-props": "*",
     "styled-components": "^5"
   },
