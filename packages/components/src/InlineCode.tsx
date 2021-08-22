@@ -1,9 +1,9 @@
-import React from 'react'
+import { forwardRef } from 'react'
 import { Box, BoxProps } from './Box'
 
 export interface InlineCodeProps extends BoxProps {}
 
-export let InlineCode = React.forwardRef(function InlineCode(
+export let InlineCode = forwardRef(function InlineCode(
   props: InlineCodeProps,
   ref,
 ) {

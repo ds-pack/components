@@ -1,9 +1,9 @@
-import React from 'react'
+import { forwardRef } from 'react'
 import { Link, LinkProps } from './Link'
 
 interface GitHubMentionProps extends LinkProps {}
 
-export let GitHubMention = React.forwardRef(function GitHubMention(
+export let GitHubMention = forwardRef(function GitHubMention(
   { children, ...props }: GitHubMentionProps,
   ref,
 ) {

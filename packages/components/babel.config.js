@@ -7,15 +7,15 @@ module.exports = function (api) {
       '@babel/preset-env',
       {
         targets: {
-          node: 8,
+          node: true,
         },
       },
     ]
   }
   return {
-    presets: [cfg, '@babel/preset-react'],
+    presets: [cfg, ['@babel/preset-react', { runtime: 'automatic' }]],
     plugins: [
-      'babel-plugin-styled-components',
+      ['babel-plugin-styled-components', { ssr: true }],
       '@babel/plugin-transform-runtime',
       '@babel/plugin-proposal-export-default-from',
       [

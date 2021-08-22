@@ -1,14 +1,15 @@
-import React from 'react'
+import { forwardRef, Children, isValidElement } from 'react'
+import type { ReactNode } from 'react'
 import { Box, BoxProps } from './Box'
 
 export interface StackProps extends BoxProps {
   props?: BoxProps
   inline: boolean
   gap: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10
-  children: React.ReactNode
+  children: ReactNode
 }
 
-export let Stack = React.forwardRef(function Stack(
+export let Stack = forwardRef(function Stack(
   { gap, children, inline = false, props = {}, ...rest }: StackProps,
   ref: any,
 ) {
@@ -19,8 +20,8 @@ export let Stack = React.forwardRef(function Stack(
       {...rest}
       ref={ref}
     >
-      {React.Children.toArray(children)
-        .filter(React.isValidElement)
+      {Children.toArray(children)
+        .filter(isValidElement)
         .map((child: any, index: number) => (
           <Box
             key={index}

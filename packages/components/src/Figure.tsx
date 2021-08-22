@@ -1,14 +1,15 @@
-import React from 'react'
+import { forwardRef } from 'react'
+import type { ReactNode } from 'react'
 import { Box, BoxProps } from './Box'
 import { Image } from './Image'
 
 interface FigureProps extends BoxProps {
-  caption: React.ReactNode
+  caption: ReactNode
   src: string
   alt: string
 }
 
-export let Figure = React.forwardRef(function Figure(
+export let Figure = forwardRef(function Figure(
   { caption, src, alt, ...props }: FigureProps,
   ref,
 ) {

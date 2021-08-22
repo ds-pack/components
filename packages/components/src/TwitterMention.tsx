@@ -1,9 +1,9 @@
-import React from 'react'
+import { forwardRef } from 'react'
 import { Link, LinkProps } from './Link'
 
 export interface TwitterMentionProps extends LinkProps {}
 
-export let TwitterMention = React.forwardRef(function TwitterMention(
+export let TwitterMention = forwardRef(function TwitterMention(
   { children, ...props }: TwitterMentionProps,
   ref,
 ) {

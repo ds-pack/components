@@ -1,5 +1,5 @@
-import React, { forwardRef } from 'react'
-import styled, { css } from 'styled-components'
+import { forwardRef } from 'react'
+import styled from 'styled-components'
 import { Box, BoxProps } from './Box'
 
 export interface Props extends BoxProps {
@@ -16,7 +16,7 @@ let WithoutProps = forwardRef(function WithoutProps(
 export let Banner = styled(WithoutProps)(({ variant }) => {
   switch (variant) {
     case 'success': {
-      return css`
+      return `
         color: var(--colors-black);
         background-color: var(--colors-teal-2);
         border: 2px solid var(--colors-teal-6);
@@ -27,7 +27,7 @@ export let Banner = styled(WithoutProps)(({ variant }) => {
       `
     }
     case 'error': {
-      return css`
+      return `
         color: var(--colors-black);
         background-color: var(--colors-red-2);
         border: 2px solid var(--colors-red-6);
@@ -38,7 +38,7 @@ export let Banner = styled(WithoutProps)(({ variant }) => {
       `
     }
     case 'warning': {
-      return css`
+      return `
         color: var(--colors-black);
         background-color: var(--colors-yellow-2);
         border: 2px solid var(--colors-yellow-6);
@@ -50,7 +50,7 @@ export let Banner = styled(WithoutProps)(({ variant }) => {
     }
     case 'info':
     default: {
-      return css`
+      return `
         color: var(--colors-black);
         background-color: var(--colors-blue-2);
         border: 2px solid var(--colors-blue-6);

@@ -1,4 +1,5 @@
-import React, { forwardRef, useState } from 'react'
+import { forwardRef, useState } from 'react'
+import type { ReactNode } from 'react'
 import styled, { css } from 'styled-components'
 import { Box, BoxProps } from './Box'
 import { Label } from './Label'
@@ -14,7 +15,7 @@ export interface InputProps extends BoxProps {
   disabled: boolean
   value: string
   onChange: (value: string) => void
-  children: React.ReactNode
+  children: ReactNode
   autoFocus: boolean
   placeholder: string
   inputProps: BoxProps

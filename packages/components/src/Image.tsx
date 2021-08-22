@@ -1,4 +1,4 @@
-import React from 'react'
+import { forwardRef } from 'react'
 import { Box, BoxProps } from './Box'
 import styled from 'styled-components'
 
@@ -12,6 +12,6 @@ export interface ImageProps extends BoxProps {
   alt: string
 }
 
-export let Image = React.forwardRef(function Image(props: ImageProps, ref) {
+export let Image = forwardRef(function Image(props: ImageProps, ref) {
   return <StyledImage is="img" ref={ref} {...props} />
 })

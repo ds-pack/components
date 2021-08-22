@@ -1,4 +1,4 @@
-import React from 'react'
+import { forwardRef } from 'react'
 import { VisuallyHidden } from './VisuallyHidden'
 import { BoxProps } from './Box'
 
@@ -7,7 +7,7 @@ export interface ToggleInputProps extends BoxProps {
   onChange: (checked: boolean) => void
 }
 
-export let ToggleInput = React.forwardRef(function ToggleInput(
+export let ToggleInput = forwardRef(function ToggleInput(
   { onChange, checked, ...props }: ToggleInputProps,
   ref,
 ) {

@@ -1,4 +1,5 @@
-import React, { forwardRef } from 'react'
+import { forwardRef, useState } from 'react'
+import type { ReactNode } from 'react'
 import styled, { css } from 'styled-components'
 import { Box, BoxProps } from './Box'
 import { Label } from './Label'
@@ -14,7 +15,7 @@ interface TextareaProps extends BoxProps {
   disabled: boolean
   value: string
   onChange: (value: string) => void
-  children: React.ReactNode
+  children: ReactNode
   autoFocus: boolean
   placeholder: string
   inputProps: BoxProps
@@ -56,7 +57,7 @@ let StyledTextarea = styled(WithoutProps)(
   `,
 )
 
-export let Textarea = React.forwardRef(function Textarea(
+export let Textarea = forwardRef(function Textarea(
   {
     disabled,
     value,
@@ -69,7 +70,7 @@ export let Textarea = React.forwardRef(function Textarea(
   }: TextareaProps,
   ref,
 ) {
-  let [focused, setFocused] = React.useState(autoFocus)
+  let [focused, setFocused] = useState(autoFocus)
 
   function handleFocus() {
     setFocused(true)

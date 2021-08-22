@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react'
+import { forwardRef } from 'react'
 import styled from 'styled-components'
 import { Box, BoxProps } from './Box'
 
@@ -61,9 +61,6 @@ export let List = styled(WithoutProps)(({ variant = 'base' }) => {
 
 export interface ListItemProps extends BoxProps {}
 
-export let ListItem = React.forwardRef(function ListItem(
-  props: ListItemProps,
-  ref,
-) {
+export let ListItem = forwardRef(function ListItem(props: ListItemProps, ref) {
   return <Box ref={ref} is="li" {...props} />
 })

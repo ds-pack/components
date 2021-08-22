@@ -1,4 +1,5 @@
-import React, { forwardRef } from 'react'
+import { forwardRef, useState } from 'react'
+import type { ReactNode } from 'react'
 import styled, { css } from 'styled-components'
 import { Box, BoxProps } from './Box'
 import { Label } from './Label'
@@ -17,7 +18,7 @@ export interface RadioButtonProps extends BoxProps {
   value: string
   onChange: (value: string) => void
   disabled?: boolean
-  children: React.ReactNode
+  children: ReactNode
   autoFocus?: boolean
 }
 
@@ -83,7 +84,7 @@ export let RadioButton = forwardRef(function RadioButton(
   }: RadioButtonProps,
   ref,
 ) {
-  let [focused, setFocused] = React.useState(autoFocus)
+  let [focused, setFocused] = useState(autoFocus)
 
   return (
     <Label flexDirection="row" {...props}>

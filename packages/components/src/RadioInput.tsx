@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react'
+import { forwardRef } from 'react'
 import { VisuallyHidden, VisuallyHiddenProps } from './VisuallyHidden'
 
 export interface RadioInputProps extends VisuallyHiddenProps {

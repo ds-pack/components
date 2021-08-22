@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react'
+import { forwardRef, useState, useEffect } from 'react'
 import { ToggleInput } from './ToggleInput'
 import styled, { css } from 'styled-components'
 import { Box, BoxProps } from './Box'
@@ -89,7 +89,7 @@ let StyledCheckbox = styled(WithoutProps)(
   `,
 )
 
-export let Checkbox = React.forwardRef(function Checkbox(
+export let Checkbox = forwardRef(function Checkbox(
   {
     checked,
     onChange,
@@ -102,9 +102,9 @@ export let Checkbox = React.forwardRef(function Checkbox(
   ref,
 ) {
   let sharedRef = useSharedRef(ref)
-  let [focused, setFocused] = React.useState(autoFocus)
+  let [focused, setFocused] = useState(autoFocus)
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (indeterminate) {
       sharedRef.current.indeterminate = indeterminate
     }
