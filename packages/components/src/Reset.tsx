@@ -6,7 +6,7 @@ export let Reset = createGlobalStyle(
   ({ theme }) => css`
     :root {
       ${themeToCSSVariables(theme)
-        .map((token) => `${token[0]}: ${token[1]}`)
+        .map((token: [string, string]): string => `${token[0]}: ${token[1]}`)
         .join(';\n')}
     }
     html {
