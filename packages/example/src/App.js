@@ -39,6 +39,7 @@ let {
   useDropdown,
   DropdownButton,
   DropdownMenu,
+  Fieldset,
 } = components
 
 // let DropdownMenu = forwardRef(function DropdownMenu({ isOpen, ...props }, ref) {
@@ -143,8 +144,10 @@ function Demo() {
     <>
       <Stack gap="$4" p="$5" bg="$gray-0" className="App">
         <Dropdown />
-        <Box is="fieldset">
-          <Box is="legend">Select your favorite food:</Box>
+        <Fieldset>
+          <Box is="legend" px="$2">
+            Select your favorite food:
+          </Box>
 
           <RadioButton
             onChange={selectFood}
@@ -170,7 +173,7 @@ function Demo() {
           >
             Burritos
           </RadioButton>
-        </Box>
+        </Fieldset>
         <Stack
           props={{ flexGrow: 1 }}
           inline
@@ -483,4 +486,4 @@ function App() {
 }
 
 const rootElement = document.getElementById('root')
-ReactDOM.render(<App />, rootElement)
+ReactDOM.createRoot(rootElement).render(<App />)

@@ -126,3 +126,7 @@ test('RadioInput is defined', () => {
 test('Portal is defined', () => {
   expect(components.Portal).toBeDefined()
 })
+
+test('Fieldset is defined', () => {
+  expect(components.Fieldset).toBeDefined()
+})
