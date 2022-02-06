@@ -1,6 +1,6 @@
-// export * from './useTheme'
-// export { default as theme } from './theme'
-// export * from './Reset'
+import './reset.css'
+
+export * from './vars.css'
 export * from './Box'
 export * from './Banner'
 export * from './Stack'

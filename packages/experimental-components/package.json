@@ -41,13 +41,16 @@
     "@types/react-dom": "^16",
     "@types/styled-components": "^5",
     "@vanilla-extract/css": "^1.6.8",
+    "@vanilla-extract/dynamic": "^2.0.2",
     "@vanilla-extract/esbuild-plugin": "^2.0.2",
     "babel-jest": "^26",
     "babel-plugin-styled-components": "^1",
     "esbuild": "^0.14.18",
     "jest": "^26",
     "nanopop": "^2",
+    "polished": "^4.1.4",
     "prettier": "^2",
+    "rainbow-sprinkles": "^0.6.0",
     "react": "experimental",
     "react-dom": "experimental",
     "react-is": "experimental",
@@ -60,7 +63,9 @@
   "peerDependencies": {
     "@ds-pack/use-refs": "*",
     "@vanilla-extract/css": "^1.6.8",
+    "@vanilla-extract/dynamic": "^2.0.2",
     "nanopop": "^2",
+    "rainbow-sprinkles": "^0.6.0",
     "react": "*",
     "react-dom": "*"
   }
