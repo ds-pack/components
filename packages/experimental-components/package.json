@@ -1,0 +1,67 @@
+{
+  "name": "@ds-pack/components-experimental",
+  "version": "0.0.0",
+  "main": "dist/index.js",
+  "source": "src/index.tsx",
+  "repository": "git@github.com:ds-pack/components.git",
+  "author": "Matt Hamlin <matthewjameshamlin@gmail.com>",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "xwatch": "babel src/ --out-dir dist/ --extensions '.ts,.tsx' --watch",
+    "watch": "echo todo",
+    "build": "rm -rf dist/index.js && node ./scripts/build.js",
+    "test": "jest",
+    "test-watch": "jest --watch",
+    "test-cov": "jest --collectCoverage",
+    "prepub": "yarn build",
+    "pub": "yarn publish --access public",
+    "tsc": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7",
+    "@babel/core": "^7",
+    "@babel/plugin-proposal-export-default-from": "^7",
+    "@babel/plugin-syntax-jsx": "^7.16.7",
+    "@babel/plugin-syntax-typescript": "^7.16.7",
+    "@babel/plugin-transform-runtime": "^7",
+    "@babel/plugin-transform-typescript": "^7",
+    "@babel/preset-env": "^7",
+    "@babel/preset-react": "^7",
+    "@babel/runtime": "^7",
+    "@ds-pack/use-refs": "*",
+    "@swc/core": "^1.2.136",
+    "@swc/jest": "^0.2.17",
+    "@testing-library/jest-dom": "^5",
+    "@testing-library/react": "^10",
+    "@types/jest": "^25",
+    "@types/react": "^16",
+    "@types/react-dom": "^16",
+    "@types/styled-components": "^5",
+    "@vanilla-extract/css": "^1.6.8",
+    "@vanilla-extract/esbuild-plugin": "^2.0.2",
+    "babel-jest": "^26",
+    "babel-plugin-styled-components": "^1",
+    "esbuild": "^0.14.18",
+    "jest": "^26",
+    "nanopop": "^2",
+    "prettier": "^2",
+    "react": "experimental",
+    "react-dom": "experimental",
+    "react-is": "experimental",
+    "typescript": "^4"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "peerDependencies": {
+    "@ds-pack/use-refs": "*",
+    "@vanilla-extract/css": "^1.6.8",
+    "nanopop": "^2",
+    "react": "*",
+    "react-dom": "*"
+  }
+}
