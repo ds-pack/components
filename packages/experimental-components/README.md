@@ -5,11 +5,21 @@ A bare-bones component library built using:
 - [React](https://reactjs.org/)
 - [Vanilla Extract](https://vanilla-extract.style/)
 
+## Setup:
+
+This library publishes the direct source and doesn't manage building locally -
+instead the consuming application should manage building the library!
+
+Usage with Next.js:
+
+```tsx
+// next-transpile-modules
+// withVanillaExtract
+```
+
 ### Tools:
 
 - Typescript
-- Esbuild
-- SWC
 - Jest
 
 ### Cutting a Release:

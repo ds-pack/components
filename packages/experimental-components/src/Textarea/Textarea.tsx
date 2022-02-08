@@ -1,15 +1,7 @@
-import { forwardRef, useState } from 'react'
+import { forwardRef } from 'react'
 import type { ReactNode } from 'react'
-import styled, { css } from 'styled-components'
 import { Box, BoxProps } from '../Box'
 import { Label } from '../Label'
-import ReactDOM from 'react-dom'
-
-// @see https://github.com/facebook/react/issues/18591#issuecomment-613026224
-function flush(cb) {
-  // @ts-ignore
-  ReactDOM.flushSync(cb)
-}
 
 interface TextareaProps extends BoxProps {
   disabled: boolean
@@ -70,26 +62,12 @@ export let Textarea = forwardRef(function Textarea(
   }: TextareaProps,
   ref,
 ) {
-  let [focused, setFocused] = useState(autoFocus)
-
-  function handleFocus() {
-    setFocused(true)
-  }
-  function handleBlur() {
-    setFocused(false)
-  }
-
   return (
-    <Label
-      onFocus={() => flush(handleFocus)}
-      onBlur={() => flush(handleBlur)}
-      {...props}
-    >
+    <Label {...props}>
       {children}
       <StyledTextarea
         mt="$1"
         placeholder={placeholder}
-        focused={focused}
         disabled={disabled}
         value={value}
         {...inputProps}
