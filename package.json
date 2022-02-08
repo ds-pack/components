@@ -1,14 +1,15 @@
 {
   "private": true,
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "sandbox"
   ],
   "name": "ds-pack-components",
   "scripts": {
     "build": "yarn workspace @ds-pack/components run build",
     "test": "yarn workspace @ds-pack/components run test",
     "pub": "yarn workspace @ds-pack/components run pub",
-    "start": "yarn workspace ds-pack-components-example start"
+    "start": "yarn workspace sandbox dev"
   },
   "dependencies": {}
 }
