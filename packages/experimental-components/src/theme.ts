@@ -7,9 +7,14 @@ interface Breakpoints {
   extraLarge: string
 }
 
+// @ts-ignore
 export let breakpoints: Breakpoints = [
   ['small', baseBreakpoint],
   ['medium', baseBreakpoint * 2],
   ['large', baseBreakpoint * 3],
   ['extraLarge', baseBreakpoint * 4],
-].reduce((acc, [label, val]) => ({ ...acc, [label]: `${val}em` }), {})
+].reduce(
+  // @ts-ignore
+  (acc, [label, val]): Breakpoints => ({ ...acc, [label]: `${val}em` }),
+  {},
+)
