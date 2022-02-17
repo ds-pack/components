@@ -1,48 +1,25 @@
 import { forwardRef } from 'react'
 import { Box, BoxProps } from '../Box'
-import styled, { css } from 'styled-components'
+import { chip, base, primary } from './Chip.css'
+import cx from '../classnames'
 
 export interface ChipProps extends BoxProps {
   variant?: 'primary' | 'default'
 }
 
-let WithoutProps = forwardRef(function WithoutProps(
-  { variant, ...props }: ChipProps,
+export let Chip = forwardRef(function Chip(
+  { variant = 'default', ...props }: ChipProps,
   ref,
 ) {
-  return <Box {...props} ref={ref} />
-})
-
-let InnerChip = styled(WithoutProps)(({ variant }) => {
-  switch (variant) {
-    case 'primary': {
-      return css`
-        display: inline-flex;
-        background-color: var(--colors-primary);
-        color: var(--colors-white);
-        padding-left: var(--space-2);
-        padding-right: var(--space-2);
-        padding-top: var(--space-1);
-        padding-bottom: var(--space-1);
-        border-radius: var(--radii-1);
-      `
-    }
-    case 'default':
-    default: {
-      return css`
-        display: inline-flex;
-        background-color: var(--colors-gray-3);
-        color: var(--colors-black);
-        padding-left: var(--space-2);
-        padding-right: var(--space-2);
-        padding-top: var(--space-1);
-        padding-bottom: var(--space-1);
-        border-radius: var(--radii-1);
-      `
-    }
-  }
-})
-
-export let Chip = forwardRef(function Chip(props: ChipProps, ref) {
-  return <InnerChip {...props} ref={ref} />
+  return (
+    <Box
+      className={cx({
+        [chip]: true,
+        [primary]: variant === 'primary',
+        [base]: variant === 'default',
+      })}
+      {...props}
+      ref={ref}
+    />
+  )
 })
