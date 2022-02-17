@@ -13,7 +13,7 @@ module.exports = withVanillaExtract(
       reactStrictMode: true,
       experimental: {
         modern: true,
-        reactMode: 'concurrent',
+        reactRoot: 'concurrent',
         // Hmmmm 🤔
         // concurrentFeatures: true,
         // serverComponents: true,
