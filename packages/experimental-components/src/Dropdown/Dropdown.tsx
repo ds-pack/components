@@ -4,6 +4,8 @@ import { Box, BoxProps } from '../Box'
 import { Portal } from '../Portal'
 import { Tapable } from '../Tapable'
 import { reposition } from 'nanopop'
+import * as styles from './Dropdown.css'
+import cx from '../classnames'
 
 export interface DropdownMenuProps extends BoxProps {
   isOpen: boolean
@@ -29,41 +31,6 @@ export interface DropdownButtonProps extends BoxProps {
   autoFocus?: boolean
 }
 
-let WithoutProps = forwardRef(function WithoutProps(
-  { isOpen, focused, hovered, ...props }: DropdownButtonProps,
-  ref,
-) {
-  return <Box is={Tapable} {...props} ref={ref} />
-})
-
-let StyledDropdownButton = styled(WithoutProps)(
-  ({ isOpen, disabled, focused, hovered }) => css`
-    border: solid 2px;
-    width: 100%;
-    display: inline-flex;
-    flex-grow: 1;
-    flex-shrink: 0;
-    padding: 0.5em 1em;
-    border-radius: var(--radii-0);
-    color: var(--colors-black);
-    box-shadow: ${focused || isOpen ? `var(--shadows-focusShadow)` : null};
-    outline: none;
-    font-size: var(--fontSizes-1);
-    cursor: ${disabled ? 'not-allowed' : 'pointer'};
-    background-color: ${disabled
-      ? `var(--colors-disabledBg)`
-      : `var(--colors-gray-0)`};
-    border-color: ${(() => {
-      if (disabled) {
-        return `var(--colors-disabledFill)`
-      } else if (focused || isOpen) {
-        return `var(--colors-primary)`
-      }
-      return `var(--colors-black)`
-    })()};
-  `,
-)
-
 export let DropdownButton = forwardRef(function DropdownButton(
   { children, disabled, isOpen, autoFocus, ...props }: DropdownButtonProps,
   ref,
@@ -71,16 +38,20 @@ export let DropdownButton = forwardRef(function DropdownButton(
   let [focused, setFocused] = useState(autoFocus)
 
   return (
-    <StyledDropdownButton
+    <Tapable
       ref={ref}
+      className={cx({
+        [styles.dropdown]: true,
+        [styles.disabled]: disabled,
+        [styles.focused]: focused,
+      })}
       disabled={disabled}
       {...props}
-      focused={focused}
       onFocus={() => setFocused(true)}
       onBlur={() => setFocused(false)}
     >
       {children}
-    </StyledDropdownButton>
+    </Tapable>
   )
 })
 
