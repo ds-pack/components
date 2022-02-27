@@ -17,6 +17,7 @@ export interface BoxProps extends SystemProps {
   testIds?: string | { default: string }
   className?: string
   style?: {}
+  children: any
   [key: string]: any
 }
 

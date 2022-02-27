@@ -1,20 +1,9 @@
-import styled from 'styled-components'
+import { forwardRef } from 'react'
 import { Box, BoxProps } from '../Box'
+import { link } from './Link.css'
 
 export interface LinkProps extends BoxProps {}
 
-export let Link = styled(Box)<LinkProps>`
-  color: var(--colors-primary);
-  text-decoration: underline;
-  display: inline-flex;
-  cursor: pointer;
-  &:hover,
-  &:focus {
-    color: var(--colors-primaryDark);
-    text-decoration: none;
-  }
-  &:focus {
-    box-shadow: var(--shadows-focusShadow);
-    outline: none;
-  }
-`
+export let Link = forwardRef(function Link(props, ref) {
+  return <Box className={link} {...props} ref={ref} />
+})

@@ -1,11 +1,6 @@
 import { forwardRef } from 'react'
 import { Box, BoxProps } from '../Box'
-import styled from 'styled-components'
-
-let StyledImage = styled(Box)`
-  max-width: 100%;
-  height: auto;
-`
+import { image } from './Image.css'
 
 export interface ImageProps extends BoxProps {
   src: string
@@ -13,5 +8,5 @@ export interface ImageProps extends BoxProps {
 }
 
 export let Image = forwardRef(function Image(props: ImageProps, ref) {
-  return <StyledImage is="img" ref={ref} {...props} />
+  return <Box className={image} is="img" ref={ref} {...props} />
 })

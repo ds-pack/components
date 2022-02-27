@@ -1,62 +1,23 @@
 import { forwardRef } from 'react'
-import styled from 'styled-components'
 import { Box, BoxProps } from '../Box'
+import * as styles from './List.css'
 
 export interface ListProps extends BoxProps {
   variant: 'base' | 'ordered' | 'unordered'
 }
 
-let WithoutProps = forwardRef(function WithoutProps(
+export let List = forwardRef(function List(
   { variant, ...props }: ListProps,
   ref,
 ) {
-  return <Box {...props} ref={ref} />
-})
-
-export let List = styled(WithoutProps)(({ variant = 'base' }) => {
-  switch (variant) {
-    case 'base': {
-      return {
-        listStyleType: 'none',
-        marginLeft: 0,
-        marginRight: 0,
-        marginTop: 0,
-        marginBottom: 0,
-        paddingLeft: 0,
-        paddingRight: 0,
-        paddingBottom: 0,
-        paddingTop: 0,
-      }
-    }
-    case 'ordered': {
-      return {
-        listStyleType: 'decimal',
-        listStylePosition: 'inside',
-        marginLeft: 0,
-        marginRight: 0,
-        marginTop: 0,
-        marginBottom: 0,
-        paddingLeft: 0,
-        paddingRight: 0,
-        paddingBottom: 0,
-        paddingTop: 0,
-      }
-    }
-    case 'unordered': {
-      return {
-        listStyleType: 'disc',
-        listStylePosition: 'inside',
-        marginLeft: 0,
-        marginRight: 0,
-        marginTop: 0,
-        marginBottom: 0,
-        paddingLeft: 0,
-        paddingRight: 0,
-        paddingBottom: 0,
-        paddingTop: 0,
-      }
-    }
-  }
+  return (
+    <Box
+      is={variant === 'ordered' ? 'ol' : 'ul'}
+      className={styles[variant]}
+      {...props}
+      ref={ref}
+    />
+  )
 })
 
 export interface ListItemProps extends BoxProps {}
