@@ -2,7 +2,7 @@ import { style } from '@vanilla-extract/css'
 import { vars } from '../vars.css'
 
 export let textarea = style({
-  marginTop: vars.space[0],
+  marginTop: vars.space[1],
   border: 'solid 2px',
   width: '100%',
   display: 'inline-flex',
@@ -12,13 +12,15 @@ export let textarea = style({
   borderRadius: vars.radii.small,
   color: vars.colors.black,
   outline: 'none',
-  fontSize: vars.fontSizes[0],
+  fontSize: vars.fontSizes[1],
   fontFamily: vars.fonts.base,
   borderColor: vars.colors.black,
   backgroundColor: vars.colors.gray000,
   selectors: {
     '&:focus': {
       boxShadow: vars.focusShadow,
+    },
+    '&:focus, &:hover': {
       borderColor: vars.colors.primary,
     },
     '&[disabled]': {

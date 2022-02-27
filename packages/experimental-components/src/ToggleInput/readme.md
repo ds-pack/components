@@ -1,6 +1,6 @@
 # ToggleInput
 
-[All components/hooks](../index.md)
+[All components/hooks](../../README.md)
 
 The ToggleInput component is a visually hidden wrapper around an
 `<input type="checkbox">` element.

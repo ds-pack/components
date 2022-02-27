@@ -1,6 +1,6 @@
 # RadioButton
 
-[All components/hooks](../index.md)
+[All components/hooks](../../README.md)
 
 The RadioButton component is a composed component built on top of the `Label`,
 and `RadioInput` components. It creates a visual radio component for selecting

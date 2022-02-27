@@ -1,6 +1,6 @@
 # useTapable
 
-[All components/hooks](../index.md)
+[All components/hooks](../README.md)
 
 The `useTapable` hook is used to provide an object of aria- props on an element
 to make it act like a `<button>`.

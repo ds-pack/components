@@ -1,6 +1,6 @@
 # Checkbox
 
-[All components/hooks](../index.md)
+[All components/hooks](../../README.md)
 
 The Checkbox component is a composed component built on top of the `Label`, and
 `ToggleInput` components. It creates a visual checkbox component for selecting

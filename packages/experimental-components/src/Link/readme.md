@@ -1,6 +1,6 @@
 # Link
 
-[All components/hooks](../index.md)
+[All components/hooks](../../README.md)
 
 The Link component is used for rendering links to other pages or parts of the
 current page.

@@ -1,6 +1,6 @@
 # Heading
 
-[All components/hooks](../index.md)
+[All components/hooks](../../README.md)
 
 The Heading component is used for presenting a document heading (e.g. `<h1>`
 through `<h6>`). It supports the following `variants`:
