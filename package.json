@@ -7,7 +7,6 @@
   "name": "ds-pack-components",
   "scripts": {
     "build": "yarn workspace @ds-pack/components run build",
-    "build-exp": "yarn workspace @ds-pack/components-experimental run build",
     "test": "yarn workspace @ds-pack/components run test",
     "test-exp": "yarn workspace @ds-pack/components-experimental run test",
     "pub": "yarn workspace @ds-pack/components run pub",
