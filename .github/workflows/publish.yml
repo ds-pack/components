@@ -14,6 +14,6 @@ jobs:
           node-version: 12
           registry-url: https://registry.npmjs.org/
       - run: yarn
-      - run: yarn pub
+      - run: yarn pub & yarn pub-exp
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
