@@ -28,6 +28,20 @@ export default function App() {
   return (
     <Box m="4">
       <Stack gap="10">
+        <Box
+          maxWidth={{
+            // _: 'block',
+            // small: 'none',
+            // medium: 'flex',
+            // large: 'inline-flex',
+            // extraLarge: 'grid',
+            small: '94vw',
+            medium: '80vw',
+            large: '70ch',
+          }}
+        >
+          Testing things
+        </Box>
         <Stack gap="4">
           <Text>Foo</Text>
           <Text>Bar</Text>

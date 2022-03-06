@@ -462,22 +462,22 @@ let propConfig = {
 const { createSystemPropCss, getBoxProps, properties, config } =
   rainbowSprinkles({
     conditions: {
-      all: {},
+      // all: {},
       _: {},
       small: {
-        '@media': `@media screen and (min-width: ${breakpoints.small})`,
+        '@media': `screen and (min-width: ${breakpoints.small})`,
       },
       medium: {
-        '@media': `@media screen and (min-width: ${breakpoints.medium})`,
+        '@media': `screen and (min-width: ${breakpoints.medium})`,
       },
       large: {
-        '@media': `@media screen and (min-width: ${breakpoints.large})`,
+        '@media': `screen and (min-width: ${breakpoints.large})`,
       },
       extraLarge: {
-        '@media': `@media screen and (min-width: ${breakpoints.extraLarge})`,
+        '@media': `screen and (min-width: ${breakpoints.extraLarge})`,
       },
     },
-    defaultCondition: 'all',
+    defaultCondition: '_',
     properties: {
       margin: vars.space,
       marginTop: vars.space,
