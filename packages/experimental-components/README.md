@@ -31,6 +31,8 @@ Usage with Next.js:
 
 ## Docs:
 
+- [Theme](./src/theme.md)
+
 ### Components
 
 - [Box](./src/Box/readme.md)

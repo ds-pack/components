@@ -7,14 +7,15 @@ interface Breakpoints {
   extraLarge: string
 }
 
-// @ts-ignore
-export let breakpoints: Breakpoints = [
+export let breakpoints = [
   ['small', baseBreakpoint],
   ['medium', baseBreakpoint * 2],
   ['large', baseBreakpoint * 3],
   ['extraLarge', baseBreakpoint * 4],
 ].reduce(
-  // @ts-ignore
-  (acc, [label, val]): Breakpoints => ({ ...acc, [label]: `${val}em` }),
+  (acc, [label, val]): Partial<Breakpoints> => ({
+    ...acc,
+    [label]: `${val}em`,
+  }),
   {},
-)
+) as Breakpoints
