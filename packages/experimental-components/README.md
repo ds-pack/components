@@ -14,7 +14,18 @@ Usage with Next.js:
 
 ```tsx
 // next-transpile-modules
+import createTM from 'next-transpile-modules'
 // withVanillaExtract
+import { createVanillaExtractPlugin } from '@vanilla-extract/next-plugin'
+
+// @TODO - replace when renaming the package
+let withTM = createTM(['@ds-pack/components-experimental'])
+
+let withVanillaExtract = createVanillaExtractPlugin()
+
+export default withVanillaExtract({
+  /* ... */
+})
 ```
 
 ### Tools:
