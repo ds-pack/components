@@ -4,7 +4,7 @@ import { blockquote } from './Blockquote.css'
 
 export interface BlockquoteProps extends BoxProps {}
 
-export let Blockquote = forwardRef(function Blockquote(
+export let Blockquote = forwardRef<any, BlockquoteProps>(function Blockquote(
   props: BlockquoteProps,
   ref,
 ) {

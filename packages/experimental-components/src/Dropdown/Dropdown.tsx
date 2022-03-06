@@ -11,18 +11,17 @@ export interface DropdownMenuProps extends BoxProps {
   isOpen: boolean
 }
 
-export let DropdownMenu = forwardRef(function DropdownMenu(
-  { isOpen, ...props }: DropdownMenuProps,
-  ref,
-) {
-  return (
-    <Portal isOpen={isOpen}>
-      <Box position="fixed" ref={ref}>
-        <Box {...props} />
-      </Box>
-    </Portal>
-  )
-})
+export let DropdownMenu = forwardRef<any, DropdownMenuProps>(
+  function DropdownMenu({ isOpen, ...props }: DropdownMenuProps, ref) {
+    return (
+      <Portal isOpen={isOpen}>
+        <Box position="fixed" ref={ref}>
+          <Box {...props} />
+        </Box>
+      </Portal>
+    )
+  },
+)
 
 export interface DropdownButtonProps extends BoxProps {
   isOpen: boolean
@@ -31,29 +30,31 @@ export interface DropdownButtonProps extends BoxProps {
   autoFocus?: boolean
 }
 
-export let DropdownButton = forwardRef(function DropdownButton(
-  { children, disabled, isOpen, autoFocus, ...props }: DropdownButtonProps,
-  ref,
-) {
-  let [focused, setFocused] = useState(autoFocus)
+export let DropdownButton = forwardRef<any, DropdownButtonProps>(
+  function DropdownButton(
+    { children, disabled, isOpen, autoFocus, ...props }: DropdownButtonProps,
+    ref,
+  ) {
+    let [focused, setFocused] = useState(autoFocus)
 
-  return (
-    <Tapable
-      ref={ref}
-      className={cx({
-        [styles.dropdown]: true,
-        [styles.disabled]: disabled,
-        [styles.focused]: focused,
-      })}
-      disabled={disabled}
-      {...props}
-      onFocus={() => setFocused(true)}
-      onBlur={() => setFocused(false)}
-    >
-      {children}
-    </Tapable>
-  )
-})
+    return (
+      <Tapable
+        ref={ref}
+        className={cx({
+          [styles.dropdown]: true,
+          [styles.disabled]: disabled,
+          [styles.focused]: focused,
+        })}
+        disabled={disabled}
+        {...props}
+        onFocus={() => setFocused(true)}
+        onBlur={() => setFocused(false)}
+      >
+        {children}
+      </Tapable>
+    )
+  },
+)
 
 export function useDropdown() {
   let [isOpen, setOpen] = useState(false)

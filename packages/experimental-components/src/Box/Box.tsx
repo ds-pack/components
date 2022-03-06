@@ -13,7 +13,7 @@ function createTestIds(testIds = null) {
 }
 
 export interface BoxProps extends SystemProps {
-  is?: any
+  is?: React.ComponentType<{ [key: string]: unknown }> | string
   testIds?: string | { default: string }
   className?: string
   style?: {}
@@ -21,7 +21,7 @@ export interface BoxProps extends SystemProps {
   [key: string]: any
 }
 
-export let Box = forwardRef(function Box(
+export let Box = forwardRef<any, BoxProps>(function Box(
   { is: Element = 'div', testIds, className, style, ...props }: BoxProps,
   ref,
 ) {

@@ -4,13 +4,13 @@ import { Box, BoxProps } from '../Box'
 import { Image } from '../Image'
 import { caption as captionClass } from './Figure.css'
 
-interface FigureProps extends BoxProps {
+export interface FigureProps extends BoxProps {
   caption: ReactNode
   src: string
   alt: string
 }
 
-export let Figure = forwardRef(function Figure(
+export let Figure = forwardRef<HTMLElement, FigureProps>(function Figure(
   { caption, src, alt, ...props }: FigureProps,
   ref,
 ) {

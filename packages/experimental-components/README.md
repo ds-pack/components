@@ -10,6 +10,16 @@ A bare-bones component library built using:
 This library publishes the direct source and doesn't manage building locally -
 instead the consuming application should manage building the library!
 
+### Install:
+
+```sh
+# @TODO - replace when renaming the package
+# Install the package and it's peerDependencies
+yarn add @ds-pack/components-experimental @ds-pack/use-refs @vanilla-extract/css @vanilla-extract/dynamic rainbow-sprinkles nanopop
+# Install it's dependencies
+yarn add -D polished
+```
+
 Usage with Next.js:
 
 ```tsx

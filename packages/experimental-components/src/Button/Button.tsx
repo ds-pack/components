@@ -10,7 +10,7 @@ export interface ButtonProps extends BoxProps {
   onClick?: (e: MouseEvent<HTMLButtonElement>) => void
   children?: React.ReactNode
 }
-export let Button = forwardRef(function Button(
+export let Button = forwardRef<any, ButtonProps>(function Button(
   { variant = 'primary', ...props }: ButtonProps,
   ref,
 ) {

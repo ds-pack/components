@@ -14,7 +14,7 @@ export interface InputProps extends BoxProps {
   inputProps: BoxProps
 }
 
-export let Input = forwardRef(function Input(
+export let Input = forwardRef<HTMLInputElement, InputProps>(function Input(
   {
     disabled,
     value,

@@ -7,17 +7,16 @@ export interface RadioInputProps extends VisuallyHiddenProps {
   value: string
 }
 
-export let RadioInput = forwardRef(function RadioInput(
-  { onChange, value, ...props }: RadioInputProps,
-  ref,
-) {
-  return (
-    <VisuallyHidden
-      is="input"
-      type="radio"
-      {...props}
-      ref={ref}
-      onChange={() => onChange(value)}
-    />
-  )
-})
+export let RadioInput = forwardRef<HTMLInputElement, RadioInputProps>(
+  function RadioInput({ onChange, value, ...props }: RadioInputProps, ref) {
+    return (
+      <VisuallyHidden
+        is="input"
+        type="radio"
+        {...props}
+        ref={ref}
+        onChange={() => onChange(value)}
+      />
+    )
+  },
+)

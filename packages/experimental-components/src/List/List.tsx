@@ -6,7 +6,7 @@ export interface ListProps extends BoxProps {
   variant: 'base' | 'ordered' | 'unordered'
 }
 
-export let List = forwardRef(function List(
+export let List = forwardRef<any, ListProps>(function List(
   { variant, ...props }: ListProps,
   ref,
 ) {

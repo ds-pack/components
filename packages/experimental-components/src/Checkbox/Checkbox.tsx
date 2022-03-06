@@ -22,49 +22,51 @@ export interface CheckboxProps extends BoxProps {
   children: React.ReactNode
 }
 
-export let Checkbox = forwardRef(function Checkbox(
-  {
-    checked,
-    onChange,
-    disabled,
-    indeterminate,
-    autoFocus,
-    children,
-    ...props
-  }: CheckboxProps,
-  ref,
-) {
-  let sharedRef = useSharedRef(ref)
-  let [focused, setFocused] = useState(autoFocus)
+export let Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
+  function Checkbox(
+    {
+      checked,
+      onChange,
+      disabled,
+      indeterminate,
+      autoFocus,
+      children,
+      ...props
+    }: CheckboxProps,
+    ref,
+  ) {
+    let sharedRef = useSharedRef(ref)
+    let [focused, setFocused] = useState(autoFocus)
 
-  useEffect(() => {
-    if (indeterminate) {
-      sharedRef.current.indeterminate = indeterminate
-    }
-  }, [indeterminate])
+    useEffect(() => {
+      if (indeterminate) {
+        sharedRef.current.indeterminate = indeterminate
+      }
+    }, [indeterminate])
 
-  return (
-    <Label flexDirection="row" {...props}>
-      <Box
-        className={cx({
-          [styles.checkbox]: true,
-          [styles.checked]: checked,
-          [styles.indeterminate]: indeterminate,
-          [styles.focused]: focused,
-          [styles.disabled]: disabled,
-        })}
-      />
-      <ToggleInput
-        // @ts-ignore
-        onFocus={() => flush(() => setFocused(true))}
-        onBlur={() => flush(() => setFocused(false))}
-        autoFocus={autoFocus}
-        checked={checked}
-        onChange={onChange}
-        disabled={disabled}
-        ref={sharedRef}
-      />
-      {children}
-    </Label>
-  )
-})
+    return (
+      <Label flexDirection="row" {...props}>
+        <Box
+          className={cx({
+            [styles.checkbox]: true,
+            [styles.checked]: checked,
+            [styles.indeterminate]: indeterminate,
+            [styles.focused]: focused,
+            [styles.disabled]: disabled,
+          })}
+        />
+        <ToggleInput
+          // @ts-ignore
+          onFocus={() => flush(() => setFocused(true))}
+          onBlur={() => flush(() => setFocused(false))}
+          autoFocus={autoFocus}
+          checked={checked}
+          onChange={onChange}
+          disabled={disabled}
+          ref={sharedRef}
+        />
+        {children}
+      </Label>
+    )
+  },
+)

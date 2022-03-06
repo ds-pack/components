@@ -23,7 +23,7 @@ export interface RadioButtonProps extends BoxProps {
   autoFocus?: boolean
 }
 
-export let RadioButton = forwardRef(function RadioButton(
+export let RadioButton = forwardRef<any, RadioButtonProps>(function RadioButton(
   {
     checked,
     onChange,

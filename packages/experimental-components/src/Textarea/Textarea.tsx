@@ -14,7 +14,7 @@ interface TextareaProps extends BoxProps {
   inputProps: BoxProps
 }
 
-export let Textarea = forwardRef(function Textarea(
+export let Textarea = forwardRef<any, TextareaProps>(function Textarea(
   {
     disabled,
     value,

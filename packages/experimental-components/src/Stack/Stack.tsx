@@ -11,7 +11,7 @@ export interface StackProps extends BoxProps {
   children: ReactNode
 }
 
-export let Stack = forwardRef(function Stack(
+export let Stack = forwardRef<any, StackProps>(function Stack(
   { gap, children, inline = false, props = {}, ...rest }: StackProps,
   ref: any,
 ) {

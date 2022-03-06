@@ -6,7 +6,7 @@ export interface HeadingProps extends BoxProps {
   variant: 'h1' | 'lead' | 'h2' | 'h3' | 'subhead'
 }
 
-export let Heading = forwardRef(function Heading(
+export let Heading = forwardRef<any, HeadingProps>(function Heading(
   { variant, ...props }: HeadingProps,
   ref,
 ) {

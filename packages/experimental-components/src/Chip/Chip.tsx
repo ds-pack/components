@@ -7,7 +7,7 @@ export interface ChipProps extends BoxProps {
   variant?: 'primary' | 'default'
 }
 
-export let Chip = forwardRef(function Chip(
+export let Chip = forwardRef<any, ChipProps>(function Chip(
   { variant = 'default', ...props }: ChipProps,
   ref,
 ) {

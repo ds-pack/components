@@ -7,6 +7,9 @@ export interface ImageProps extends BoxProps {
   alt: string
 }
 
-export let Image = forwardRef(function Image(props: ImageProps, ref) {
+export let Image = forwardRef<HTMLImageElement, ImageProps>(function Image(
+  props: ImageProps,
+  ref,
+) {
   return <Box className={image} is="img" ref={ref} {...props} />
 })

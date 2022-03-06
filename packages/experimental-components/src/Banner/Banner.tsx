@@ -3,12 +3,12 @@ import { Box, BoxProps } from '../Box'
 import cx from '../classnames'
 import * as styles from './Banner.css'
 
-export interface Props extends BoxProps {
+export interface BannerProps extends BoxProps {
   variant: 'info' | 'warning' | 'error' | 'success'
 }
 
-export let Banner = forwardRef(function Banner(
-  { variant = 'info', ...props }: Props,
+export let Banner = forwardRef<any, BannerProps>(function Banner(
+  { variant = 'info', ...props }: BannerProps,
   ref,
 ) {
   return (
