@@ -1,5 +1,4 @@
 import { forwardRef, useEffect, useState } from 'react'
-import styled, { css } from 'styled-components'
 import { Box, BoxProps } from '../Box'
 import { Portal } from '../Portal'
 import { Tapable } from '../Tapable'
