@@ -1,4 +1,4 @@
-let baseBreakpoint = 10
+let baseBreakpoint = 20
 
 interface Breakpoints {
   small: string
