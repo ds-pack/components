@@ -8,3 +8,5 @@ yarn-error.log
 .DS_Store
 example/build
 sandbox/.next
+compiled.css
+compiled.js

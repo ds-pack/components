@@ -7,9 +7,11 @@
   "author": "Matt Hamlin <matthewjameshamlin@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "build": "node scripts/build.js",
     "test": "jest",
     "test-watch": "jest --watch",
     "test-cov": "jest --collectCoverage",
+    "prepub": "yarn build",
     "pub": "yarn publish --access public",
     "tsc": "tsc --noEmit"
   },
@@ -28,7 +30,9 @@
     "@vanilla-extract/babel-plugin": "^1.1.4",
     "@vanilla-extract/css": "^1.6.8",
     "@vanilla-extract/dynamic": "^2.0.2",
+    "@vanilla-extract/esbuild-plugin": "^2.0.2",
     "babel-jest": "^26",
+    "esbuild": "^0.14.25",
     "jest": "^26",
     "nanopop": "^2",
     "polished": "^4.1.4",

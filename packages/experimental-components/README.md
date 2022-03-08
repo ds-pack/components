@@ -38,6 +38,16 @@ export default withVanillaExtract({
 })
 ```
 
+Usage with other frameworks (create-react-app, vanilla webpack applications,
+etc):
+
+```tsx
+// Import the styles:
+// @TODO - replace when renaming the package
+import '@ds-pack/components-experimental/compiled.css'
+import { Button } from '@ds-pack/components-experimental/compiled'
+```
+
 ### Tools:
 
 - Typescript
