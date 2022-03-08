@@ -20,7 +20,7 @@ import {
   Textarea,
   TwitterMention,
   VisuallyHidden,
-} from '@ds-pack/components-experimental'
+} from '@ds-pack/components'
 
 export default function App() {
   let [checked, setChecked] = useState(false)
@@ -30,11 +30,6 @@ export default function App() {
       <Stack gap="10">
         <Box
           maxWidth={{
-            // _: 'block',
-            // small: 'none',
-            // medium: 'flex',
-            // large: 'inline-flex',
-            // extraLarge: 'grid',
             small: '94vw',
             medium: '80vw',
             large: '70ch',

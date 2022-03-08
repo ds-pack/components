@@ -25,7 +25,6 @@ module.exports = function (api) {
           allowDeclareFields: true,
         },
       ],
-      'babel-plugin-styled-components',
       '@babel/plugin-transform-runtime',
       '@babel/plugin-proposal-export-default-from',
     ],

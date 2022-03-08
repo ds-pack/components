@@ -1,4 +1,4 @@
-# `@ds-pack/components-experimental`
+# `@ds-pack/components`
 
 A bare-bones component library built using:
 
@@ -7,16 +7,15 @@ A bare-bones component library built using:
 
 ## Setup:
 
-This library publishes the direct source and doesn't manage building locally -
-instead the consuming application should manage building the library!
+This library publishes the direct source and doesn't manage building locally by
+default - instead the consuming application should manage building the library!
 
 ### Install:
 
 ```sh
-# @TODO - replace when renaming the package
 # Install the package and it's peerDependencies
-yarn add @ds-pack/components-experimental @ds-pack/use-refs @vanilla-extract/css @vanilla-extract/dynamic rainbow-sprinkles nanopop
-# Install it's dependencies
+yarn add @ds-pack/components @ds-pack/use-refs @vanilla-extract/css @vanilla-extract/dynamic rainbow-sprinkles nanopop
+# Install it's dev dependencies
 yarn add -D polished
 ```
 
@@ -28,8 +27,7 @@ import createTM from 'next-transpile-modules'
 // withVanillaExtract
 import { createVanillaExtractPlugin } from '@vanilla-extract/next-plugin'
 
-// @TODO - replace when renaming the package
-let withTM = createTM(['@ds-pack/components-experimental'])
+let withTM = createTM(['@ds-pack/components'])
 
 let withVanillaExtract = createVanillaExtractPlugin()
 
@@ -43,9 +41,8 @@ etc):
 
 ```tsx
 // Import the styles:
-// @TODO - replace when renaming the package
-import '@ds-pack/components-experimental/compiled.css'
-import { Button } from '@ds-pack/components-experimental/compiled'
+import '@ds-pack/components/compiled.css'
+import { Button } from '@ds-pack/components/compiled'
 ```
 
 ### Tools:

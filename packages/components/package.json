@@ -1,6 +1,6 @@
 {
-  "name": "@ds-pack/components-experimental",
-  "version": "0.0.6",
+  "name": "@ds-pack/components",
+  "version": "1.0.0",
   "main": "src/index.ts",
   "source": "src/index.ts",
   "repository": "git@github.com:ds-pack/components.git",

@@ -1,5 +1,5 @@
 {
-  "name": "@ds-pack/components",
+  "name": "@ds-pack/components-legacy",
   "version": "0.0.19",
   "main": "dist/index.js",
   "source": "src/index.tsx",
