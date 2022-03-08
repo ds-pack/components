@@ -8,9 +8,7 @@
   "scripts": {
     "build": "yarn workspace @ds-pack/components run build",
     "test": "yarn workspace @ds-pack/components run test",
-    "test-exp": "yarn workspace @ds-pack/components-experimental run test",
     "pub": "yarn workspace @ds-pack/components run pub",
-    "pub-exp": "yarn workspace @ds-pack/components-experimental run pub",
     "start": "yarn workspace sandbox dev"
   },
   "dependencies": {}
