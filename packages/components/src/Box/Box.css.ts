@@ -1,5 +1,5 @@
-import { createSystemPropCss } from './system-props'
+import { createRainbowSprinklesCss } from './system-props'
 
-const styles = createSystemPropCss()
+const styles = createRainbowSprinklesCss()
 
 export default styles

@@ -1,5 +1,4 @@
-import { rainbowSprinkles } from 'rainbow-sprinkles'
-import type { AllSystemProps } from 'rainbow-sprinkles'
+import { createRainbowSprinkles } from 'rainbow-sprinkles'
 import { vars } from '../vars.css'
 import { breakpoints } from '../theme'
 
@@ -459,8 +458,8 @@ let propConfig = {
 
 */
 
-const { createSystemPropCss, getBoxProps, properties, config } =
-  rainbowSprinkles({
+const { getBoxProps, createRainbowSprinklesCss, extractSprinklesFromProps } =
+  createRainbowSprinkles({
     conditions: {
       // all: {},
       _: {},
@@ -478,7 +477,7 @@ const { createSystemPropCss, getBoxProps, properties, config } =
       },
     },
     defaultCondition: '_',
-    properties: {
+    dynamicProperties: {
       margin: vars.space,
       marginTop: vars.space,
       marginRight: vars.space,
@@ -541,8 +540,6 @@ const { createSystemPropCss, getBoxProps, properties, config } =
     },
   })
 
-const configCopy = { ...config }
+export type Sprinkles = Parameters<typeof getBoxProps>[1]
 
-export type SystemProps = AllSystemProps<typeof configCopy>
-
-export { getBoxProps, createSystemPropCss, properties }
+export { getBoxProps, createRainbowSprinklesCss, extractSprinklesFromProps }
