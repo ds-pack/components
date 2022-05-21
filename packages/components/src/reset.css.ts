@@ -5,8 +5,6 @@ globalStyle('html, body', {
   boxSizing: 'border-box',
   fontSize: vars.fontSizes[1],
   fontFamily: vars.fonts.base,
-  color: vars.colors.black,
-  backgroundColor: vars.colors.white,
   minHeight: '100%',
 })
 
