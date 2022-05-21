@@ -12,7 +12,7 @@
     "test-watch": "jest --watch",
     "test-cov": "jest --collectCoverage",
     "prepub": "pnpm build",
-    "pub": "pnpm publish --access public",
+    "pub": "pnpm publish --access public --no-git-checks",
     "tsc": "tsc --noEmit"
   },
   "devDependencies": {
