@@ -10,6 +10,5 @@
     "test": "yarn workspace @ds-pack/components run test",
     "pub": "yarn workspace @ds-pack/components run pub",
     "start": "yarn workspace sandbox dev"
-  },
-  "dependencies": {}
+  }
 }

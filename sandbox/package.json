@@ -22,6 +22,7 @@
     "nanopop": "^2",
     "next": "canary",
     "next-transpile-modules": "^9.0.0",
+    "rainbow-sprinkles": "^0.9",
     "react": "experimental",
     "react-dom": "experimental"
   },

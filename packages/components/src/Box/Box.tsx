@@ -1,5 +1,5 @@
 import { forwardRef } from 'react'
-import styles from './Box.css'
+import { styles } from './Box.css'
 import {
   getBoxProps,
   extractSprinklesFromProps,
@@ -28,10 +28,11 @@ export let Box = forwardRef<any, BoxProps>(function Box(
   { is: Element = 'div', testIds, className, style, ...props }: BoxProps,
   ref,
 ) {
-  let { systemProps, otherProps } = extractSprinklesFromProps(props)
+  let { sprinkles, otherProps } = extractSprinklesFromProps(props)
+  console.log(sprinkles)
   let { className: localClassname, style: localStyle } = getBoxProps(
     styles,
-    systemProps,
+    sprinkles,
   )
   return (
     <Element
