@@ -1,7 +1,5 @@
 import { forwardRef } from 'react'
-import styles from './Box.css'
-import { getBoxProps, properties, SystemProps } from './system-props'
-import { extractAtomsFromProps } from 'rainbow-sprinkles'
+import { rainbowSprinkles, Sprinkles } from './system-props.css'
 
 function createTestIds(testIds = null) {
   if (testIds) {
@@ -12,7 +10,7 @@ function createTestIds(testIds = null) {
   return {}
 }
 
-export interface BoxProps extends SystemProps {
+export interface BoxProps extends Sprinkles {
   is?: React.ComponentType<{ [key: string]: unknown }> | string
   testIds?: string | { default: string }
   className?: string
@@ -25,11 +23,11 @@ export let Box = forwardRef<any, BoxProps>(function Box(
   { is: Element = 'div', testIds, className, style, ...props }: BoxProps,
   ref,
 ) {
-  let { systemProps, otherProps } = extractAtomsFromProps(props, properties)
-  let { className: localClassname, style: localStyle } = getBoxProps(
-    styles,
-    systemProps,
-  )
+  let {
+    className: localClassname,
+    style: localStyle,
+    otherProps,
+  } = rainbowSprinkles(props)
   return (
     <Element
       ref={ref}

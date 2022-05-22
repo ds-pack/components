@@ -30,7 +30,7 @@ importers:
       nanopop: ^2
       polished: ^4.1.4
       prettier: ^2
-      rainbow-sprinkles: ^0
+      rainbow-sprinkles: ^0.10
       react: experimental
       react-dom: experimental
       react-is: experimental
@@ -59,7 +59,7 @@ importers:
       nanopop: 2.1.0
       polished: 4.1.4
       prettier: 2.3.2
-      rainbow-sprinkles: 0.6.0_itw2nd7mnig2devqdtjjdtw3ta
+      rainbow-sprinkles: 0.10.1_itw2nd7mnig2devqdtjjdtw3ta
       react: 0.0.0-experimental-6e2f38f3a-20220519
       react-dom: 0.0.0-experimental-6e2f38f3a-20220519_tgfq3yfkbytgmd7tr3daywm474
       react-is: 0.0.0-experimental-6e2f38f3a-20220519
@@ -137,10 +137,12 @@ importers:
       '@types/react': ^18
       '@vanilla-extract/babel-plugin': ^1
       '@vanilla-extract/css': ^1
+      '@vanilla-extract/dynamic': ^2.0.2
       '@vanilla-extract/next-plugin': ^2
       nanopop: ^2
       next: canary
       next-transpile-modules: ^9.0.0
+      rainbow-sprinkles: ^0.9
       react: experimental
       react-dom: experimental
       typescript: ^4
@@ -151,10 +153,12 @@ importers:
       '@ds-pack/use-refs': 1.0.0_tgfq3yfkbytgmd7tr3daywm474
       '@vanilla-extract/babel-plugin': 1.1.4
       '@vanilla-extract/css': 1.6.8
+      '@vanilla-extract/dynamic': 2.0.2
       '@vanilla-extract/next-plugin': 2.0.1_rnhgeob4har5rhfy6tmlrwmlcy
       nanopop: 2.1.0
       next: 12.1.7-canary.10_qg4py3ivosph5rcfuavmove5za
       next-transpile-modules: 9.0.0
+      rainbow-sprinkles: 0.9.3_itw2nd7mnig2devqdtjjdtw3ta
       react: 0.0.0-experimental-6e2f38f3a-20220519
       react-dom: 0.0.0-experimental-6e2f38f3a-20220519_tgfq3yfkbytgmd7tr3daywm474
       webpack: 5.72.1
@@ -2236,7 +2240,6 @@ packages:
     resolution: {integrity: sha512-U4nKaEQ8Kuz+exXEr51DUpyaOuzo24/S/k1YbDPQR06cYcNjQqvwFRnwWtZ+9ImocqM1wTKtzrdUgSTtLGIwAg==}
     dependencies:
       '@vanilla-extract/private': 1.0.3
-    dev: true
 
   /@vanilla-extract/esbuild-plugin/2.0.2:
     resolution: {integrity: sha512-WQPySNQx5ups1pFuMyzGqkZvsshEzVRGFpWCgfNrdIFtWDIcmfkh4mVpocnkCkqNjAFE+TKyyKmtQhhQIs9VQA==}
@@ -4826,7 +4829,6 @@ packages:
 
   /lodash.merge/4.6.2:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
-    dev: true
 
   /lodash.sortby/4.7.0:
     resolution: {integrity: sha1-7dFMgk4sycHgsKG0K7UhBRakJDg=}
@@ -5387,17 +5389,27 @@ packages:
     resolution: {integrity: sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==}
     engines: {node: '>=6'}
 
-  /rainbow-sprinkles/0.6.0_itw2nd7mnig2devqdtjjdtw3ta:
-    resolution: {integrity: sha512-f58MeauOiSlLKUp6g/ZK1VGOKVzKA4S/0VTM2QVs6y9DDXmI+zjM2Nl2VucmlTWSlLCcd5qhx5o/qrqZvhjwug==}
+  /rainbow-sprinkles/0.10.1_itw2nd7mnig2devqdtjjdtw3ta:
+    resolution: {integrity: sha512-S+nV0ilxi59tXffyDyoZHrkycVuxr9dDhplBRXu4ny3ks/IPZAQi02uT8EyNYCLkiu+dyyF/v44fmxbsq5naag==}
     peerDependencies:
-      '@vanilla-extract/css': ^1.6.8
-      '@vanilla-extract/dynamic': ^2.0.2
+      '@vanilla-extract/css': ^1
+      '@vanilla-extract/dynamic': ^2
     dependencies:
       '@vanilla-extract/css': 1.6.8
       '@vanilla-extract/dynamic': 2.0.2
-      csstype: 3.0.10
       lodash.merge: 4.6.2
     dev: true
+
+  /rainbow-sprinkles/0.9.3_itw2nd7mnig2devqdtjjdtw3ta:
+    resolution: {integrity: sha512-JhopQ77+sW/xUVFxIFrJTKQnV2j58BEyHCXbkvij07QKIsgsyP9vh40Z/78KpPIcolD5cof3TBhW3QMXNnqrTA==}
+    peerDependencies:
+      '@vanilla-extract/css': ^1.7
+      '@vanilla-extract/dynamic': ^2
+    dependencies:
+      '@vanilla-extract/css': 1.6.8
+      '@vanilla-extract/dynamic': 2.0.2
+      lodash.merge: 4.6.2
+    dev: false
 
   /randombytes/2.1.0:
     resolution: {integrity: sha512-vYl3iOX+4CKUWuxGi9Ukhie6fsqXqS9FE2Zaic4tNFD2N2QQaXOMFbuKK4QmDHC0JO6B1Zp41J0LpT0oR68amQ==}

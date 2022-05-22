@@ -15,10 +15,12 @@
     "@ds-pack/use-refs": "^1",
     "@vanilla-extract/babel-plugin": "^1",
     "@vanilla-extract/css": "^1",
+    "@vanilla-extract/dynamic": "^2.0.2",
     "@vanilla-extract/next-plugin": "^2",
     "nanopop": "^2",
     "next": "canary",
     "next-transpile-modules": "^9.0.0",
+    "rainbow-sprinkles": "^0.9",
     "react": "experimental",
     "react-dom": "experimental",
     "webpack": "^5"
