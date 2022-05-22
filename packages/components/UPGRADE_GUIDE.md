@@ -1,3 +1,7 @@
+### 1.0.2 -> 1.0.3
+
+No changes required for consuming applications
+
 ### 1.0.1 -> 1.0.2
 
 This change bumped the minimum peerDependency on `rainbow-sprinkles` to `^0.10`.

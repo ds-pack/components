@@ -7,6 +7,10 @@ export let disabled = style({})
 
 export let focused = style({})
 
+export let radioLabel = style({
+  flexDirection: 'row',
+})
+
 export let radioButton = style({
   marginRight: vars.space[2],
   height: '20px',

@@ -1,3 +1,7 @@
+### 1.0.3
+
+- Fixed label alignment in Checkbox and Radio Button components
+
 ### 1.0.2
 
 - Bump minimum `rainbow-sprinkles` peerDependency

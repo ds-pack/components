@@ -1,6 +1,10 @@
 import { style } from '@vanilla-extract/css'
 import { vars } from '../vars.css'
 
+export let checkboxLabel = style({
+  flexDirection: 'row',
+})
+
 export let checkbox = style({
   marginRight: vars.space[2],
   height: '20px',
