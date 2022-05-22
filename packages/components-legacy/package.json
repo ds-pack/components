@@ -15,8 +15,8 @@
     "test": "jest",
     "test-watch": "jest --watch",
     "test-cov": "jest --collectCoverage",
-    "prepub": "yarn build",
-    "pub": "yarn publish --access public",
+    "prepub": "pnpm build",
+    "pub": "pnpm publish --access public",
     "tsc": "tsc --noEmit"
   },
   "devDependencies": {

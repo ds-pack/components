@@ -1,6 +1,6 @@
 {
   "name": "@ds-pack/components",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "src/index.ts",
   "source": "src/index.ts",
   "repository": "git@github.com:ds-pack/components.git",
@@ -11,8 +11,8 @@
     "test": "jest",
     "test-watch": "jest --watch",
     "test-cov": "jest --collectCoverage",
-    "prepub": "yarn build",
-    "pub": "yarn publish --access public",
+    "prepub": "pnpm build",
+    "pub": "pnpm publish --access public --no-git-checks",
     "tsc": "tsc --noEmit"
   },
   "devDependencies": {
@@ -23,7 +23,7 @@
     "@babel/preset-typescript": "^7.16.7",
     "@ds-pack/use-refs": "*",
     "@testing-library/jest-dom": "^5",
-    "@testing-library/react": "^10",
+    "@testing-library/react": "^13",
     "@types/jest": "^25",
     "@types/react": "^18",
     "@types/react-dom": "^18",
@@ -31,13 +31,15 @@
     "@vanilla-extract/css": "^1.6.8",
     "@vanilla-extract/dynamic": "^2.0.2",
     "@vanilla-extract/esbuild-plugin": "^2.0.2",
+    "@babel/plugin-transform-react-jsx": "7.17.12",
+    "@babel/plugin-syntax-typescript": "7.17.12",
     "babel-jest": "^26",
     "esbuild": "^0.14.25",
     "jest": "^26",
     "nanopop": "^2",
     "polished": "^4.1.4",
     "prettier": "^2",
-    "rainbow-sprinkles": "^0.9",
+    "rainbow-sprinkles": "^0.10",
     "react": "experimental",
     "react-dom": "experimental",
     "react-is": "experimental",
@@ -52,7 +54,7 @@
     "@vanilla-extract/css": "^1.6.8",
     "@vanilla-extract/dynamic": "^2.0.2",
     "nanopop": "^2",
-    "rainbow-sprinkles": "^0.9",
+    "rainbow-sprinkles": "^0.10",
     "react": "*",
     "react-dom": "*"
   }

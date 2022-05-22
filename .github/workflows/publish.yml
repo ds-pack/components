@@ -9,11 +9,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
+      - uses: pnpm/action-setup@v2
         with:
-          node-version: 12
+          version: 7
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
           registry-url: https://registry.npmjs.org/
-      - run: yarn
-      - run: yarn pub
+          cache: 'pnpm'
+      - run: pnpm install
+      - run: pnpm pub
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}

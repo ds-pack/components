@@ -37,6 +37,8 @@ require('esbuild')
       '@ds-pack/use-refs',
       'react-dom',
       '@vanilla-extract/css',
+      '@vanilla-extract/dynamic',
+      'rainbow-sprinkles',
       'nanopop',
     ],
   })
