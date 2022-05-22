@@ -1,5 +1,5 @@
 {
-  "packages": ["packages/components", "packages/experimental-components"],
+  "packages": ["packages/components"],
   "sandboxes": ["new"],
   "node": "16"
 }
