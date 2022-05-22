@@ -1,10 +1,5 @@
 import { forwardRef } from 'react'
-import { styles } from './Box.css'
-import {
-  getBoxProps,
-  extractSprinklesFromProps,
-  Sprinkles,
-} from './system-props'
+import { rainbowSprinkles, Sprinkles } from './system-props.css'
 
 function createTestIds(testIds = null) {
   if (testIds) {
@@ -28,12 +23,11 @@ export let Box = forwardRef<any, BoxProps>(function Box(
   { is: Element = 'div', testIds, className, style, ...props }: BoxProps,
   ref,
 ) {
-  let { sprinkles, otherProps } = extractSprinklesFromProps(props)
-  console.log(sprinkles)
-  let { className: localClassname, style: localStyle } = getBoxProps(
-    styles,
-    sprinkles,
-  )
+  let {
+    className: localClassname,
+    style: localStyle,
+    otherProps,
+  } = rainbowSprinkles(props)
   return (
     <Element
       ref={ref}
