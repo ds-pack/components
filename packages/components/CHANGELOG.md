@@ -1,3 +1,8 @@
+### 1.0.4
+
+- Bump `rainbow-sprinkles` peerDependency
+- Change in system-props API
+
 ### 1.0.3
 
 - Fixed label alignment in Checkbox and Radio Button components

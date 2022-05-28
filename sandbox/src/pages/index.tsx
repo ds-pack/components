@@ -26,8 +26,8 @@ export default function App() {
   let [checked, setChecked] = useState(false)
   let [text, setText] = useState('')
   return (
-    <Box m="4">
-      <Stack gap="10">
+    <Box m="$4">
+      <Stack gap="$10">
         <Box
           maxWidth={{
             small: '94vw',
@@ -37,24 +37,24 @@ export default function App() {
         >
           Testing things
         </Box>
-        <Stack gap="4">
+        <Stack gap="$4">
           <Text>Foo</Text>
           <Text>Bar</Text>
           <Text>Baz</Text>
         </Stack>
-        <Stack inline gap="4">
+        <Stack inline gap="$4">
           <Text>Foo</Text>
           <Text>Bar</Text>
           <Text>Baz</Text>
         </Stack>
         <Blockquote>Testing!</Blockquote>
-        <Stack inline gap="5">
+        <Stack inline gap="$5">
           <Button variant="primary">Primary</Button>
           <Button variant="ghost">Primary</Button>
           <Button variant="text">Primary</Button>
           <Button variant="secondary">Primary</Button>
         </Stack>
-        <Stack gap="5" inline>
+        <Stack gap="$5" inline>
           <Button disabled variant="primary">
             Primary
           </Button>
@@ -119,7 +119,7 @@ export default function App() {
         />
         <GitHubMention>hamlim</GitHubMention>
         <TwitterMention>immatthamlin</TwitterMention>
-        <Stack gap="4">
+        <Stack gap="$4">
           <Heading variant="h1">H1</Heading>
           <Heading variant="lead">lead</Heading>
           <Heading variant="h2">h2</Heading>
