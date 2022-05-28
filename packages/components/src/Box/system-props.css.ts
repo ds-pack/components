@@ -84,4 +84,4 @@ export let rainbowSprinkles = createRainbowSprinkles(
   }),
 )
 
-export type Sprinkles = Parameters<typeof rainbowSprinkles>[1]
+export type Sprinkles = Parameters<typeof rainbowSprinkles>[0]

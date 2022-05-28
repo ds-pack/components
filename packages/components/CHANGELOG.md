@@ -1,3 +1,7 @@
+### 1.0.5
+
+- Fix types for system props applied to Box components
+
 ### 1.0.4
 
 - Bump `rainbow-sprinkles` peerDependency
