@@ -1,3 +1,33 @@
+### 1.0.3 -> 1.0.4
+
+This change bumped the minimum peerDependency on `rainbow-sprinkles` to `^0.11`.
+
+To adopt this change consuming app should update `rainbow-sprinkles` when
+adopting this change.
+
+Additionally, all usage of system-props need to be prefixed with a `$`, for
+example:
+
+**Before:**
+
+```tsx
+<Stack gap="4">
+  <div />
+  <div />
+  <div />
+</Stack>
+```
+
+**After:**
+
+```tsx
+<Stack gap="$4">
+  <div />
+  <div />
+  <div />
+</Stack>
+```
+
 ### 1.0.2 -> 1.0.3
 
 No changes required for consuming applications

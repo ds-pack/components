@@ -1,6 +1,6 @@
 {
   "name": "@ds-pack/components",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "src/index.ts",
   "source": "src/index.ts",
   "repository": "git@github.com:ds-pack/components.git",
@@ -39,7 +39,7 @@
     "nanopop": "^2",
     "polished": "^4.1.4",
     "prettier": "^2",
-    "rainbow-sprinkles": "^0.10",
+    "rainbow-sprinkles": "^0.11",
     "react": "experimental",
     "react-dom": "experimental",
     "react-is": "experimental",
@@ -54,7 +54,7 @@
     "@vanilla-extract/css": "^1.6.8",
     "@vanilla-extract/dynamic": "^2.0.2",
     "nanopop": "^2",
-    "rainbow-sprinkles": "^0.10",
+    "rainbow-sprinkles": "^0.11",
     "react": "*",
     "react-dom": "*"
   }
