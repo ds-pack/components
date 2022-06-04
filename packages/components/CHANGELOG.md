@@ -1,3 +1,7 @@
+### 1.0.6
+
+- Change default global theme to exported `themeClass`
+
 ### 1.0.5
 
 - Fix types for system props applied to Box components
