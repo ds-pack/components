@@ -1,4 +1,4 @@
-import { createGlobalTheme } from '@vanilla-extract/css'
+import { createTheme } from '@vanilla-extract/css'
 import { breakpoints } from './theme'
 import { modularScale } from 'polished'
 
@@ -178,7 +178,7 @@ let colors = {
   disabledFill: baseColors.gray500,
 }
 
-export let vars = createGlobalTheme(':root', {
+export let [themeClass, vars] = createTheme({
   space: [0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40].reduce(
     (acc, val, idx) => ({ ...acc, [idx]: `${val}px` }),
     {},
@@ -210,126 +210,5 @@ export let vars = createGlobalTheme(':root', {
   },
   breakpoints: breakpoints as any,
   colors,
-  // lists: {
-  //   base: {
-  //     listStyleType: 'none',
-  //     marginLeft: '0',
-  //     marginRight: '0',
-  //     marginTop: '0',
-  //     marginBottom: '0',
-  //     paddingLeft: '0',
-  //     paddingRight: '0',
-  //     paddingBottom: '0',
-  //     paddingTop: '0',
-  //   },
-  //   ordered: {
-  //     listStyleType: 'decimal',
-  //     listStylePosition: 'inside',
-  //     marginLeft: '0',
-  //     marginRight: '0',
-  //     marginTop: '0',
-  //     marginBottom: '0',
-  //     paddingLeft: '0',
-  //     paddingRight: '0',
-  //     paddingBottom: '0',
-  //     paddingTop: '0',
-  //   },
-  //   unordered: {
-  //     listStyleType: 'disc',
-  //     listStylePosition: 'inside',
-  //     marginLeft: '0',
-  //     marginRight: '0',
-  //     marginTop: '0',
-  //     marginBottom: '0',
-  //     paddingLeft: '0',
-  //     paddingRight: '0',
-  //     paddingBottom: '0',
-  //     paddingTop: '0',
-  //   },
-  // },
-  // TODO: Move these into individual components instead!
-  /*
-  get banners() {
-    return {
-      success: {
-        color: this.colors.black,
-        backgroundColor: this.colors.teal200,
-        border: `solid 2px ${this.colors.teal600}`,
-        borderRadius: this.radii[0],
-        padding: this.space[3],
-        display: 'flex',
-        alignItems: 'center',
-      },
-      info: {
-        color: this.colors.black,
-        backgroundColor: this.colors.blue200,
-        border: `solid 2px ${this.colors.blue600}`,
-        borderRadius: this.radii[0],
-        padding: this.space[3],
-        display: 'flex',
-        alignItems: 'center',
-      },
-      error: {
-        color: this.colors.black,
-        backgroundColor: this.colors.red200,
-        border: `solid 2px ${this.colors.red600}`,
-        borderRadius: this.radii[0],
-        padding: this.space[3],
-        display: 'flex',
-        alignItems: 'center',
-      },
-      warning: {
-        color: this.colors.black,
-        backgroundColor: this.colors.yellow200,
-        border: `solid 2px ${this.colors.yellow600}`,
-        borderRadius: this.radii[0],
-        padding: this.space[3],
-        display: 'flex',
-        alignItems: 'center',
-      },
-    }
-  },
-  get headings() {
-    return {
-      h1: {
-        fontSize: this.fontSizes.h1,
-        fontWeight: this.fontWeights.bold,
-      },
-      lead: {
-        fontSize: this.fontSizes.h1,
-        fontWeight: this.fontWeights.bold,
-        fontFamily: this.fonts.serif,
-      },
-      h2: {
-        fontSize: this.fontSizes.h2,
-        fontWeight: this.fontWeights.bold,
-      },
-      h3: {
-        fontSize: this.fontSizes.h3,
-        fontWeight: this.fontWeights.bold,
-      },
-      subhead: {
-        fontSize: this.fontSizes.h4,
-        fontWeight: this.fontWeights.bold,
-      },
-    }
-  },
-  get chips() {
-    return {
-      primary: {
-        backgroundColor: this.colors.primary,
-        color: this.colors.black,
-      },
-    }
-  },
-  get focusShadow() {
-    return `0 0 4px 2px ${this.colors.primaryDark}`
-  },
-  get shadows() {
-    return {
-      focusShadow: this.focusShadow,
-    }
-  },
-  */
   focusShadow: `0 0 4px 2px ${colors.primaryDark}`,
 })

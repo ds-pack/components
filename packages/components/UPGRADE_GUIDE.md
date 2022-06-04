@@ -1,3 +1,34 @@
+### 1.0.5 -> 1.0.6
+
+This change updated the way that the default theme is applied. Previously the
+theme would be auto-applied to the `:root` selector, now the theme is scoped to
+a classname (exported as `themeClass`) which needs to be applied to the root
+`<html>` element.
+
+If you're using Next.js, you'll need a custom `_document.tsx` file:
+
+```tsx
+import { Html, Head, Main, NextScript } from 'next/document'
+// New:
+import { themeClass } from '@ds-pack/components'
+
+export default function Document() {
+  return (
+    // Apply classname here
+    <Html className={themeClass}>
+      <Head />
+      <body>
+        <Main />
+        <NextScript />
+      </body>
+    </Html>
+  )
+}
+```
+
+If you apply the classname **not** on the `<html>` element, some components may
+not be styled correctly and fonts won't be applied correctly!
+
 ### 1.0.4 -> 1.0.5
 
 No changes required for consuming applications
