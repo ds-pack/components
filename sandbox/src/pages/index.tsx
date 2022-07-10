@@ -34,6 +34,7 @@ export default function App() {
             medium: '80vw',
             large: '70ch',
           }}
+          fontWeight="bold"
         >
           Testing things
         </Box>
