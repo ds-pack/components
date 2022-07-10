@@ -23,6 +23,7 @@
     "@babel/preset-env": "^7",
     "@babel/preset-react": "^7",
     "@babel/preset-typescript": "^7.16.7",
+    "@babel/runtime": "7.18.6",
     "@ds-pack/use-refs": "*",
     "@testing-library/jest-dom": "^5",
     "@testing-library/react": "^13",

@@ -13,6 +13,5 @@ jobs:
           registry-url: https://registry.npmjs.org/
           cache: 'yarn'
       - run: corepack enable
-      - run: yarn --version
       - run: yarn install
       - run: yarn test
