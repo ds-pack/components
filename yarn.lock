@@ -6630,7 +6630,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"polished@npm:^4.1.4":
+"polished@npm:4.2.2, polished@npm:^4.1.4":
   version: 4.2.2
   resolution: "polished@npm:4.2.2"
   dependencies:
@@ -7139,6 +7139,7 @@ __metadata:
     nanopop: ^2
     next: canary
     next-transpile-modules: ^9.0.0
+    polished: 4.2.2
     rainbow-sprinkles: ^0.11
     react: experimental
     react-dom: experimental

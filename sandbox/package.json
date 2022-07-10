@@ -32,6 +32,7 @@
     "@babel/plugin-transform-runtime": "^7",
     "@types/node": "^14",
     "@types/react": "^18",
+    "polished": "4.2.2",
     "typescript": "^4"
   }
 }
