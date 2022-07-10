@@ -6,10 +6,10 @@
   ],
   "name": "ds-pack-components",
   "scripts": {
-    "build": "pnpm --filter @ds-pack/components build",
-    "test": "pnpm --filter @ds-pack/components test",
-    "pub": "pnpm --filter @ds-pack/components pub",
-    "start": "pnpm --filter sandbox dev"
+    "build": "yarn workspace @ds-pack/components build",
+    "test": "yarn workspace @ds-pack/components test",
+    "pub": "yarn workspace @ds-pack/components pub",
+    "start": "yarn workspace sandbox dev"
   },
-  "dependencies": {}
+  "packageManager": "yarn@3.2.1"
 }

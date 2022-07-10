@@ -1,5 +1,3 @@
-.yarn/unplugged
-.yarn/build-state.yml
 .env
 /coverage/
 node_modules
@@ -10,3 +8,11 @@ example/build
 sandbox/.next
 compiled.css
 compiled.js
+
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
