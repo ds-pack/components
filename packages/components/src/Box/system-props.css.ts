@@ -59,6 +59,7 @@ export let rainbowSprinkles = createRainbowSprinkles(
       textAlign: true,
       fontStyle: true,
       overflow: true,
+      fontWeight: true
     },
     shorthands: {
       m: ['margin'],

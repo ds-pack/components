@@ -6,9 +6,8 @@ const withTM = require('next-transpile-modules')(['@ds-pack/components'])
 let config = {
   reactStrictMode: true,
   experimental: {
-    modern: true,
-    reactMode: 'concurrent',
-    reactRoot: true,
+    runtime: 'nodejs',
+    serverComponents: true,
   },
 }
 
