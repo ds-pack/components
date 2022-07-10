@@ -1,3 +1,11 @@
+### 1.0.7 -> 1.0.8
+
+No changes required for consuming applications.
+
+### 1.0.6 -> 1.0.7
+
+No changes required for consuming applications.
+
 ### 1.0.5 -> 1.0.6
 
 This change updated the way that the default theme is applied. Previously the

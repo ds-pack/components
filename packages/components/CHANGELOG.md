@@ -1,6 +1,10 @@
+### 1.0.8
+
+- Add support for the `fontWeight` system prop on Box/other components.
+
 ### 1.0.7
 
-Fix `compiled.css`, `compiled.js` entrypoints missing in published package
+- Fix `compiled.css`, `compiled.js` entrypoints missing in published package
 
 ### 1.0.6
 
