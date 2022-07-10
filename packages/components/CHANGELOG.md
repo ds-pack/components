@@ -1,3 +1,7 @@
+### 1.0.7
+
+Fix `compiled.css`, `compiled.js` entrypoints missing in published package
+
 ### 1.0.6
 
 - Change default global theme to exported `themeClass`
