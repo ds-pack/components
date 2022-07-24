@@ -6,4 +6,5 @@ export let caption = style({
   fontStyle: 'italic',
   paddingLeft: vars.space[2],
   paddingRight: vars.space[2],
+  borderLeft: `solid 2px ${vars.colors.gray300}`,
 })

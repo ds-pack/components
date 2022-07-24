@@ -139,6 +139,12 @@ export default function App() {
         </List>
         <List variant="unordered">
           <ListItem>Yo</ListItem>
+          <List variant="unordered">
+            <ListItem>Nested!</ListItem>
+            <List variant="unordered">
+              <ListItem>Nested third level!</ListItem>
+            </List>
+          </List>
         </List>
         <RadioButton name="foo" value="radio" onChange={setChecked}>
           Testing!

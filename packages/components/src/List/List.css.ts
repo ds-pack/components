@@ -1,4 +1,5 @@
 import { style } from '@vanilla-extract/css'
+import { vars } from '../vars.css'
 
 export let base = style({
   listStyleType: 'none',
@@ -14,8 +15,7 @@ export let base = style({
 
 export let ordered = style({
   listStyleType: 'decimal',
-  listStylePosition: 'inside',
-  marginLeft: 0,
+  marginLeft: vars.space[4],
   marginRight: 0,
   marginTop: 0,
   marginBottom: 0,
@@ -27,8 +27,7 @@ export let ordered = style({
 
 export let unordered = style({
   listStyleType: 'disc',
-  listStylePosition: 'inside',
-  marginLeft: 0,
+  marginLeft: vars.space[4],
   marginRight: 0,
   marginTop: 0,
   marginBottom: 0,

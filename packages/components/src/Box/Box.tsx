@@ -1,5 +1,6 @@
 import { forwardRef } from 'react'
 import { rainbowSprinkles, Sprinkles } from './system-props.css'
+import cx from '../classnames'
 
 function createTestIds(testIds = null) {
   if (testIds) {
@@ -33,7 +34,10 @@ export let Box = forwardRef<any, BoxProps>(function Box(
       ref={ref}
       {...createTestIds(testIds)}
       {...otherProps}
-      className={className ? localClassname + ' ' + className : localClassname}
+      className={cx({
+        [localClassname]: !!localClassname,
+        [className]: !!className,
+      })}
       style={{ ...style, ...localStyle }}
     />
   )

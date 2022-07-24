@@ -17,6 +17,7 @@ export let Banner = forwardRef<any, BannerProps>(function Banner(
       className={cx({
         [styles.banner]: true,
         [styles[variant]]: !!variant,
+        [props.className]: !!props.className,
       })}
       ref={ref}
     />

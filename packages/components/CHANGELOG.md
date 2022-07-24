@@ -1,3 +1,12 @@
+### 1.0.9
+
+- Add support for the following system props:
+  - `borderStyle`
+  - `borderWidth`
+  - `borderColor`
+  - `lineHeight`
+  - `gap`
+
 ### 1.0.8
 
 - Add support for the `fontWeight` system prop on Box/other components.

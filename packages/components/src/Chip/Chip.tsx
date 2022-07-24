@@ -17,6 +17,7 @@ export let Chip = forwardRef<any, ChipProps>(function Chip(
         [chip]: true,
         [primary]: variant === 'primary',
         [base]: variant === 'default',
+        [props.className]: !!props.className,
       })}
       {...props}
       ref={ref}

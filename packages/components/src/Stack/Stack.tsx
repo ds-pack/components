@@ -31,6 +31,7 @@ export let Stack = forwardRef<any, StackProps>(function Stack(
       className={cx({
         [styles.container]: true,
         [styles.inline]: inline,
+        [props.className]: !!props.className,
       })}
       {...rest}
       ref={ref}

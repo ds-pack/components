@@ -3,6 +3,7 @@ import type { ReactNode } from 'react'
 import { Box, BoxProps } from '../Box'
 import { Label } from '../Label'
 import { input } from './Input.css'
+import cx from '../classnames'
 
 export interface InputProps extends BoxProps {
   disabled: boolean
@@ -35,7 +36,10 @@ export let Input = forwardRef<HTMLInputElement, InputProps>(function Input(
         disabled={disabled}
         value={value}
         {...inputProps}
-        className={input}
+        className={cx({
+          [input]: true,
+          [props.className]: !!props.className,
+        })}
         is="input"
         ref={ref}
         onChange={({ target: { value } }) => onChange(value)}

@@ -48,6 +48,7 @@ export let rainbowSprinkles = createRainbowSprinkles(
       flexShrink: true,
       gridTemplateColumns: true,
       gridTemplateRows: true,
+      gap: true,
       position: true,
       transform: true,
       top: true,
@@ -56,10 +57,14 @@ export let rainbowSprinkles = createRainbowSprinkles(
       bottom: true,
       borderRadius: vars.radii,
       border: true,
+      borderWidth: true,
+      borderStyle: true,
+      borderColor: true,
+      lineHeight: true,
       textAlign: true,
       fontStyle: true,
       overflow: true,
-      fontWeight: true
+      fontWeight: true,
     },
     shorthands: {
       m: ['margin'],

@@ -20,6 +20,7 @@ export let Button = forwardRef<any, ButtonProps>(function Button(
       className={cx({
         [styles.button]: true,
         [styles[variant]]: !!variant,
+        [props.className]: !!props.className,
       })}
       {...props}
       ref={ref}
