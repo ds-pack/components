@@ -48,7 +48,7 @@ export let rainbowSprinkles = createRainbowSprinkles(
       flexShrink: true,
       gridTemplateColumns: true,
       gridTemplateRows: true,
-      gap: true,
+      gap: vars.space,
       position: true,
       transform: true,
       top: true,

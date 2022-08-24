@@ -1,3 +1,9 @@
+### 1.0.10
+
+- Allow `gap` to use `vars.space` tokens
+- Adjusted padding on Buttons and Inputs
+- Adjusted text color on the Label component
+
 ### 1.0.9
 
 - Add support for the following system props:

@@ -3,7 +3,7 @@ import { vars } from '../vars.css'
 
 let sharedBoxyStyles = {
   height: '50px',
-  padding: '0.5em 1em',
+  padding: '0.25em .5em',
 }
 
 export let button = style({

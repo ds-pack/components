@@ -8,7 +8,7 @@ export let input = style({
   display: 'inline-flex',
   flexGrow: 1,
   flexShrink: 0,
-  padding: '0.5em 1em',
+  padding: '0.5em .5em',
   borderRadius: vars.radii.small,
   color: vars.colors.black,
   outline: 'none',

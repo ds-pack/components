@@ -1,3 +1,7 @@
+### 1.0.9 -> 1.0.10
+
+No changes required for consuming applications.
+
 ### 1.0.8 -> 1.0.9
 
 No changes required for consuming applications.

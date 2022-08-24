@@ -4,5 +4,5 @@ import { vars } from '../vars.css'
 export let label = style({
   display: 'flex',
   flexDirection: 'column',
-  color: vars.colors.gray700,
+  color: vars.colors.gray900,
 })
