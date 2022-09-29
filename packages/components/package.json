@@ -13,7 +13,7 @@
     "test-watch": "jest --watch",
     "test-cov": "jest --collectCoverage",
     "prepub": "yarn build",
-    "pub": "yarn npm publish --access public",
+    "pub": "npm publish --access public",
     "tsc": "tsc --noEmit"
   },
   "devDependencies": {
