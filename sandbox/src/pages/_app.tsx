@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import '@ds-pack/components/dist/index.css'
 
 export default function App({ Component, pageProps }) {
   return (
