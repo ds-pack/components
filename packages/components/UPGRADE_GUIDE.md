@@ -1,3 +1,16 @@
+### 1.0.10 -> 1.0.11
+
+Some big changes in this release, Next.js apps no longer need Vanilla Extract
+webpack plugin + next-transpile-modules to consume.
+
+Instead, you will need to add a css import at the root of the application:
+
+Either within your `_app.tsx` file or `layout.tsx` file:
+
+```tsx
+import '@ds-pack/components/dist/index.css'
+```
+
 ### 1.0.9 -> 1.0.10
 
 No changes required for consuming applications.

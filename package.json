@@ -4,7 +4,7 @@
     "packages/*",
     "sandbox"
   ],
-  "name": "ds-pack-components",
+  "name": "root",
   "scripts": {
     "build": "yarn workspace @ds-pack/components build",
     "test": "yarn workspace @ds-pack/components test",

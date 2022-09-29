@@ -1,3 +1,8 @@
+### 1.0.11
+
+- Change default consumption of the library to be from compiled files
+  (dist/index.es5.js, dist/index.es6.js, dist/index.mjs)
+
 ### 1.0.10
 
 - Allow `gap` to use `vars.space` tokens

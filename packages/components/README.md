@@ -4,36 +4,30 @@ A bare-bones component library built using:
 
 - [React](https://reactjs.org/)
 - [Vanilla Extract](https://vanilla-extract.style/)
+- [Rainbow Sprinkles](https://github.com/wayfair/rainbow-sprinkles)
 
 ## Setup:
-
-This library publishes the direct source and doesn't manage building locally by
-default - instead the consuming application should manage building the library!
 
 ### Install:
 
 ```sh
 # Install the package and it's peerDependencies
 yarn add @ds-pack/components @ds-pack/use-refs @vanilla-extract/css @vanilla-extract/dynamic rainbow-sprinkles nanopop
-# Install it's dev dependencies
-yarn add -D polished
 ```
 
 Usage with Next.js:
 
 ```tsx
-// next-transpile-modules
-import createTM from 'next-transpile-modules'
-// withVanillaExtract
-import { createVanillaExtractPlugin } from '@vanilla-extract/next-plugin'
+// within `layout.tsx` or `_app.tsx`:
+import '@ds-pack/components/dist/index.css'
 
-let withTM = createTM(['@ds-pack/components'])
+// ...
+// within `layout.tsx` or `_document.tsx`:
+import { themeClass } from '@ds-pack/components'
 
-let withVanillaExtract = createVanillaExtractPlugin()
-
-export default withVanillaExtract({
-  /* ... */
-})
+function Layout({ children }) {
+  return <html className={themeClass}>// ...</html>
+}
 ```
 
 Usage with other frameworks (create-react-app, vanilla webpack applications,
@@ -41,8 +35,8 @@ etc):
 
 ```tsx
 // Import the styles:
-import '@ds-pack/components/compiled.css'
-import { Button } from '@ds-pack/components/compiled'
+import '@ds-pack/components/dist/index.css'
+import { Button } from '@ds-pack/components'
 ```
 
 ### Tools:
