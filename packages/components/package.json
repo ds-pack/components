@@ -8,7 +8,8 @@
   "author": "Matt Hamlin <matthewjameshamlin@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "node scripts/build.js",
+    "build-styles": "rollup -c rollup.config.mjs",
+    "build": "yarn build-styles && babel --out-dir ./dist/ --extensions='.ts,.tsx'",
     "test": "jest",
     "test-watch": "jest --watch",
     "test-cov": "jest --collectCoverage",
@@ -35,8 +36,10 @@
     "@vanilla-extract/css": "^1.6.8",
     "@vanilla-extract/dynamic": "^2.0.2",
     "@vanilla-extract/esbuild-plugin": "^2.0.2",
+    "@vanilla-extract/rollup-plugin": "^1.2.0",
     "babel-jest": "^26",
     "esbuild": "^0.14.25",
+    "fast-glob": "^3.2.12",
     "jest": "^26",
     "nanopop": "^2",
     "polished": "^4.1.4",
@@ -45,6 +48,7 @@
     "react": "experimental",
     "react-dom": "experimental",
     "react-is": "experimental",
+    "rollup": "^3.8.1",
     "typescript": "^4"
   },
   "publishConfig": {
