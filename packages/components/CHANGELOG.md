@@ -1,3 +1,7 @@
+### 1.0.14
+
+- Bump the `rainbow-sprinkles` peerDependency to `^0.15`
+
 ### 1.0.13
 
 - Patch for the previous release to have vars work correctly in consuming

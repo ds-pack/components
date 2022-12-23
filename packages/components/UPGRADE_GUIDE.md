@@ -1,3 +1,8 @@
+### 1.0.13 -> 1.0.14
+
+The only requisite change when upgrading to this release is to upgrade the
+version of `rainbow-sprinkles` to `^0.15`
+
 ### 1.0.12 -> 1.0.13
 
 Follow on changes from the below release:

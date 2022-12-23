@@ -1528,7 +1528,7 @@ __metadata:
     nanopop: ^2
     polished: ^4.1.4
     prettier: ^2
-    rainbow-sprinkles: ^0.12
+    rainbow-sprinkles: ^0.15
     react: experimental
     react-dom: experimental
     react-is: experimental
@@ -1538,7 +1538,7 @@ __metadata:
     "@ds-pack/use-refs": "*"
     "@vanilla-extract/dynamic": ^2.0.2
     nanopop: ^2
-    rainbow-sprinkles: ^0.12
+    rainbow-sprinkles: ^0.15
     react: "*"
     react-dom: "*"
   languageName: unknown
@@ -6699,13 +6699,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rainbow-sprinkles@npm:^0.12":
-  version: 0.12.1
-  resolution: "rainbow-sprinkles@npm:0.12.1"
+"rainbow-sprinkles@npm:^0.15":
+  version: 0.15.1
+  resolution: "rainbow-sprinkles@npm:0.15.1"
   peerDependencies:
     "@vanilla-extract/css": ^1
     "@vanilla-extract/dynamic": ^2
-  checksum: 63af07edc19cc34ad50dd5e8b250b4f1d656cf78f7f7091b1ff53f455d1a3fc77f1f2e7772b862975982673032b92c8e8edcf0b8c12a8be96bd2f9347f199644
+  checksum: 29d9b19444a230739097016e11b79f0d2dc584ffa507095dccb6bb058c35752def3f9c22f7fb224af9122b50bef2b8ac4dbd9f18f19cfa51b8533fb2979815b1
   languageName: node
   linkType: hard
 
@@ -7104,7 +7104,7 @@ __metadata:
     next: latest
     next-transpile-modules: ^9.0.0
     polished: 4.2.2
-    rainbow-sprinkles: ^0.12
+    rainbow-sprinkles: ^0.15
     react: experimental
     react-dom: experimental
     typescript: ^4

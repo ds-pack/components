@@ -1,6 +1,6 @@
 {
   "name": "@ds-pack/components",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "main": "dist/index.js",
   "source": "src/index.ts",
   "types": "dist/index.d.ts",
@@ -46,7 +46,7 @@
     "nanopop": "^2",
     "polished": "^4.1.4",
     "prettier": "^2",
-    "rainbow-sprinkles": "^0.12",
+    "rainbow-sprinkles": "^0.15",
     "react": "experimental",
     "react-dom": "experimental",
     "react-is": "experimental",
@@ -61,7 +61,7 @@
     "@ds-pack/use-refs": "*",
     "@vanilla-extract/dynamic": "^2.0.2",
     "nanopop": "^2",
-    "rainbow-sprinkles": "^0.12",
+    "rainbow-sprinkles": "^0.15",
     "react": "*",
     "react-dom": "*"
   }

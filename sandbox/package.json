@@ -20,7 +20,7 @@
     "nanopop": "^2",
     "next": "latest",
     "next-transpile-modules": "^9.0.0",
-    "rainbow-sprinkles": "^0.12",
+    "rainbow-sprinkles": "^0.15",
     "react": "experimental",
     "react-dom": "experimental",
     "webpack": "^5"
