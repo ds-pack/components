@@ -18,7 +18,7 @@
     "@vanilla-extract/dynamic": "^2.0.2",
     "@vanilla-extract/next-plugin": "^2",
     "nanopop": "^2",
-    "next": "canary",
+    "next": "latest",
     "next-transpile-modules": "^9.0.0",
     "rainbow-sprinkles": "^0.12",
     "react": "experimental",

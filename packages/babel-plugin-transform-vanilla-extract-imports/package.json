@@ -1,0 +1,4 @@
+{
+  "name": "@ds-pack/babel-plugin-transform-vanilla-extract-imports",
+  "main": "./src/index.js"
+}

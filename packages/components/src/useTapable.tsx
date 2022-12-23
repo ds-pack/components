@@ -1,3 +1,4 @@
+'use client'
 import { useEffect, useCallback, useState } from 'react'
 import { useSharedRef } from '@ds-pack/use-refs'
 
