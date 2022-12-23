@@ -1,3 +1,8 @@
+### 1.0.12
+
+- Change build steps, output types, colocated styles (see the
+  [UPGRADE_GUIDE](./UPGRADE_GUIDE.md) for more details)
+
 ### 1.0.11
 
 - Change default consumption of the library to be from compiled files

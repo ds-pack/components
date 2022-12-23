@@ -1,3 +1,86 @@
+### 1.0.11 -> 1.0.12
+
+Some relatively big changes in this release:
+
+- Split imports
+- Support for server components
+- Colocated styles
+
+If you're using Next.js >= 13.1:
+
+```tsx
+// within next.config.js|mjs:
+
+export default {
+  // new:
+  modularizeImports: {
+    '@ds-pack/components': {
+      transform: '@ds-pack/components/dist/{{member}}',
+      skipDefaultConversion: true,
+    },
+  },
+}
+```
+
+If you're using Next.js < 13.1:
+
+```tsx
+// within next.config.js|mjs:
+
+export default {
+  // new:
+  experimental: {
+    modularizeImports: {
+      '@ds-pack/components': {
+        transform: '@ds-pack/components/dist/{{member}}',
+        skipDefaultConversion: true,
+      },
+    },
+  },
+}
+```
+
+_Note: Components should still work without `modularizeImports` enabled, but
+they won't work within React Server Components currently_
+
+If you're using the `app` directory (with server components):
+
+```tsx
+// root `layout.tsx`
+import { themeClass } from '@ds-pack/components'
+import '@ds-pack/components/dist/reset.css'
+
+export default function Layout({ children }) {
+  return <html className={themeClass}>...</html>
+}
+```
+
+If you're using the `pages` directory:
+
+```tsx
+// Unchanged!
+// in _document.tsx
+import { themeClass } from '@ds-pack/components'
+import { Html, Head, Main, NextScript } from 'next/document'
+
+export default function Document() {
+  return (
+    <Html className={themeClass}>
+      <Head />
+      <body>
+        <Main />
+        <NextScript />
+      </body>
+    </Html>
+  )
+}
+```
+
+```tsx
+// in _app.tsx
+import '@ds-pack/components/dist/reset.css'
+```
+
 ### 1.0.10 -> 1.0.11
 
 Some big changes in this release, Next.js apps no longer need Vanilla Extract
