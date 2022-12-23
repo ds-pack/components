@@ -1493,6 +1493,12 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@ds-pack/babel-plugin-transform-vanilla-extract-imports@workspace:*, @ds-pack/babel-plugin-transform-vanilla-extract-imports@workspace:packages/babel-plugin-transform-vanilla-extract-imports":
+  version: 0.0.0-use.local
+  resolution: "@ds-pack/babel-plugin-transform-vanilla-extract-imports@workspace:packages/babel-plugin-transform-vanilla-extract-imports"
+  languageName: unknown
+  linkType: soft
+
 "@ds-pack/components@*, @ds-pack/components@workspace:packages/components":
   version: 0.0.0-use.local
   resolution: "@ds-pack/components@workspace:packages/components"
@@ -1505,6 +1511,7 @@ __metadata:
     "@babel/preset-react": ^7
     "@babel/preset-typescript": ^7.16.7
     "@babel/runtime": 7.18.6
+    "@ds-pack/babel-plugin-transform-vanilla-extract-imports": "workspace:*"
     "@ds-pack/use-refs": "*"
     "@testing-library/jest-dom": ^5
     "@testing-library/react": ^13
