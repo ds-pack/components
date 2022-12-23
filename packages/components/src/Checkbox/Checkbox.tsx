@@ -1,3 +1,4 @@
+'use client'
 import { forwardRef, useState, useEffect } from 'react'
 import { ToggleInput } from '../ToggleInput'
 import { Box, BoxProps } from '../Box'

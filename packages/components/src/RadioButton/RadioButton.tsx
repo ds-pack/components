@@ -1,3 +1,4 @@
+'use client'
 import { forwardRef, useState } from 'react'
 import type { ReactNode } from 'react'
 import { Box, BoxProps } from '../Box'

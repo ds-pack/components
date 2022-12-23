@@ -1,3 +1,4 @@
+'use client'
 import { forwardRef, useEffect, useState } from 'react'
 import { Box, BoxProps } from '../Box'
 import { Portal } from '../Portal'
