@@ -14,6 +14,7 @@ export default {
   output: {
     dir: './dist',
     preserveModules: true,
+    format: 'cjs',
     // banner: "'use client';",
     entryFileNames({ name }) {
       if (name) {

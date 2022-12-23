@@ -13,6 +13,17 @@ module.exports = function transformVanillaExtractImports() {
           )
         }
       },
+      ExportAllDeclaration(path) {
+        if (!path.node.source.value.endsWith('.css')) {
+          return
+        }
+        if (path.node.source.value.endsWith('.css')) {
+          path.node.source.value = path.node.source.value.replace(
+            '.css',
+            '.vanilla',
+          )
+        }
+      },
     },
   }
 }

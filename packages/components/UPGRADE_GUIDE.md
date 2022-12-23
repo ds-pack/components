@@ -1,3 +1,75 @@
+### 1.0.12 -> 1.0.13
+
+Follow on changes from the below release:
+
+If your consuming application is using `vars` from `@ds-pack/components`, then
+you'll need the following config within the Vanilla Extract options:
+
+```tsx
+// This example is using rollup:
+/**
+ * @type import('rollup').RollupOptions
+ */
+export default {
+  plugins: [
+    vanillaExtractPlugin({
+      esbuildOptions: {
+        plugins: [
+          {
+            name: 'empty-css-imports',
+            setup(build) {
+              build.onLoad({ filter: /\.css$/ }, () => ({ contents: '' }))
+            },
+          },
+        ],
+      },
+    }),
+  ],
+}
+```
+
+Additionally, need to update the css imports as noted from the below upgrade:
+
+If you're using the `app` directory (with server components):
+
+```tsx
+// root `layout.tsx`
+import { themeClass } from '@ds-pack/components'
+import '@ds-pack/components/dist/vars.css'
+import '@ds-pack/components/dist/reset.css'
+
+export default function Layout({ children }) {
+  return <html className={themeClass}>...</html>
+}
+```
+
+If you're using the `pages` directory:
+
+```tsx
+// Unchanged!
+// in _document.tsx
+import { themeClass } from '@ds-pack/components'
+import { Html, Head, Main, NextScript } from 'next/document'
+
+export default function Document() {
+  return (
+    <Html className={themeClass}>
+      <Head />
+      <body>
+        <Main />
+        <NextScript />
+      </body>
+    </Html>
+  )
+}
+```
+
+```tsx
+// in _app.tsx
+import '@ds-pack/components/dist/vars.css'
+import '@ds-pack/components/dist/reset.css'
+```
+
 ### 1.0.11 -> 1.0.12
 
 Some relatively big changes in this release:

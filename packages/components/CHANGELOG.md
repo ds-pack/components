@@ -1,3 +1,8 @@
+### 1.0.13
+
+- Patch for the previous release to have vars work correctly in consuming
+  applications
+
 ### 1.0.12
 
 - Change build steps, output types, colocated styles (see the
