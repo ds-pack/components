@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "emitDeclarationOnly": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "declaration": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve"
+  },
+  "exclude": ["node_modules", ".yarn", "**/*.test.ts", "**/*.test.tsx"],
+  "include": ["**/*.ts", "**/*.tsx"]
+}

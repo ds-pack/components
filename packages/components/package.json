@@ -9,7 +9,9 @@
   "license": "MIT",
   "scripts": {
     "build-styles": "rollup -c rollup.config.mjs",
-    "build": "yarn build-styles && babel --out-dir ./dist/ --extensions='.ts,.tsx'",
+    "build-js": "babel --extensions .ts,.tsx ./src --out-dir ./dist --ignore './src/**/*.test.tsx,./src/**/*.test.ts'",
+    "build-ts": "tsc --emitDeclarationOnly --outDir ./dist --project tsconfig.build.json",
+    "build": "yarn build-styles && yarn build-js && yarn build-ts",
     "test": "jest",
     "test-watch": "jest --watch",
     "test-cov": "jest --collectCoverage",
