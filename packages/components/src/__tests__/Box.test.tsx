@@ -19,7 +19,8 @@ test('supports `is` prop with styles', () => {
   let box = container.querySelector('marquee')
   expect(box).toMatchInlineSnapshot(`
     <marquee
-      class=""
+      class="system-props_marginRight-___zabve4p"
+      style="--marginRight-___zabve4k: 9;"
     >
       Box
     </marquee>

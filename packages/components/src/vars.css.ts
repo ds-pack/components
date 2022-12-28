@@ -1,6 +1,16 @@
 import { createTheme } from '@vanilla-extract/css'
 import { breakpoints } from './theme'
-import { modularScale } from 'polished'
+
+/**
+ * Inlined from styled-components/polished package
+ */
+function modularScale(
+  steps: number,
+  base: number,
+  ratio: number = 1.333,
+): string {
+  return `${base * ratio ** steps}`
+}
 
 function createScale(ratio: number, base: number) {
   return function (steps: number) {
@@ -18,7 +28,7 @@ let baseFontSizes = {
   4: fontScale(4),
 }
 
-let fontSizes = {
+export let fontSizes = {
   ...baseFontSizes,
   h1: baseFontSizes[4],
   h2: baseFontSizes[3],
@@ -162,7 +172,7 @@ let baseColors = {
   cyan900: '#006159',
 }
 
-let colors = {
+export let colors = {
   ...baseColors,
   white: '#fdfefe',
   primary: baseColors.blue500,
@@ -178,7 +188,7 @@ let colors = {
   disabledFill: baseColors.gray500,
 }
 
-export let [themeClass, vars] = createTheme({
+export let defaultTheme = {
   space: [0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40].reduce(
     (acc, val, idx) => ({ ...acc, [idx]: `${val}px` }),
     {},
@@ -194,6 +204,7 @@ export let [themeClass, vars] = createTheme({
     bold: '700',
   },
   sizes: {
+    // @TODO: Change this to `ch` units
     content: '60em',
   },
   radii: {
@@ -208,7 +219,9 @@ export let [themeClass, vars] = createTheme({
     extraHigh: '20',
     top: '50',
   },
-  breakpoints: breakpoints as any,
+  breakpoints,
   colors,
   focusShadow: `0 0 4px 2px ${colors.primaryDark}`,
-})
+}
+
+export let [themeClass, vars] = createTheme<typeof defaultTheme>(defaultTheme)

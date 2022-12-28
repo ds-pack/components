@@ -7031,6 +7031,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"rollup@npm:^3.9.0":
+  version: 3.9.0
+  resolution: "rollup@npm:3.9.0"
+  dependencies:
+    fsevents: ~2.3.2
+  dependenciesMeta:
+    fsevents:
+      optional: true
+  bin:
+    rollup: dist/bin/rollup
+  checksum: b0ce4baa8db8ee77ab096a4e066b20fb0719efb9cbd84f230838517d35bf159311487112852cfa687126896b58084c8e6cb9ab222f7559c4b6138ca693d63439
+  languageName: node
+  linkType: hard
+
 "root@workspace:.":
   version: 0.0.0-use.local
   resolution: "root@workspace:."
@@ -7100,6 +7114,8 @@ __metadata:
     "@vanilla-extract/css": ^1
     "@vanilla-extract/dynamic": ^2.0.2
     "@vanilla-extract/next-plugin": ^2
+    "@vanilla-extract/rollup-plugin": ^1.2.0
+    fast-glob: ^3.2.12
     nanopop: ^2
     next: latest
     next-transpile-modules: ^9.0.0
@@ -7107,6 +7123,7 @@ __metadata:
     rainbow-sprinkles: ^0.15
     react: experimental
     react-dom: experimental
+    rollup: ^3.9.0
     typescript: ^4
     webpack: ^5
   languageName: unknown
