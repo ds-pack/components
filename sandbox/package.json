@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "watch-styles": "rollup -c rollup.config.mjs --watch",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -32,7 +33,10 @@
     "@babel/plugin-transform-runtime": "^7",
     "@types/node": "^14",
     "@types/react": "^18",
+    "@vanilla-extract/rollup-plugin": "^1.2.0",
+    "fast-glob": "^3.2.12",
     "polished": "4.2.2",
+    "rollup": "^3.9.0",
     "typescript": "^4"
   }
 }

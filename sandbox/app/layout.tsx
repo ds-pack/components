@@ -1,9 +1,10 @@
-import { themeClass } from '@ds-pack/components'
+// import { themeClass } from '@ds-pack/components'
 import '@ds-pack/components/dist/reset.css'
+import { customTheme } from '../styles/theme'
 
 export default function Layout({ children }) {
   return (
-    <html className={themeClass} lang="en-US">
+    <html className={customTheme} lang="en-US">
       <head>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <title>Sandbox</title>
