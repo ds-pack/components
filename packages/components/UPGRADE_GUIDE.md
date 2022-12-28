@@ -1,3 +1,11 @@
+### 1.0.14 -> 1.0.15
+
+This change shouldn't require any additional changes if you're consuming the
+library as-is, however it does allow you to define a custom theme, either
+extending the default or starting from scratch!
+
+See [docs on vars](./src/vars.md) for more details!
+
 ### 1.0.13 -> 1.0.14
 
 The only requisite change when upgrading to this release is to upgrade the

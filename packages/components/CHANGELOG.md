@@ -1,3 +1,8 @@
+### 1.0.15
+
+- Support defining a local theme to override the default theme, for more details
+  see the [Upgrade Guide](./UPGRADE_GUIDE.md)
+
 ### 1.0.14
 
 - Bump the `rainbow-sprinkles` peerDependency to `^0.15`
