@@ -1,3 +1,7 @@
+### 1.0.15 -> 1.0.16
+
+No other changes needed!
+
 ### 1.0.14 -> 1.0.15
 
 This change shouldn't require any additional changes if you're consuming the

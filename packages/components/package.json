@@ -1,6 +1,6 @@
 {
   "name": "@ds-pack/components",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "main": "dist/index.js",
   "source": "src/index.ts",
   "types": "dist/index.d.ts",

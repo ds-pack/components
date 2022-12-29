@@ -1,3 +1,9 @@
+### 1.0.16
+
+- Fix css insertion order bug within Checkbox and RadioButton components and
+  their associated labels causing some page loads to shift the label below the
+  visual indicator
+
 ### 1.0.15
 
 - Support defining a local theme to override the default theme, for more details

@@ -8,6 +8,8 @@ export let disabled = style({})
 export let focused = style({})
 
 export let radioLabel = style({
+  display: 'flex',
+  color: vars.colors.gray900,
   flexDirection: 'row',
 })
 

@@ -3,7 +3,6 @@ import { forwardRef, useState, useEffect } from 'react'
 import { ToggleInput } from '../ToggleInput'
 import { Box, BoxProps } from '../Box'
 import { useSharedRef } from '@ds-pack/use-refs'
-import { Label } from '../Label'
 import * as styles from './Checkbox.css'
 import ReactDOM from 'react-dom'
 import cx from '../classnames'
@@ -46,7 +45,7 @@ export let Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
     }, [indeterminate])
 
     return (
-      <Label className={styles.checkboxLabel} {...props}>
+      <Box className={styles.checkboxLabel} {...props}>
         <Box
           className={cx({
             [styles.checkbox]: true,
@@ -67,7 +66,7 @@ export let Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
           ref={sharedRef}
         />
         {children}
-      </Label>
+      </Box>
     )
   },
 )

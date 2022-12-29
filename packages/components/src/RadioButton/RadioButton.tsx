@@ -2,7 +2,6 @@
 import { forwardRef, useState } from 'react'
 import type { ReactNode } from 'react'
 import { Box, BoxProps } from '../Box'
-import { Label } from '../Label'
 import { RadioInput } from '../RadioInput'
 import ReactDOM from 'react-dom'
 import * as styles from './RadioButton.css'
@@ -40,7 +39,7 @@ export let RadioButton = forwardRef<any, RadioButtonProps>(function RadioButton(
   let [focused, setFocused] = useState(autoFocus)
 
   return (
-    <Label className={styles.radioLabel} {...props}>
+    <Box className={styles.radioLabel} {...props}>
       <Box
         className={cx({
           [styles.radioButton]: true,
@@ -60,6 +59,6 @@ export let RadioButton = forwardRef<any, RadioButtonProps>(function RadioButton(
         ref={ref}
       />
       {children}
-    </Label>
+    </Box>
   )
 })
