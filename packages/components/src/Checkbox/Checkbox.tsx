@@ -45,7 +45,7 @@ export let Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
     }, [indeterminate])
 
     return (
-      <Box className={styles.checkboxLabel} {...props}>
+      <Box is="label" className={styles.checkboxLabel} {...props}>
         <Box
           className={cx({
             [styles.checkbox]: true,

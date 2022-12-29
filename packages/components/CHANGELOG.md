@@ -1,3 +1,7 @@
+### 1.0.17
+
+- Fix label element in Checkbox and RadioButton components
+
 ### 1.0.16
 
 - Fix css insertion order bug within Checkbox and RadioButton components and

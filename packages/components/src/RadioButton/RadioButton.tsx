@@ -39,7 +39,7 @@ export let RadioButton = forwardRef<any, RadioButtonProps>(function RadioButton(
   let [focused, setFocused] = useState(autoFocus)
 
   return (
-    <Box className={styles.radioLabel} {...props}>
+    <Box is="label" className={styles.radioLabel} {...props}>
       <Box
         className={cx({
           [styles.radioButton]: true,
