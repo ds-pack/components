@@ -19,7 +19,8 @@ Usage with Next.js:
 
 ```tsx
 // within `layout.tsx` or `_app.tsx`:
-import '@ds-pack/components/dist/index.css'
+import '@ds-pack/components/dist/vars.css'
+import '@ds-pack/components/dist/reset.css'
 
 // ...
 // within `layout.tsx` or `_document.tsx`:
@@ -35,7 +36,8 @@ etc):
 
 ```tsx
 // Import the styles:
-import '@ds-pack/components/dist/index.css'
+import '@ds-pack/components/dist/vars.css'
+import '@ds-pack/components/dist/reset.css'
 import { Button } from '@ds-pack/components'
 ```
 

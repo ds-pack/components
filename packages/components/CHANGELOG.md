@@ -1,3 +1,8 @@
+### 1.0.18
+
+- Fix `Input`, `Textarea`, `RadioInput`, and `ToggleInput` not being marked as
+  client components correctly
+
 ### 1.0.17
 
 - Fix label element in Checkbox and RadioButton components

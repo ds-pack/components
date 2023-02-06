@@ -1,6 +1,6 @@
 {
   "name": "@ds-pack/components",
-  "version": "1.0.17",
+  "version": "1.0.18",
   "main": "dist/index.js",
   "source": "src/index.ts",
   "types": "dist/index.d.ts",
@@ -11,7 +11,7 @@
     "build-styles": "rollup -c rollup.config.mjs",
     "build-js": "babel --extensions .ts,.tsx ./src --out-dir ./dist --ignore './src/**/*.test.tsx,./src/**/*.test.ts,./src/**/*.css.ts'",
     "build-ts": "tsc --emitDeclarationOnly --outDir ./dist --project tsconfig.build.json",
-    "build": "rm -rf ./dist && yarn build-styles && yarn build-js && yarn build-ts",
+    "build": "rm -rf ./dist && yarn build-styles && yarn build-js && yarn build-ts && yarn post-build",
     "post-build": "babel ./dist/vars.vanilla.js --out-file ./dist/vars.js",
     "test": "jest",
     "test-watch": "jest --watch",

@@ -1,3 +1,4 @@
+'use client'
 import { forwardRef } from 'react'
 import { VisuallyHidden } from '../VisuallyHidden'
 import { BoxProps } from '../Box'
