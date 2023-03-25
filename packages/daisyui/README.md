@@ -15,7 +15,7 @@ A bare-bones component library built using:
 
 ```sh
 # Install the package and it's peerDependencies
-yarn add @ds-pack/components-daisyui @ds-pack/use-refs nanopop daisyui
+yarn add @ds-pack/daisyui @ds-pack/use-refs nanopop daisyui
 ```
 
 You'll also most likely need to install tailwindcss and it's dependencies:
