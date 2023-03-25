@@ -11,7 +11,7 @@ import {
   List,
   ListItem,
   VisuallyHidden,
-} from '@ds-pack/components-daisyui'
+} from '@ds-pack/daisyui'
 import Interactive from './interactive'
 
 export default function Page() {

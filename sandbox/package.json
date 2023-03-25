@@ -13,7 +13,7 @@
   "dependencies": {
     "@babel/runtime": "^7",
     "@ds-pack/components": "workspace:*",
-    "@ds-pack/components-daisyui": "workspace:*",
+    "@ds-pack/daisyui": "workspace:*",
     "@ds-pack/use-refs": "^1",
     "@vanilla-extract/babel-plugin": "^1",
     "@vanilla-extract/css": "^1",

@@ -1,5 +1,5 @@
 {
-  "name": "@ds-pack/components-daisyui",
+  "name": "@ds-pack/daisyui",
   "version": "0.0.1",
   "main": "dist/index.js",
   "source": "src/index.ts",

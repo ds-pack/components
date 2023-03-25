@@ -1,11 +1,6 @@
 'use client'
 import { useState } from 'react'
-import {
-  Checkbox,
-  Input,
-  RadioButton,
-  Textarea,
-} from '@ds-pack/components-daisyui'
+import { Checkbox, Input, RadioButton, Textarea } from '@ds-pack/daisyui'
 
 export default function Interactive() {
   let [checked, setChecked] = useState(false)
