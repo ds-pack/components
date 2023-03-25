@@ -1,7 +1,3 @@
-import './reset.css'
-
-export * from './theme'
-export * from './vars.css'
 export * from './Box'
 export * from './Banner'
 export * from './Stack'

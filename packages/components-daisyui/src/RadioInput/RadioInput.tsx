@@ -21,3 +21,5 @@ export let RadioInput = forwardRef<HTMLInputElement, RadioInputProps>(
     )
   },
 )
+
+export default RadioInput
