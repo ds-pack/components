@@ -4,6 +4,7 @@ import {
   Button,
   Chip,
   Figure,
+  Heading,
 } from '@ds-pack/components-daisyui'
 import Interactive from './interactive'
 
@@ -40,6 +41,21 @@ export default function Page() {
         alt=""
         caption="Yo yo!"
       />
+      <Heading is="h1" variant="lead">
+        Lead
+      </Heading>
+      <Heading is="h1" variant="h1">
+        H1
+      </Heading>
+      <Heading is="h2" variant="h2">
+        H2
+      </Heading>
+      <Heading is="h3" variant="h3">
+        H3
+      </Heading>
+      <Heading is="h3" variant="subhead">
+        Subhead
+      </Heading>
     </div>
   )
 }
