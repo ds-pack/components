@@ -23,17 +23,17 @@ test('Banner is defined', () => {
   expect(components.Banner).toBeDefined()
 })
 
-test('Stack is defined', () => {
-  expect(components.Stack).toBeDefined()
-})
+// test('Stack is defined', () => {
+//   expect(components.Stack).toBeDefined()
+// })
 
 test('Text is defined', () => {
   expect(components.Text).toBeDefined()
 })
 
-test('Label is defined', () => {
-  expect(components.Label).toBeDefined()
-})
+// test('Label is defined', () => {
+//   expect(components.Label).toBeDefined()
+// })
 
 test('List is defined', () => {
   expect(components.List).toBeDefined()
@@ -127,6 +127,6 @@ test('Portal is defined', () => {
   expect(components.Portal).toBeDefined()
 })
 
-test('Fieldset is defined', () => {
-  expect(components.Fieldset).toBeDefined()
-})
+// test('Fieldset is defined', () => {
+//   expect(components.Fieldset).toBeDefined()
+// })

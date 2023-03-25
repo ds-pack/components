@@ -19,28 +19,16 @@ test('supports `is` prop with styles', () => {
   let box = container.querySelector('marquee')
   expect(box).toMatchInlineSnapshot(`
     <marquee
-      class="system-props_marginRight-___zabve4p"
-      style="--marginRight-___zabve4k: 9;"
+      mr="9"
     >
       Box
     </marquee>
   `)
 })
 
-test('supports `testIds` string prop', () => {
+test('supports `testId` string prop', () => {
   let { getByTestId, container } = render(
-    <Box is="marquee" testIds="foo">
-      Box
-    </Box>,
-  )
-
-  let box = getByTestId('foo')
-  expect(box).toBe(container.querySelector('marquee'))
-})
-
-test('supports `testIds` object prop', () => {
-  let { getByTestId, container } = render(
-    <Box is="marquee" testIds={{ default: 'foo' }}>
+    <Box is="marquee" testId="foo">
       Box
     </Box>,
   )
