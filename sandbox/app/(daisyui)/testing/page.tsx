@@ -5,6 +5,8 @@ import {
   Chip,
   Figure,
   Heading,
+  InlineCode,
+  Box,
 } from '@ds-pack/components-daisyui'
 import Interactive from './interactive'
 
@@ -56,6 +58,12 @@ export default function Page() {
       <Heading is="h3" variant="subhead">
         Subhead
       </Heading>
+      <Box>
+        <InlineCode>const foo = "bar";</InlineCode>
+      </Box>
+      <Box>
+        Code with some <InlineCode size="small">"text"</InlineCode> around it!
+      </Box>
     </div>
   )
 }

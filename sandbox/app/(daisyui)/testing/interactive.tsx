@@ -1,9 +1,10 @@
 'use client'
 import { useState } from 'react'
-import { Checkbox } from '@ds-pack/components-daisyui'
+import { Checkbox, Input } from '@ds-pack/components-daisyui'
 
 export default function Interactive() {
   let [checked, setChecked] = useState(false)
+  let [val, setVal] = useState('')
 
   return (
     <>
@@ -21,6 +22,10 @@ export default function Interactive() {
       <Checkbox indeterminate checked={checked} onChange={setChecked}>
         Indeterminate
       </Checkbox>
+
+      <Input value={val} onChange={setVal}>
+        Enter your name:
+      </Input>
     </>
   )
 }

@@ -11,6 +11,8 @@ A bare-bones component library built using:
   (consider either burning down custom element usage, or expose a way to know if
   the button is active or not within Tapable/useTapable)
 - Dropdown
+- InlineCode theme enhancements (e.g. dark mode and light mode versions)
+- Input validation states
 
 ## Setup:
 
