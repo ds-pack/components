@@ -33,12 +33,12 @@ export let Chip = forwardRef<any, ChipProps>(function Chip(
 ) {
   return (
     <Box
+      {...props}
       className={cx({
         badge: true,
         [variantClasses[variant]]: !!variant,
         [props.className]: !!props.className,
       })}
-      {...props}
       ref={ref}
     />
   )

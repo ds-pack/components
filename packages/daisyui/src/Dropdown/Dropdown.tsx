@@ -35,11 +35,12 @@ export let DropdownButton = forwardRef<any, DropdownButtonProps>(
     { children, disabled, isOpen, autoFocus, ...props }: DropdownButtonProps,
     ref,
   ) {
-    let [focused, setFocused] = useState(autoFocus)
+    // let [focused, setFocused] = useState(autoFocus)
 
     return (
       <Tapable
         ref={ref}
+        {...props}
         className={cx({
           btn: true,
           'btn-disabled': disabled,
@@ -48,9 +49,8 @@ export let DropdownButton = forwardRef<any, DropdownButtonProps>(
           // [styles.focused]: focused,
         })}
         disabled={disabled}
-        {...props}
-        onFocus={() => setFocused(true)}
-        onBlur={() => setFocused(false)}
+        // onFocus={() => setFocused(true)}
+        // onBlur={() => setFocused(false)}
       >
         {children}
       </Tapable>

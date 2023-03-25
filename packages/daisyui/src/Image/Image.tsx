@@ -13,6 +13,7 @@ export let Image = forwardRef<HTMLImageElement, ImageProps>(function Image(
 ) {
   return (
     <Box
+      {...props}
       className={cx({
         'max-w-[100%]': true,
         'h-[auto]': true,
@@ -20,7 +21,6 @@ export let Image = forwardRef<HTMLImageElement, ImageProps>(function Image(
       })}
       is="img"
       ref={ref}
-      {...props}
     />
   )
 })

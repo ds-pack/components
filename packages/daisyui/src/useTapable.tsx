@@ -66,3 +66,5 @@ export function useTapable(
     'aria-disabled': disabled ? 'true' : undefined,
   }
 }
+
+export default useTapable

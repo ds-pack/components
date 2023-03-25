@@ -1,3 +1,9 @@
+### 0.0.4
+
+- Fixed `className` prop precendence
+  - Previously, providing a `className` prop on some components would result in
+    removing the pre-defined classnames entirely, instead of being merged
+
 ### 0.0.3
 
 - Actually fixed `classnames` export

@@ -38,13 +38,13 @@ export let Button = forwardRef<any, ButtonProps>(function Button(
   return (
     <Box
       is={Tapable}
+      {...props}
       className={cx({
         btn: true,
         [variantClasses[variant]]: !!variant,
         'btn-disabled': props.disabled,
         [props.className]: !!props.className,
       })}
-      {...props}
       ref={ref}
     />
   )

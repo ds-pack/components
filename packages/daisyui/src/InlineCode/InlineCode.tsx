@@ -19,12 +19,12 @@ export let InlineCode = forwardRef<HTMLElement, InlineCodeProps>(
     return (
       <Box
         is="code"
+        {...props}
         className={cx({
           kbd: true,
           [variantClasses[size]]: !!size,
           [props.className]: !!props.className,
         })}
-        {...props}
         ref={ref}
       />
     )

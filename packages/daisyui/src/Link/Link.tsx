@@ -31,12 +31,12 @@ export let Link = forwardRef<any, LinkProps>(function Link(
 ) {
   return (
     <Box
+      {...props}
       className={cx({
         link: true,
         [variantClasses[variant]]: !!variant,
         [props.className]: !!props.className,
       })}
-      {...props}
       ref={ref}
     />
   )

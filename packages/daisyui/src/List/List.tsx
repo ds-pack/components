@@ -20,11 +20,11 @@ export let List = forwardRef<any, ListProps>(function List(
   return (
     <Box
       is={variant === 'ordered' ? 'ol' : 'ul'}
+      {...props}
       className={cx({
         [variantClasses[variant]]: !!variant,
         [props.className]: !!props.className,
       })}
-      {...props}
       ref={ref}
     />
   )

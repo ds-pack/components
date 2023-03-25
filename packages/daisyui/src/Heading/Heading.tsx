@@ -20,12 +20,12 @@ export let Heading = forwardRef<any, HeadingProps>(function Heading(
 ) {
   return (
     <Box
+      {...props}
       className={cx({
         [variantClasses[variant]]: !!variant,
         'font-bold': true,
         [props.className]: !!props.className,
       })}
-      {...props}
       ref={ref}
     />
   )

@@ -11,6 +11,7 @@ export let Blockquote = forwardRef<any, BlockquoteProps>(function Blockquote(
   return (
     <Box
       ref={ref}
+      {...props}
       className={cx({
         'border-l-4': true,
         'border-base-content': true,
@@ -19,7 +20,6 @@ export let Blockquote = forwardRef<any, BlockquoteProps>(function Blockquote(
         'pl-2': true,
         [props.className]: !!props.className,
       })}
-      {...props}
     />
   )
 })
