@@ -1,5 +1,4 @@
-'use client'
-import { forwardRef } from 'react'
+import { forwardRef, useId } from 'react'
 import type { ReactNode } from 'react'
 import { Box, BoxProps } from '../Box'
 import { cx } from '../classnames'
@@ -27,23 +26,27 @@ export let RadioButton = forwardRef<any, RadioButtonProps>(function RadioButton(
   }: RadioButtonProps,
   ref,
 ) {
+  let id = useId()
   return (
-    <Box is="label" className="label" {...props}>
-      <Box
-        className={cx({
-          radio: true,
-        })}
-        is="input"
-        type="radio"
-        onChange={onChange}
-        autoFocus={autoFocus}
-        value={value}
-        name={name}
-        disabled={disabled}
-        ref={ref}
-      />
-      <Box is="span" className="label-text">
-        {children}
+    <Box className="form-control" {...props}>
+      <Box is="label" htmlFor={id} className="label">
+        <Box is="span" className="label-text">
+          {children}
+        </Box>
+        <Box
+          className={cx({
+            radio: true,
+          })}
+          is="input"
+          type="radio"
+          onChange={onChange}
+          autoFocus={autoFocus}
+          value={value}
+          name={name}
+          id={id}
+          disabled={disabled}
+          ref={ref}
+        />
       </Box>
     </Box>
   )
