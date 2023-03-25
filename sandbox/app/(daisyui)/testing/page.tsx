@@ -10,6 +10,7 @@ import {
   Link,
   List,
   ListItem,
+  VisuallyHidden,
 } from '@ds-pack/components-daisyui'
 import Interactive from './interactive'
 
@@ -108,6 +109,7 @@ export default function Page() {
         <ListItem>2</ListItem>
         <ListItem>3</ListItem>
       </List>
+      <VisuallyHidden>Hello there!</VisuallyHidden>
     </div>
   )
 }

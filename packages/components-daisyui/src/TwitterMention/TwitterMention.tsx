@@ -8,7 +8,6 @@ export interface TwitterMentionProps extends LinkProps {
 export let TwitterMention = forwardRef<any, TwitterMentionProps>(
   function TwitterMention({ children, ...props }: TwitterMentionProps, ref) {
     return (
-      // @ts-ignore
       <Link
         ref={ref}
         is="a"
@@ -22,3 +21,5 @@ export let TwitterMention = forwardRef<any, TwitterMentionProps>(
     )
   },
 )
+
+export default TwitterMention
