@@ -146,7 +146,7 @@ function Layout({ children }) {
 - [ ] Button's don't have animation when using the keyboard to activate them
       (consider either burning down custom element usage, or expose a way to
       know if the button is active or not within Tapable/useTapable)
-- [] Dropdown
+- [ ] Dropdown
 - [ ] InlineCode theme enhancements (e.g. dark mode and light mode versions)
 - [ ] Input validation states
 - [ ] Nested lists and spacing stuff, etc
