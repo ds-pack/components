@@ -4,7 +4,7 @@ import { Box, BoxProps } from '../Box'
 import { Portal } from '../Portal'
 import { Tapable } from '../Tapable'
 import { reposition } from 'nanopop'
-import * as styles from './Dropdown.css'
+// import * as styles from './Dropdown.css'
 import { cx } from '../classnames'
 
 export interface DropdownMenuProps extends BoxProps {
@@ -41,9 +41,11 @@ export let DropdownButton = forwardRef<any, DropdownButtonProps>(
       <Tapable
         ref={ref}
         className={cx({
-          [styles.dropdown]: true,
-          [styles.disabled]: disabled,
-          [styles.focused]: focused,
+          btn: true,
+          'btn-disabled': disabled,
+          // [styles.dropdown]: true,
+          // [styles.disabled]: disabled,
+          // [styles.focused]: focused,
         })}
         disabled={disabled}
         {...props}
@@ -55,6 +57,19 @@ export let DropdownButton = forwardRef<any, DropdownButtonProps>(
     )
   },
 )
+
+export interface DropdownProps extends BoxProps {}
+
+export let Dropdown = forwardRef<any, DropdownProps>(function Dropdown(
+  { children },
+  ref,
+) {
+  return (
+    <Box ref={ref} className="dropdown">
+      {children}
+    </Box>
+  )
+})
 
 export function useDropdown() {
   let [isOpen, setOpen] = useState(false)

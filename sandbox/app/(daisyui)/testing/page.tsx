@@ -1,9 +1,4 @@
-import {
-  Banner,
-  Blockquote,
-  Button,
-  // Checkbox,
-} from '@ds-pack/components-daisyui'
+import { Banner, Blockquote, Button, Chip } from '@ds-pack/components-daisyui'
 import Interactive from './interactive'
 
 export default function Page() {
@@ -24,6 +19,16 @@ export default function Page() {
       <Button variant="link">Link</Button>
       <Button variant="outline">Outline</Button>
       <Interactive />
+      <Chip>Chip!</Chip>
+      <Chip variant="outline">Chip!</Chip>
+      <Chip variant="primary">Chip!</Chip>
+      <Chip variant="secondary">Chip!</Chip>
+      <Chip variant="accent">Chip!</Chip>
+      <Chip variant="ghost">Chip!</Chip>
+      <Chip variant="info">Chip!</Chip>
+      <Chip variant="success">Chip!</Chip>
+      <Chip variant="warning">Chip!</Chip>
+      <Chip variant="error">Chip!</Chip>
     </div>
   )
 }
