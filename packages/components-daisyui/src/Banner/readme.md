@@ -9,3 +9,12 @@ experience. It supports the following `variants`:
 - `info`
 - `error`
 - `warning`
+
+## Examples:
+
+```tsx
+<Banner variant="info">Information here</Banner>
+<Banner variant="warning">Warning here</Banner>
+<Banner variant="error">Error message here</Banner>
+<Banner variant="success">Success message here</Banner>
+```

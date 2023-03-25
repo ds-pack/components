@@ -1,17 +1,8 @@
 'use client'
-import { forwardRef, useState, useEffect } from 'react'
-import { ToggleInput } from '../ToggleInput'
+import { forwardRef, useEffect, useCallback, useId } from 'react'
 import { Box, BoxProps } from '../Box'
 import { useSharedRef } from '@ds-pack/use-refs'
-import * as styles from './Checkbox.css'
-import ReactDOM from 'react-dom'
 import { cx } from '../classnames'
-
-// @see https://github.com/facebook/react/issues/18591#issuecomment-613026224
-function flush(cb) {
-  // @ts-ignore
-  ReactDOM.flushSync(cb)
-}
 
 export interface CheckboxProps extends BoxProps {
   checked: boolean
@@ -36,7 +27,6 @@ export let Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
     ref,
   ) {
     let sharedRef = useSharedRef(ref)
-    let [focused, setFocused] = useState(autoFocus)
 
     useEffect(() => {
       if (indeterminate) {
@@ -44,29 +34,33 @@ export let Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
       }
     }, [indeterminate])
 
+    let toggle = useCallback(() => onChange(!checked), [checked])
+
+    let id = useId()
+
     return (
-      <Box is="label" className={styles.checkboxLabel} {...props}>
-        <Box
-          className={cx({
-            [styles.checkbox]: true,
-            [styles.checked]: checked,
-            [styles.indeterminate]: indeterminate,
-            [styles.focused]: focused,
-            [styles.disabled]: disabled,
-          })}
-        />
-        <ToggleInput
-          // @ts-ignore
-          onFocus={() => flush(() => setFocused(true))}
-          onBlur={() => flush(() => setFocused(false))}
-          autoFocus={autoFocus}
-          checked={checked}
-          onChange={onChange}
-          disabled={disabled}
-          ref={sharedRef}
-        />
-        {children}
+      <Box className="form-control" {...props}>
+        <Box is="label" htmlFor={id} className="label" {...props}>
+          <Box is="span" className="label-text">
+            {children}
+          </Box>
+          <Box
+            id={id}
+            className={cx({
+              checkbox: true,
+            })}
+            is="input"
+            type="checkbox"
+            disabled={disabled}
+            onChange={toggle}
+            checked={checked}
+            autoFocus={autoFocus}
+            ref={sharedRef}
+          />
+        </Box>
       </Box>
     )
   },
 )
+
+export default Checkbox

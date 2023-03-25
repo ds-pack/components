@@ -22,3 +22,5 @@ export let ToggleInput = forwardRef<any, ToggleInputProps>(function ToggleInput(
     />
   )
 })
+
+export default ToggleInput

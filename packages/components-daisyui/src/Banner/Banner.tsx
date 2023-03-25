@@ -2,7 +2,6 @@
 import { forwardRef } from 'react'
 import { Box, BoxProps } from '../Box'
 import { cx } from '../classnames'
-// import * as styles from './Banner.css'
 
 export interface BannerProps extends BoxProps {
   variant: 'info' | 'warning' | 'error' | 'success'
