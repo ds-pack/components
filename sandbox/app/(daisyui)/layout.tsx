@@ -5,7 +5,7 @@ import '../../styles/globals.css'
 
 export default function Layout({ children }) {
   return (
-    <html data-theme="bumblebee" lang="en-US">
+    <html data-theme="lemonade" lang="en-US">
       <head>
         {/* <meta name="viewport" content="initial-scale=1.0, width=device-width" /> */}
         <title>Sandbox</title>

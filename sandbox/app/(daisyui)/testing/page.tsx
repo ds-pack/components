@@ -7,6 +7,7 @@ import {
   Heading,
   InlineCode,
   Box,
+  Link,
 } from '@ds-pack/components-daisyui'
 import Interactive from './interactive'
 
@@ -63,6 +64,32 @@ export default function Page() {
       </Box>
       <Box>
         Code with some <InlineCode size="small">"text"</InlineCode> around it!
+      </Box>
+      <Box>
+        <Link is="a" href="#" variant="neutral">
+          neutral link
+        </Link>{' '}
+        <Link is="a" href="#" variant="primary">
+          primary link
+        </Link>{' '}
+        <Link is="a" href="#" variant="secondary">
+          secondary link
+        </Link>{' '}
+        <Link is="a" href="#" variant="accent">
+          accent link
+        </Link>{' '}
+        <Link is="a" href="#" variant="success">
+          success link
+        </Link>{' '}
+        <Link is="a" href="#" variant="info">
+          info link
+        </Link>{' '}
+        <Link is="a" href="#" variant="warning">
+          warning link
+        </Link>{' '}
+        <Link is="a" href="#" variant="error">
+          error link
+        </Link>
       </Box>
     </div>
   )
