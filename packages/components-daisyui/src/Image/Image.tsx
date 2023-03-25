@@ -1,6 +1,5 @@
 import { forwardRef } from 'react'
 import { Box, BoxProps } from '../Box'
-import { image } from './Image.css'
 import { cx } from '../classnames'
 
 export interface ImageProps extends BoxProps {
@@ -14,10 +13,16 @@ export let Image = forwardRef<HTMLImageElement, ImageProps>(function Image(
 ) {
   return (
     <Box
-      className={cx({ [image]: true, [props.className]: !!props.className })}
+      className={cx({
+        'max-w-[100%]': true,
+        'h-[auto]': true,
+        [props.className]: !!props.className,
+      })}
       is="img"
       ref={ref}
       {...props}
     />
   )
 })
+
+export default Image

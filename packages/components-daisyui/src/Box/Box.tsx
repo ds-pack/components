@@ -1,4 +1,3 @@
-'use client'
 import { forwardRef } from 'react'
 // import { rainbowSprinkles, Sprinkles } from './system-props.css'
 import { cx } from '../classnames'

@@ -3,8 +3,10 @@ interface Classes {
 }
 
 export function cx(classes: Classes) {
-  return Object.entries(classes)
+  let result = Object.entries(classes)
     .filter(([, predicate]) => Boolean(predicate))
     .map(([cls]) => cls)
-    .join(' ')
+  if (result.length) {
+    return result.join(' ')
+  }
 }

@@ -20,7 +20,7 @@
     "@vanilla-extract/dynamic": "^2.0.2",
     "@vanilla-extract/next-plugin": "^2",
     "nanopop": "^2",
-    "next": "latest",
+    "next": "canary",
     "rainbow-sprinkles": "^0.15",
     "react": "experimental",
     "react-dom": "experimental"

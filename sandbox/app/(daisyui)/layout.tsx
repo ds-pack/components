@@ -7,7 +7,7 @@ export default function Layout({ children }) {
   return (
     <html data-theme="bumblebee" lang="en-US">
       <head>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        {/* <meta name="viewport" content="initial-scale=1.0, width=device-width" /> */}
         <title>Sandbox</title>
       </head>
       <body>{children}</body>

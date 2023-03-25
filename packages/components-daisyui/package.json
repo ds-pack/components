@@ -11,6 +11,7 @@
     "build-js": "babel --extensions .ts,.tsx ./src --out-dir ./dist --ignore './src/**/*.test.tsx,./src/**/*.test.ts,./src/**/*.css.ts'",
     "build-ts": "tsc --emitDeclarationOnly --outDir ./dist --project tsconfig.build.json",
     "build": "rm -rf ./dist && yarn build-js && yarn build-ts",
+    "dev": "yarn build-js --watch",
     "test": "jest",
     "test-watch": "jest --watch",
     "test-cov": "jest --collectCoverage",

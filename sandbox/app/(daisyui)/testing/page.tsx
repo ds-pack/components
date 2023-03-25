@@ -1,4 +1,10 @@
-import { Banner, Blockquote, Button, Chip } from '@ds-pack/components-daisyui'
+import {
+  Banner,
+  Blockquote,
+  Button,
+  Chip,
+  Figure,
+} from '@ds-pack/components-daisyui'
 import Interactive from './interactive'
 
 export default function Page() {
@@ -29,6 +35,11 @@ export default function Page() {
       <Chip variant="success">Chip!</Chip>
       <Chip variant="warning">Chip!</Chip>
       <Chip variant="error">Chip!</Chip>
+      <Figure
+        src="https://images.unsplash.com/photo-1679599673055-62de1177335d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1286&q=80"
+        alt=""
+        caption="Yo yo!"
+      />
     </div>
   )
 }

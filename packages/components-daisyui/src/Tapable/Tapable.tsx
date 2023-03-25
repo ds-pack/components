@@ -1,3 +1,4 @@
+'use client'
 import { forwardRef } from 'react'
 import { Box, BoxProps } from '../Box'
 import { useTapable } from '../useTapable'
@@ -11,3 +12,5 @@ export let Tapable = forwardRef<any, TapableProps>(function Tapable(
   let ariaProps = useTapable(props, ref)
   return <Box {...props} {...ariaProps} />
 })
+
+export default Tapable

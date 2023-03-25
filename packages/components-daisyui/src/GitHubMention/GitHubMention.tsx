@@ -21,3 +21,5 @@ export let GitHubMention = forwardRef<any, GitHubMentionProps>(
     )
   },
 )
+
+export default GitHubMention

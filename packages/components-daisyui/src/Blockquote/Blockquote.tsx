@@ -1,4 +1,3 @@
-'use client'
 import { forwardRef } from 'react'
 import { Box, BoxProps } from '../Box'
 import { cx } from '../classnames'
@@ -18,7 +17,6 @@ export let Blockquote = forwardRef<any, BlockquoteProps>(function Blockquote(
         italic: true,
         'text-neutral': true,
         'pl-2': true,
-        // [blockquote]: true,
         [props.className]: !!props.className,
       })}
       {...props}

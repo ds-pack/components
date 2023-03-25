@@ -1,8 +1,7 @@
-'use client'
 import { forwardRef, MouseEvent } from 'react'
 import { cx } from '../classnames'
 import { Box, BoxProps } from '../Box'
-import { Tapable } from '../Tapable'
+import Tapable from '../Tapable'
 
 export interface ButtonProps extends BoxProps {
   disabled?: boolean
