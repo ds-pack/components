@@ -1,10 +1,16 @@
 'use client'
 import { useState } from 'react'
-import { Checkbox, Input, RadioButton } from '@ds-pack/components-daisyui'
+import {
+  Checkbox,
+  Input,
+  RadioButton,
+  Textarea,
+} from '@ds-pack/components-daisyui'
 
 export default function Interactive() {
   let [checked, setChecked] = useState(false)
   let [val, setVal] = useState('')
+  let [text, setText] = useState('')
   let [radio, setRadio] = useState()
 
   return (
@@ -55,6 +61,10 @@ export default function Interactive() {
           Baz
         </RadioButton>
       </div>
+
+      <Textarea value={text} onChange={setText}>
+        Edit me:
+      </Textarea>
     </>
   )
 }

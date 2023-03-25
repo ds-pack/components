@@ -1,9 +1,6 @@
-'use client'
 import { forwardRef, useId } from 'react'
 import type { ReactNode } from 'react'
 import { Box, BoxProps } from '../Box'
-// import { Label } from '../Label'
-// import { input } from './Input.css'
 import { cx } from '../classnames'
 
 export interface InputProps extends BoxProps {

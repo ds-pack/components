@@ -1,9 +1,7 @@
-'use client'
-import { forwardRef } from 'react'
+import { forwardRef, useId } from 'react'
 import type { ReactNode } from 'react'
 import { Box, BoxProps } from '../Box'
-import { Label } from '../Label'
-import { textarea } from './Textarea.css'
+import { cx } from '../classnames'
 
 interface TextareaProps extends BoxProps {
   disabled: boolean
@@ -28,19 +26,31 @@ export let Textarea = forwardRef<any, TextareaProps>(function Textarea(
   }: TextareaProps,
   ref,
 ) {
+  let id = useId()
   return (
-    <Label {...props}>
-      {children}
+    <Box {...props}>
+      <Box is="label" htmlFor={id} className="label">
+        <Box is="span" className="label-text">
+          {children}
+        </Box>
+      </Box>
       <Box
-        className={textarea}
+        className={cx({
+          textarea: true,
+          'textarea-bordered': true,
+          'w-full': true,
+        })}
         is="textarea"
         placeholder={placeholder}
         disabled={disabled}
         value={value}
         {...inputProps}
+        id={id}
         ref={ref}
         onChange={({ target: { value } }) => onChange(value)}
       />
-    </Label>
+    </Box>
   )
 })
+
+export default Textarea

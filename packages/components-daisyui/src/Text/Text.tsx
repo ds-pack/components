@@ -9,3 +9,5 @@ export let Text = forwardRef<any, TextProps>(function Text(
 ) {
   return <Box is="p" {...props} ref={ref} />
 })
+
+export default Text
