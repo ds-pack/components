@@ -1,3 +1,7 @@
+### 0.0.3
+
+- Actually fixed `classnames` export
+
 ### 0.0.2
 
 - Fixed `classnames` export
