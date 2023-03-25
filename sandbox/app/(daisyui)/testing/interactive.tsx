@@ -1,10 +1,11 @@
 'use client'
 import { useState } from 'react'
-import { Checkbox, Input } from '@ds-pack/components-daisyui'
+import { Checkbox, Input, RadioButton } from '@ds-pack/components-daisyui'
 
 export default function Interactive() {
   let [checked, setChecked] = useState(false)
   let [val, setVal] = useState('')
+  let [radio, setRadio] = useState()
 
   return (
     <>
@@ -26,6 +27,34 @@ export default function Interactive() {
       <Input value={val} onChange={setVal}>
         Enter your name:
       </Input>
+
+      <div className="form-control">
+        <RadioButton
+          disabled
+          name="foo"
+          value="foo"
+          checked={radio === 'foo'}
+          onChange={setRadio}
+        >
+          Foo
+        </RadioButton>
+        <RadioButton
+          name="foo"
+          value="bar"
+          checked={radio === 'bar'}
+          onChange={setRadio}
+        >
+          Bar
+        </RadioButton>
+        <RadioButton
+          name="foo"
+          value="baz"
+          checked={radio === 'baz'}
+          onChange={setRadio}
+        >
+          Baz
+        </RadioButton>
+      </div>
     </>
   )
 }

@@ -26,3 +26,5 @@ export function usePortal({ children, isOpen }) {
 export function Portal({ children, isOpen = false }) {
   return usePortal({ children, isOpen })
 }
+
+export default Portal

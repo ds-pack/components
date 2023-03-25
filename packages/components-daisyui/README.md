@@ -13,6 +13,7 @@ A bare-bones component library built using:
 - Dropdown
 - InlineCode theme enhancements (e.g. dark mode and light mode versions)
 - Input validation states
+- Nested lists and spacing stuff, etc
 
 ## Setup:
 

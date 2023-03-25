@@ -8,6 +8,8 @@ import {
   InlineCode,
   Box,
   Link,
+  List,
+  ListItem,
 } from '@ds-pack/components-daisyui'
 import Interactive from './interactive'
 
@@ -91,6 +93,21 @@ export default function Page() {
           error link
         </Link>
       </Box>
+      <List>
+        <ListItem>1</ListItem>
+        <ListItem>2</ListItem>
+        <ListItem>3</ListItem>
+      </List>
+      <List variant="ordered">
+        <ListItem>1</ListItem>
+        <ListItem>2</ListItem>
+        <ListItem>3</ListItem>
+      </List>
+      <List variant="unordered">
+        <ListItem>1</ListItem>
+        <ListItem>2</ListItem>
+        <ListItem>3</ListItem>
+      </List>
     </div>
   )
 }

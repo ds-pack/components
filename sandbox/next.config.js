@@ -7,7 +7,7 @@ let config = {
       skipDefaultConversion: true,
     },
     '@ds-pack/components-daisyui': {
-      transform: '@ds-pack/components-daisyui/dist/{{member}}/{{member}}',
+      transform: '@ds-pack/components-daisyui/dist/{{member}}',
     },
   },
   experimental: {

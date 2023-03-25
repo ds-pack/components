@@ -1,10 +1,16 @@
 import { forwardRef } from 'react'
 import { Box, BoxProps } from '../Box'
-import * as styles from './List.css'
+// import * as styles from './List.css'
 import { cx } from '../classnames'
 
 export interface ListProps extends BoxProps {
   variant: 'base' | 'ordered' | 'unordered'
+}
+
+let variantClasses = {
+  base: 'list-none',
+  ordered: 'list-decimal ml-[1rem]',
+  unordered: 'list-disc ml-[1rem]',
 }
 
 export let List = forwardRef<any, ListProps>(function List(
@@ -15,7 +21,7 @@ export let List = forwardRef<any, ListProps>(function List(
     <Box
       is={variant === 'ordered' ? 'ol' : 'ul'}
       className={cx({
-        [styles[variant]]: true,
+        [variantClasses[variant]]: !!variant,
         [props.className]: !!props.className,
       })}
       {...props}
@@ -23,6 +29,8 @@ export let List = forwardRef<any, ListProps>(function List(
     />
   )
 })
+
+export default List
 
 export interface ListItemProps extends BoxProps {}
 

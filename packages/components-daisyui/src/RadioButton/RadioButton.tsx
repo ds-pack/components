@@ -1,17 +1,8 @@
 'use client'
-import { forwardRef, useState } from 'react'
+import { forwardRef } from 'react'
 import type { ReactNode } from 'react'
 import { Box, BoxProps } from '../Box'
-import { RadioInput } from '../RadioInput'
-import ReactDOM from 'react-dom'
-import * as styles from './RadioButton.css'
 import { cx } from '../classnames'
-
-// @see https://github.com/facebook/react/issues/18591#issuecomment-613026224
-function flush(cb) {
-  // @ts-ignore
-  ReactDOM.flushSync(cb)
-}
 
 export interface RadioButtonProps extends BoxProps {
   checked: boolean
@@ -36,29 +27,26 @@ export let RadioButton = forwardRef<any, RadioButtonProps>(function RadioButton(
   }: RadioButtonProps,
   ref,
 ) {
-  let [focused, setFocused] = useState(autoFocus)
-
   return (
-    <Box is="label" className={styles.radioLabel} {...props}>
+    <Box is="label" className="label" {...props}>
       <Box
         className={cx({
-          [styles.radioButton]: true,
-          [styles.checked]: checked,
-          [styles.disabled]: disabled,
-          [styles.focused]: focused,
+          radio: true,
         })}
-      />
-      <RadioInput
+        is="input"
+        type="radio"
         onChange={onChange}
-        onFocus={() => flush(() => setFocused(true))}
-        onBlur={() => flush(() => setFocused(false))}
         autoFocus={autoFocus}
         value={value}
         name={name}
         disabled={disabled}
         ref={ref}
       />
-      {children}
+      <Box is="span" className="label-text">
+        {children}
+      </Box>
     </Box>
   )
 })
+
+export default RadioButton
