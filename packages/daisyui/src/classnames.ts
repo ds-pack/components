@@ -10,3 +10,5 @@ export function cx(classes: Classes) {
     return result.join(' ')
   }
 }
+
+export default cx;
