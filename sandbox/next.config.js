@@ -6,6 +6,10 @@ let config = {
       transform: '@ds-pack/components/dist/{{member}}',
       skipDefaultConversion: true,
     },
+    '@ds-pack/components-daisyui': {
+      transform: '@ds-pack/components-daisyui/dist/{{member}}',
+      skipDefaultConversion: true,
+    },
   },
   experimental: {
     runtime: 'nodejs',
