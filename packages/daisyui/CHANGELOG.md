@@ -1,3 +1,8 @@
+### 0.0.6
+
+- Fixed component exports, type inference hopefully
+- Added Stack component
+
 ### 0.0.5
 
 - Fixed Heading build artifact

@@ -11,12 +11,13 @@ import {
   List,
   ListItem,
   VisuallyHidden,
+  Stack,
 } from '@ds-pack/daisyui'
 import Interactive from './interactive'
 
 export default function Page() {
   return (
-    <div className="m-10 flex flex-col gap-2">
+    <Stack gap={4} className="m-10">
       <Banner variant="info">Yo!</Banner>
       <Banner variant="success">Yo!</Banner>
       <Banner variant="warning">Yo!</Banner>
@@ -110,6 +111,9 @@ export default function Page() {
         <ListItem>3</ListItem>
       </List>
       <VisuallyHidden>Hello there!</VisuallyHidden>
-    </div>
+    </Stack>
   )
 }
+
+export let revalidate = 0
+export let dynamic = 'force-dynamic'
