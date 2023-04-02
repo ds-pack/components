@@ -1,3 +1,7 @@
+### 0.0.7
+
+- Fixed type exports/availability
+
 ### 0.0.6
 
 - Fixed component exports, type inference hopefully

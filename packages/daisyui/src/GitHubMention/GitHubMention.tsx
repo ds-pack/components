@@ -1,7 +1,7 @@
 import { forwardRef } from 'react'
 import { Link, LinkProps } from '../Link'
 
-interface GitHubMentionProps extends LinkProps {
+export interface GitHubMentionProps extends LinkProps {
   children: string
 }
 

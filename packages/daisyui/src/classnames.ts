@@ -1,4 +1,4 @@
-interface Classes {
+export interface Classes {
   [cls: string]: any
 }
 
@@ -11,4 +11,4 @@ export function cx(classes: Classes) {
   }
 }
 
-export default cx;
+export default cx

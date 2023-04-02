@@ -3,7 +3,7 @@ import type { ReactNode } from 'react'
 import { Box, BoxProps } from '../Box'
 import { cx } from '../classnames'
 
-interface TextareaProps extends BoxProps {
+export interface TextareaProps extends BoxProps {
   disabled: boolean
   value: string
   onChange: (value: string) => void

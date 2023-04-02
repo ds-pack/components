@@ -110,7 +110,7 @@ function Layout({ children }) {
 
 - [Box](./src/Box/readme.md)
 - [Banner](./src/Banner/readme.md)
-<!-- - [Stack](./src/Stack/readme.md) -->
+- [Stack](./src/Stack/readme.md)
 - [Text](./src/Text/readme.md)
 - [List](./src/List/readme.md)
 - [ListItem](./src/ListItem/readme.md)
@@ -150,5 +150,5 @@ function Layout({ children }) {
 - [ ] InlineCode theme enhancements (e.g. dark mode and light mode versions)
 - [ ] Input validation states
 - [ ] Nested lists and spacing stuff, etc
-- [ ] Stack
 - [ ] Box
+- [x] Stack
