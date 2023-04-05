@@ -1,3 +1,7 @@
+### 0.0.9
+
+- Fix incorrect build from previous release
+
 ### 0.0.8
 
 - Updated `classnames` export to be `cx`, existing `classnames` imports should

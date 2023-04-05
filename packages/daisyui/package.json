@@ -1,6 +1,6 @@
 {
   "name": "@ds-pack/daisyui",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "main": "dist/index.js",
   "source": "src/index.ts",
   "types": "dist/index.d.ts",
@@ -15,8 +15,7 @@
     "test": "jest",
     "test-watch": "jest --watch",
     "test-cov": "jest --collectCoverage",
-    "prepub": "yarn build",
-    "pub": "npm publish --access public",
+    "pub": "yarn build && npm publish --access public",
     "tsc": "tsc --noEmit"
   },
   "devDependencies": {
