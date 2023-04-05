@@ -1,3 +1,8 @@
+### 0.0.8
+
+- Updated `classnames` export to be `cx`, existing `classnames` imports should
+  continue to work (just no longer recommended)
+
 ### 0.0.7
 
 - Fixed type exports/availability

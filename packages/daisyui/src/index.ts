@@ -56,5 +56,5 @@ export type {
   DropdownButtonProps,
   DropdownMenuProps,
 } from './Dropdown'
-export { cx } from './classnames'
-export type { Classes } from './classnames'
+export { cx } from './cx'
+export type { Classes } from './cx'
