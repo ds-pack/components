@@ -1,3 +1,7 @@
+### 0.0.10
+
+- Updated the sizing of the Heading component
+
 ### 0.0.9
 
 - Fix incorrect build from previous release

@@ -1,6 +1,6 @@
 {
   "name": "@ds-pack/daisyui",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "main": "dist/index.js",
   "source": "src/index.ts",
   "types": "dist/index.d.ts",

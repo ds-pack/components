@@ -8,16 +8,21 @@ import {
   InlineCode,
   Box,
   Link,
+  Link as StyledLink,
   List,
   ListItem,
   VisuallyHidden,
   Stack,
 } from '@ds-pack/daisyui'
 import Interactive from './interactive'
+import NextLink from 'next/link'
 
 export default function Page() {
   return (
     <Stack gap={4} className="m-10">
+      <StyledLink is={NextLink} href="/headings">
+        Headings
+      </StyledLink>
       <Banner variant="info">Yo!</Banner>
       <Banner variant="success">Yo!</Banner>
       <Banner variant="warning">Yo!</Banner>
