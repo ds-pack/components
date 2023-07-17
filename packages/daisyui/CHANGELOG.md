@@ -1,3 +1,7 @@
+### 0.0.11
+
+- Added support for `error` variant on the Button component
+
 ### 0.0.10
 
 - Updated the sizing of the Heading component
