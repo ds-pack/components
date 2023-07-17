@@ -37,6 +37,10 @@ export default function Page() {
       <Button variant="ghost">Ghost</Button>
       <Button variant="link">Link</Button>
       <Button variant="outline">Outline</Button>
+      <Button variant="error">Error!</Button>
+      <Button variant="outline" className="btn-error">
+        Error outline
+      </Button>
       <Interactive />
       <Chip>Chip!</Chip>
       <Chip variant="outline">Chip!</Chip>

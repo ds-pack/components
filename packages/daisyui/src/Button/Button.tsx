@@ -15,6 +15,7 @@ export interface ButtonProps extends BoxProps {
     | 'ghost'
     | 'link'
     | 'outline'
+    | 'error'
   onClick?: (e: MouseEvent<HTMLButtonElement>) => void
   children?: React.ReactNode
 }
@@ -29,6 +30,7 @@ let variantClasses = {
   ghost: 'btn-ghost',
   link: 'btn-link',
   outline: 'btn-outline',
+  error: 'btn-error',
 }
 
 export let Button = forwardRef<any, ButtonProps>(function Button(
